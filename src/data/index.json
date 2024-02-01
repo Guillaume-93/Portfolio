@@ -1,0 +1,70 @@
+{
+  "navigation": [
+    {
+      "title": "À propos",
+      "url": "http://www.example.com/about"
+    },
+    {
+      "title": "Projets",
+      "url": "http://www.example.com/portfolio"
+    },
+    {
+      "title": "Contact",
+      "url": "http://www.example.com/contact"
+    }
+  ],
+  "hero": {
+    "firstname": "Guillaume",
+    "lastname": "Bréchaire",
+    "subtitle": "Je suis un Développeur Full-stack Javascript"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "image": "/images/IMG_7393_without_background.png",
+    "secondary":"Je suis un jeune développeur avec une grande passion pour l'apprentissage et une curiosité sans limite.",
+    "tertiary":"Spécialisé en développement fullstack JavaScript, je me concentre principalement sur React.js, où je m'épanouis dans la création d'interfaces utilisateur intuitives et performantes.",
+    "quaternary":"Mon enthousiasme dans le développement est guidée par une quête constante de connaissances. Chaque projet est pour moi une opportunité d'explorer de nouvelles idées, de résoudre des problèmes complexes et d'innover.",
+    "quinary":"Dans un domaine qui évolue aussi rapidement que le nôtre, rester à jour avec les dernières technologies et meilleures pratiques n'est pas seulement une passion, mais une nécessité.",
+    "senary":"En tant que développeur fullstack, je trouve un équilibre harmonieux entre le travail en front-end et en back-end, m'assurant que les applications que je développe ne sont pas seulement agréables visuellement, mais aussi robustes et fiables sous le capot.",
+    "septenary":"Je suis motivé par le désir de créer des expériences digitales qui ne se contentent pas de répondre aux besoins des utilisateurs, mais les surpassent, créant ainsi des solutions qui sont à la fois innovantes et intuitives.",
+    "octonary":"Si vous êtes à la recherche d'un développeur dédié, rigoureux et toujours prêt à apprendre et à relever de nouveaux défis, je serais ravi de contribuer à votre projet.",
+    "nonary":"",
+    "denary": ""
+  },
+  "projects": {
+    "title": "Projets",
+    "projects": [
+      {
+        "title": "Ghibliothèque",
+        "description": "Ce site est une plateforme interactive dédiée aux films du Studio Ghibli. Utilisant l'API Studio Ghibli, il offre un catalogue complet des films, avec des images, des résumés et des détails sur chaque production. La navigation est fluide et intuitive, permettant aux fans comme aux nouveaux venus de plonger facilement dans le monde magique de Ghibli. Des fonctionnalités comme la recherche de films enrichissent l'expérience utilisateur. Le design du site s'inspire des thèmes et de l'esthétique visuelle caractéristique de Ghibli, créant une atmosphère immersive et fidèle à l'esprit des œuvres du studio.",
+        "url": "",
+        "github": "",
+        "image": "/images/ghibliotheque.png"
+      },
+      {
+        "title": "Project 2",
+        "description": "Demonstrate in this description the skills of a programmer: such as having commitment, having perseverance and accepting alternative solutions. Remember that being a portfolio you are not selling the project, you are selling yourself, it reflects the resources used: Frameworks, libraries, platforms, etc.",
+        "url": "",
+        "github": "",
+        "image": "/images/placeholder-700x350.png"
+      },
+      {
+        "title": "Project 3",
+        "description": "If the project was collaborative, reflect it in this description, that will demonstrate communication and/or leadership skills. Additionally, if you made use of the mastery of a second language, it will reflect on you professionalism.",
+        "url": "",
+        "github": "",
+        "image": "/images/placeholder-700x350.png"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "This is where you can describe about your contact. The more you describe about your contact, the more chances you have!",
+    "formId": "mayreyjo"
+  },
+  "footer": {
+    "linkedin": "",
+    "twitter": "",
+    "github": ""
+  }
+}

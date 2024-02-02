@@ -15,26 +15,6 @@ html {
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (min-width: 1600px) {
-.custom-flex {
-    flex-direction: row !important;
-}
-}
-
-// @media (max-width: 1440px) {
-//   .lg\:flex-row {
-//       flex-direction: row !important;
-//   }
-//   }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   // color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
@@ -55,3 +35,23 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
+@media (min-width: 1600px) {
+  .custom-flex {
+      flex-direction: row !important;
+  }
+  }
+  
+  @media (min-width: 505px) {
+    .custom-margin {
+      margin-left: 0.5rem;
+    }
+    }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground-rgb: 255, 255, 255;
+      --background-start-rgb: 0, 0, 0;
+      --background-end-rgb: 0, 0, 0;
+    }
+  }

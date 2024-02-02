@@ -16,7 +16,8 @@
   "hero": {
     "firstname": "Guillaume",
     "lastname": "Bréchaire",
-    "subtitle": "Je suis un Développeur Full-stack Javascript"
+    "subtitle": "Je suis un Développeur Full-stack Javascript",
+    "title": "Ce site est un portfolio interactif, conçu pour présenter mes projets et mon parcours professionnel. Il offre une navigation fluide et intuitive, avec un design minimaliste et élégant. Il est conçu pour être accessible sur tous les appareils, offrant une expérience utilisateur optimale."
   },
   "about": {
     "title": "À propos de moi",
@@ -36,24 +37,19 @@
     "projects": [
       {
         "title": "Ghibliothèque",
-        "description": "Ce site est une plateforme interactive dédiée aux films du Studio Ghibli. Utilisant l'API Studio Ghibli, il offre un catalogue complet des films, avec des images, des résumés et des détails sur chaque production. La navigation est fluide et intuitive, permettant aux fans comme aux nouveaux venus de plonger facilement dans le monde magique de Ghibli. Des fonctionnalités comme la recherche de films enrichissent l'expérience utilisateur. Le design du site s'inspire des thèmes et de l'esthétique visuelle caractéristique de Ghibli, créant une atmosphère immersive et fidèle à l'esprit des œuvres du studio.",
+        "description": "Ce site, exploitant l'API Studio Ghibli, est une plateforme interactive offrant un accès fluide et intuitif à un catalogue complet de films Ghibli, enrichi d'images, de résumés et de détails. Il intègre une recherche de films et un design inspiré de l'esthétique Ghibli pour une expérience immersive, idéale pour fans et novices.",
         "url": "",
         "github": "",
-        "image": "/images/ghibliotheque.png"
+        "image": "/images/ghibliotheque.png",
+        "image2": "/images/ghibliotheque-detail-film.png"
       },
       {
-        "title": "Project 2",
-        "description": "Demonstrate in this description the skills of a programmer: such as having commitment, having perseverance and accepting alternative solutions. Remember that being a portfolio you are not selling the project, you are selling yourself, it reflects the resources used: Frameworks, libraries, platforms, etc.",
+        "title": "Pokedex",
+        "description": "Explorez et découvrez l'univers Pokémon avec ce site interactif, regroupant les premiers Pokémon. Contrairement à d'autres plateformes, ce site utilise une base de données maison PostgreSQL, sans exploiter l'API Pokémon officielle. Il vous permet d'ajouter vos Pokémon préférés à un Pokedex personnalisé, offrant des statistiques sur chaque Pokémon. Son design, inspiré de l'esthétique caractéristique de Pokémon, promet une expérience immersive, parfaite pour les fans comme pour les novices.",
         "url": "",
         "github": "",
-        "image": "/images/placeholder-700x350.png"
-      },
-      {
-        "title": "Project 3",
-        "description": "If the project was collaborative, reflect it in this description, that will demonstrate communication and/or leadership skills. Additionally, if you made use of the mastery of a second language, it will reflect on you professionalism.",
-        "url": "",
-        "github": "",
-        "image": "/images/placeholder-700x350.png"
+        "image": "/images/pokedex.png",
+        "image2": "/images/detail-pokemon.png"
       }
     ]
   },

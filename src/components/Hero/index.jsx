@@ -16,6 +16,7 @@ const Hero = () => {
           </span>
         </h1>
         <h1 className="text-4xl md:text-6xl font-bold tracking-wide mt-4">{hero.subtitle}</h1>
+        <p className="mt-8 text-xl md:text-2xl">Ce site est un portfolio interactif, conçu pour me présenter ainsi que mes projets. Il offre une navigation fluide et intuitive, avec un design minimaliste et élégant. Il est conçu pour être accessible sur tous les appareils, offrant une expérience utilisateur optimale.</p>
         <a href="#À propos" className="text-2xl font-bold p-0.5 mt-6 w-44 bg-gradient-to-r from-blue-400 via-yellow-500 to-orange-500">
           <div className="bg-white">
             <span className="block text-center py-0.5 px-2 font-semibold bg-white font-bold bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500 bg-clip-text text-transparent">

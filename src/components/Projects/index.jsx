@@ -4,7 +4,7 @@ const Projects = () => {
   const projects = config.projects;
   return (
     <div id={projects.title} className="px-8 md:px-16 md:px-32 pb-16 bg-white">
-      <h1 className="pt-12 uppercase font-bold text-center text-black text-bold text-4xl">
+      <h1 className="pt-12 mb-20 uppercase font-bold text-center text-black text-bold text-4xl">
         {projects.title}
       </h1>
       <div className="projects__menu">
@@ -33,12 +33,23 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-              <div className="lg:ml-12">
-                <img
-                  src={item.image}
-                  alt="project image"
-                  className="mt-6 md:mt-12 lg:mt-0 w-full custom-shadow h-auto lg:w-[700px] lg:h-[350px] rounded-lg"
-                />
+              <div className="custom-flex flex flex-col">
+                <div className="lg:ml-12">
+                  <img
+                    src={item.image}
+                    alt="project image"
+                    className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto  object-contain rounded-lg"
+                    width={1000}
+                  />
+                </div>
+                <div className="lg:ml-12">
+                  <img
+                    src={item.image2}
+                    alt="project image"
+                    className="mt-6 md:mt-12 lg:mt-0 custom-shadow h-auto  object-contain rounded-lg"
+                    width={1000}
+                  />
+                </div>
               </div>
             </li>
           ))}

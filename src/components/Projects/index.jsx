@@ -3,7 +3,7 @@ import config from "../../data/index.json";
 const Projects = () => {
   const projects = config.projects;
   return (
-    <div id={projects.title} className="px-8 md:px-16 md:px-32 pb-16 bg-white">
+    <div id="projets" className="px-8 md:px-16 md:px-32 pb-16 bg-white">
       <h1 className="pt-12 mb-20 uppercase font-bold text-center text-black text-bold text-4xl">
         {projects.title}
       </h1>

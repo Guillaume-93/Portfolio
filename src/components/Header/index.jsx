@@ -21,7 +21,7 @@ const Header = () => {
       <div className="flex justify-between items-center px-4 sm:px-8 h-10">
         <div className="flex items-center flex-1">
           <div className="mr-28">
-            <a href="#">
+            <a href="#home">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -38,7 +38,7 @@ const Header = () => {
           >
             {navigation.map((item) => (
               <li className="cursor-pointer" key={item.title}>
-                <a href={`#${item.title}`} onClick={() => setIsOpen(false)}>
+                <a href={`#${item.ancre}`} onClick={() => setIsOpen(false)}>
                   {item.title}
                 </a>
               </li>
@@ -70,7 +70,7 @@ const Header = () => {
           {navigation.map((item) => (
             <li className="text-center" key={item.title}>
               <a
-                href={`#${item.title}`}
+                href={`#${item.ancre}`}
                 className="block px-4 py-2"
                 onClick={() => setIsOpen(false)}
               >

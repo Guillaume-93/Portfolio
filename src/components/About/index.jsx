@@ -3,7 +3,7 @@ import config from "../../data/index.json";
 const About = () => {
     const about = config.about;
     return (
-      <div id="À propos" className="snap-start px-8 md:px-32 pt-12 pb-12 content-center bg-gradient-to-tr from-blue-500 via-lime-500 to-orange-700">
+      <div id="a_propos" className="snap-start px-8 md:px-32 pt-12 pb-12 content-center bg-gradient-to-tr from-blue-500 via-lime-500 to-orange-700">
         <h1 className=" uppercase font-bold text-center text-white text-bold text-4xl">{about.title}</h1>
         <div className="mt-16 flex flex-col md:flex-row align-center items-center">
           <div className="w-1/2 flex justify-center content-center">

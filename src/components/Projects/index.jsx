@@ -10,7 +10,7 @@ const Projects = () => {
       <div className="projects__menu">
         <ul>
           {projects.projects.map((item) => (
-            <li key={item.title} className="flex flex-col lg:flex-row mt-12">
+            <li key={item.title} className="flex flex-col lg:flex-row mt-12 justify-center">
               <div className="lg:w-1/3">
                 <h2 className="text-2xl">{item.title}</h2>
                 <p className="mt-6">{item.description}</p>

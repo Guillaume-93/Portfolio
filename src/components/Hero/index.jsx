@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="custom-size-hero bg-white overflow-x-hidden">
       <div className="px-8 lg:px-32 flex flex-col justify-center align-center">
-        <h1 className="text-4xl md:text-6xl mt-12 md:mt-32 lg:mt-64 font-bold tracking-wide flex flex-wrap">
+        <h1 className="text-4xl md:text-6xl mt-20 md:mt-32 lg:mt-64 font-bold tracking-wide flex flex-wrap">
           Hey, moi c&apos;est
           <span className="whitespace-nowrap bg-gradient-to-r from-blue-600 via-lime-600 to-orange-600 bg-clip-text text-transparent ml-0 md:ml-3 lg:ml-3">
             {hero.firstname}

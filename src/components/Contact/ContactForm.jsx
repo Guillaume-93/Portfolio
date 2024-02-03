@@ -23,14 +23,14 @@ function ContactForm() {
       >
         <div className="mb-4">
           <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
-            Name
+            Nom
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="name"
             type="text"
             name="name"
-            placeholder="Enter your name"
+            placeholder="Entrez votre nom"
             value={name}
             onChange={(event) => setName(event.target.value)}
           />
@@ -44,7 +44,7 @@ function ContactForm() {
             id="email"
             type="email"
             name="email"
-            placeholder="Enter your email address"
+            placeholder="Entrez votre adresse mail"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
           />
@@ -58,7 +58,7 @@ function ContactForm() {
             id="message"
             name="message"
             rows={5}
-            placeholder="Enter your message"
+            placeholder="Écrivez votre message"
             value={message}
             onChange={(event) => setMessage(event.target.value)}
           />

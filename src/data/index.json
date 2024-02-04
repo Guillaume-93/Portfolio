@@ -48,7 +48,7 @@
       },
       {
         "title": "Pokedex",
-        "description": "Explorez et découvrez l'univers Pokémon avec ce site interactif, regroupant les premiers Pokémon. Contrairement à d'autres plateformes, ce site utilise une base de données maison PostgreSQL, sans exploiter l'API Pokémon officielle. Il vous permet d'ajouter vos Pokémon préférés à un Pokedex personnalisé, offrant des statistiques sur chaque Pokémon. Son design, inspiré de l'esthétique caractéristique de Pokémon, promet une expérience immersive, parfaite pour les fans comme pour les novices.",
+        "description": "Explorez et découvrez l'univers Pokémon avec ce site interactif exclusivement back-end, conçu pour les amateurs et les novices de la franchise. Ce projet unique se distingue par son utilisation d'une base de données maison PostgreSQL, évitant ainsi de dépendre de l'API Pokémon officielle. Les utilisateurs ont la possibilité d'ajouter leurs Pokémon préférés à un Pokedex personnalisé, bénéficiant d'un accès à des statistiques détaillées sur chaque Pokémon. Grâce à l'emploi du moteur de template EJS pour le rendu côté serveur, le site offre une expérience utilisateur riche et dynamique. Son design, inspiré de l'esthétique emblématique de Pokémon, promet une immersion complète dans ce monde fascinant. Ce site back-end met en avant la technologie serveur pour générer des pages dynamiques, offrant ainsi une plateforme robuste et interactive pour découvrir les Pokémon de manière ludique et informative.",
         "url": "",
         "github": "",
         "image": "/images/pokedex.png",

@@ -27,7 +27,7 @@ const About = () => {
               <p className="mt-3 text-justify">{about.octonary}</p>
             </div>
             <div className="mt-6 mx-auto md:mx-0 py-1 pt-2 pb-2 w-36 text-center font-bold">
-              <a href={'#'} className="about__resume text-white text-l">Voir Résumé</a>
+              {/* <a href={'#'} className="about__resume text-white text-l">Voir Résumé</a> */}
             </div>
           </div>
         </div>

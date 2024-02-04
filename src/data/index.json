@@ -23,24 +23,20 @@
     "title": "Ce site est un portfolio interactif, conçu pour présenter mes projets et mon parcours professionnel. Il offre une navigation fluide et intuitive, avec un design minimaliste et élégant. Il est conçu pour être accessible sur tous les appareils, offrant une expérience utilisateur optimale."
   },
   "about": {
-    "title": "À propos de moi",
+    "title": "Qui suis-je ?",
     "image": "/images/IMG_7393_without_background.png",
-    "secondary":"Je suis un jeune développeur avec une grande passion pour l'apprentissage et une curiosité sans limite.",
-    "tertiary":"Spécialisé en développement fullstack JavaScript, je me concentre principalement sur React.js, où je m'épanouis dans la création d'interfaces utilisateur intuitives et performantes.",
-    "quaternary":"Mon enthousiasme dans le développement est guidée par une quête constante de connaissances. Chaque projet est pour moi une opportunité d'explorer de nouvelles idées, de résoudre des problèmes complexes et d'innover.",
-    "quinary":"Dans un domaine qui évolue aussi rapidement que le nôtre, rester à jour avec les dernières technologies et meilleures pratiques n'est pas seulement une passion, mais une nécessité.",
-    "senary":"En tant que développeur fullstack, je trouve un équilibre harmonieux entre le travail en front-end et en back-end, m'assurant que les applications que je développe ne sont pas seulement agréables visuellement, mais aussi robustes et fiables sous le capot.",
-    "septenary":"Je suis motivé par le désir de créer des expériences digitales qui ne se contentent pas de répondre aux besoins des utilisateurs, mais les surpassent, créant ainsi des solutions qui sont à la fois innovantes et intuitives.",
-    "octonary":"Si vous êtes à la recherche d'un développeur dédié, rigoureux et toujours prêt à apprendre et à relever de nouveaux défis, je serais ravi de contribuer à votre projet.",
-    "nonary":"",
-    "denary": ""
+    "primary":"Je suis un jeune développeur fullstack JavaScript passionné, spécialisé en React.js pour créer des interfaces utilisateur performantes. ",
+    "secondary":"Ma passion pour l'apprentissage me pousse à explorer, innover et résoudre des défis techniques. ",
+    "tertiary":"Je m'efforce de rester à jour avec les technologies et pratiques récentes, équilibrant le développement front-end et back-end pour développer des applications robustes et visuellement agréables.",
+    "quaternary":"Mon objectif est de dépasser les attentes des utilisateurs par des solutions innovantes et intuitives."
+    
   },
   "projects": {
     "title": "Projets",
     "projects": [
       {
         "title": "Ghibliothèque",
-        "description": "Ce site, exploitant l'API Studio Ghibli, est une plateforme interactive offrant un accès fluide et intuitif à un catalogue complet de films Ghibli, enrichi d'images, de résumés et de détails. Il intègre une recherche de films et un design inspiré de l'esthétique Ghibli pour une expérience immersive, idéale pour fans et novices.",
+        "description": "Ce site back-end utilise l'API Studio Ghibli pour offrir un accès à un catalogue complet de films Ghibli, avec images, résumés et détails. Doté d'une recherche intégrée et de EJS pour le rendu, il propose une interface dynamique pour découvrir l'univers Studio Ghibli.",
         "url": "",
         "github": "",
         "image": "/images/ghibliotheque.png",
@@ -48,7 +44,7 @@
       },
       {
         "title": "Pokedex",
-        "description": "Explorez et découvrez l'univers Pokémon avec ce site interactif exclusivement back-end, conçu pour les amateurs et les novices de la franchise. Ce projet unique se distingue par son utilisation d'une base de données maison PostgreSQL, évitant ainsi de dépendre de l'API Pokémon officielle. Les utilisateurs ont la possibilité d'ajouter leurs Pokémon préférés à un Pokedex personnalisé, bénéficiant d'un accès à des statistiques détaillées sur chaque Pokémon. Grâce à l'emploi du moteur de template EJS pour le rendu côté serveur, le site offre une expérience utilisateur riche et dynamique. Son design, inspiré de l'esthétique emblématique de Pokémon, promet une immersion complète dans ce monde fascinant. Ce site back-end met en avant la technologie serveur pour générer des pages dynamiques, offrant ainsi une plateforme robuste et interactive pour découvrir les Pokémon de manière ludique et informative.",
+        "description": "Ce site interactif back-end, sans dépendance à l'API Pokémon officielle, permet aux utilisateurs d'ajouter des Pokémon à un Pokedex personnalisé et d'accéder à des statistiques détaillées via une base de données PostgreSQL. Utilisant EJS pour le rendu côté serveur, il offre une expérience riche, inspirée de l'esthétique Pokémon, pour explorer l'univers Pokémon de manière ludique et informative.",
         "url": "",
         "github": "",
         "image": "/images/pokedex.png",

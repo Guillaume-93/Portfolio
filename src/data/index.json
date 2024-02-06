@@ -41,16 +41,18 @@
         "description": "Ce site back-end utilise l'API Studio Ghibli pour offrir un accès à un catalogue complet de films Ghibli, avec images, résumés et détails. Doté d'une recherche intégrée et de EJS pour le rendu, il propose une interface dynamique pour découvrir l'univers Studio Ghibli.",
         "url": "",
         "github": "",
-        "image": "/images/ghibliotheque.png",
-        "image2": "/images/ghibliotheque-detail-film.png"
+        "image": "/images/ghibliotheque-accueil.png",
+        "image2": "/images/ghibliotheque-films.png",
+        "image3": "/images/ghibliotheque-detail-film.png"
       },
       {
         "title": "Pokedex",
         "description": "Ce site interactif back-end, sans dépendance à l'API Pokémon officielle, permet aux utilisateurs d'ajouter des Pokémon à un Pokedex personnalisé et d'accéder à des statistiques détaillées via une base de données PostgreSQL. Utilisant EJS pour le rendu côté serveur, il offre une expérience riche, inspirée de l'esthétique Pokémon, pour explorer l'univers Pokémon de manière ludique et informative.",
         "url": "",
         "github": "",
-        "image": "/images/pokedex.png",
-        "image2": "/images/detail-pokemon.png"
+        "image": "/images/pokedex-accueil.png",
+        "image2": "/images/pokedex.png",
+        "image3": "/images/detail-pokemon.png"
       },
       {
         "title": "O'Recipes",
@@ -58,7 +60,8 @@
         "url": "",
         "github": "",
         "image": "/images/ORecipes-accueil.png",
-        "image2": "/images/Mousse_au_chocolat.png"
+        "image2": "/images/ORecipes-favoris.png",
+        "image3": "/images/Mousse_au_chocolat.png"
       }
     ]
   },

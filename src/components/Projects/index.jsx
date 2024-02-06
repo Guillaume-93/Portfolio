@@ -61,6 +61,14 @@ const Projects = () => {
                   <img
                     src={item.image2}
                     alt="project image"
+                    className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto  object-contain rounded-lg"
+                    width={1000}
+                  />
+                </div>
+                <div className="lg:ml-12">
+                  <img
+                    src={item.image3}
+                    alt="project image"
                     className="mt-6 md:mt-12 lg:mt-0 custom-shadow h-auto  object-contain rounded-lg"
                     width={1000}
                   />

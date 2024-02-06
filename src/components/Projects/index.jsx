@@ -79,7 +79,7 @@ const Projects = () => {
         </ul>
       </div>
       <Popup isOpen={isPopupOpen} onClose={handleClosePopup}>
-        <p>Ce site n&apos;est pas disponible pour le moment.</p>
+        <p>Cette fonctionnalité n&apos;est pas disponible pour le moment.</p>
       </Popup>
     </div>
   );

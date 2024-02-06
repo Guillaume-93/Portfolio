@@ -26,8 +26,8 @@ const About = () => {
               <p className="mt-3 text-justify">{about.septenary}</p>
               <p className="mt-3 text-justify">{about.octonary}</p>
             </div>
-            <div className="mt-6 mx-auto md:mx-0 py-1 pt-2 pb-2 w-36 text-center font-bold">
-              {/* <a href={'#'} className="about__resume text-white text-l">Voir Résumé</a> */}
+            <div className="mt-6 mx-auto md:mx-0 py-1 pt-2 pb-2 w-44 text-center font-bold">
+            <a href="#contact" className="border-2 rounded-lg border-solid border-white text-white font-bold text-center py-1 px-2 w-44 mx-auto md:mx-0 mt-6">Envoyer un message</a>
             </div>
           </div>
         </div>

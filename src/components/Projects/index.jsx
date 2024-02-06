@@ -16,9 +16,12 @@ const Projects = () => {
   };
   return (
     <div id="projets" className="px-8 md:px-16 md:px-32 pb-16 bg-white">
-      <h1 className="pt-12 mb-20 uppercase font-bold text-center text-black text-bold text-4xl">
+      <h1 className="pt-12 mb-12 uppercase font-bold text-center text-black text-bold text-4xl">
         {projects.title}
       </h1>
+      <div className="flex justify-center">
+        <p className="custom-width text-center mb-12">{projects.description}</p>
+      </div>
       <div className="projects__menu">
         <ul>
           {projects.projects.map((item) => (

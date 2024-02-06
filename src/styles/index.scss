@@ -60,6 +60,12 @@ body {
   align-Items: center;
 }
 
+@media (min-width: 1200px) {
+  .custom-width {
+    width: 50%;
+  }
+}
+
 @media (min-width: 1600px) {
   .custom-flex {
     flex-direction: row !important;
@@ -68,7 +74,7 @@ body {
 
 @media (min-width: 505px) {
   .custom-margin {
-    margin-left: 0.5rem;
+    margin-left: 1rem;
   }
 }
 

@@ -25,14 +25,16 @@
   "about": {
     "title": "Qui suis-je ?",
     "image": "/images/IMG_7393_without_background.png",
-    "primary":"Je suis un jeune développeur fullstack JavaScript passionné, spécialisé en React.js pour créer des interfaces utilisateur performantes. ",
-    "secondary":"Ma passion pour l'apprentissage me pousse à explorer, innover et résoudre des défis techniques. ",
-    "tertiary":"Je m'efforce de rester à jour avec les technologies et pratiques récentes, équilibrant le développement front-end et back-end pour développer des applications robustes et visuellement agréables.",
-    "quaternary":"Mon objectif est de dépasser les attentes des utilisateurs par des solutions innovantes et intuitives."
+    "primary": "Je suis un jeune développeur fullstack JavaScript passionné, spécialisé en React.js pour créer des interfaces utilisateur performantes. ",
+    "secondary": "Ma passion pour l'apprentissage me pousse à explorer, innover et résoudre des défis techniques. ",
+    "tertiary": "Je m'efforce de rester à jour avec les technologies et pratiques récentes, équilibrant le développement front-end et back-end pour développer des applications robustes et visuellement agréables.",
+    "quaternary": "Mon objectif est de dépasser les attentes des utilisateurs par des solutions innovantes et intuitives.",
+    "quinary": "Si mon profil vous interresse et que vous souhaitez collaborer, n'hésitez pas à m'envoyer un message dans la section contact."
     
   },
   "projects": {
-    "title": "Projets",
+    "title": "Projets de formation",
+    "description": "Voici quelques projets que j'ai réalisés lors de ma formation à l'école O'Clock. Ces projets m'ont permis de développer mes compétences en développement web, en utilisant des technologies telles que JavaScript, React, Redux, Typescript, Node.js, Express, PostgreSQL, Git et GitHub.",
     "projects": [
       {
         "title": "Ghibliothèque",
@@ -49,12 +51,20 @@
         "github": "",
         "image": "/images/pokedex.png",
         "image2": "/images/detail-pokemon.png"
+      },
+      {
+        "title": "O'Recipes",
+        "description": "Ce site est une plateforme de recettes culinaires rapide et interactive, conçue avec React, Vite et Redux. Il propose une authentification sécurisée, une gestion des tokens et une fonctionnalité de favoris pour une expérience personnalisée. Son design intuitif et élégant facilite la navigation et l'accès à une variété de recettes sur tous les appareils, encourageant l'exploration culinaire.",
+        "url": "",
+        "github": "",
+        "image": "/images/ORecipes-accueil.png",
+        "image2": "/images/Mousse_au_chocolat.png"
       }
     ]
   },
   "contact": {
     "title": "Contact",
-    "description": "This is where you can describe about your contact. The more you describe about your contact, the more chances you have!",
+    "description": "C'est ici que vous pouvez prendre contact avec moi. N'hésitez pas à m'envoyer un message pour discuter de vos projets, de mes compétences ou de tout autre sujet qui vous intéresse. Je serai ravi de vous répondre.",
     "formId": "mayreyjo"
   },
   "footer": {

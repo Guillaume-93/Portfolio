@@ -1,19 +1,54 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm, ValidationError } from '@formspree/react';
 import config from "../../data/index.json";
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 
 function ContactForm() {
   const contact = config.contact;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [open, setOpen] = useState(false);
 
   const [state, handleSubmit] = useForm(contact.formId);
+
+  useEffect(() => {
+    if (state.succeeded) {
+      setOpen(true);
+      setName("");
+      setEmail("");
+      setMessage("");
+    }
+  }, [state.succeeded]);
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  }
+
   if (state.succeeded) {
-      return <p className="text-center mt-4 text-green-900">Message envoyé avec succès !</p>;
+    return (
+      <>
+        <p className="border-2 rounded-lg border-solid border-white text-sm text-white font-bold text-center py-2 px-2 mx-auto mt-6">Merci ! Je vous répondrais dans les meilleurs délais !</p>
+        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+          <Alert
+            onClose={handleClose}
+            severity="success"
+            variant="filled"
+            sx={{ width: '100%' }}
+          >
+            Message envoyé avec succès !
+          </Alert>
+        </Snackbar>
+      </>
+    );
   }
 
   return (
+    
     <div className="w-full sm:w-full md:w-3/4 lg:w-1/2 mt-16 mx-auto">
       <form 
         onSubmit={handleSubmit} 
@@ -82,6 +117,7 @@ function ContactForm() {
         </button>
         </div>
       </form>
+      
     </div>
   );
 }

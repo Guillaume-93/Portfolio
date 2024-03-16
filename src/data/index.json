@@ -35,7 +35,9 @@
   "projects": {
     "title": "Projets de formation",
     "description": "Voici quelques projets que j'ai réalisés lors de ma formation à l'école O'Clock. Ces projets m'ont permis de développer mes compétences en développement web, en utilisant des technologies telles que JavaScript, React, Redux, Typescript, Node.js, Express, PostgreSQL, Git et GitHub.",
-    "projects": [
+    "title2": "Projet d'Apothéose",
+    "description2": "Voici mon projet d'apothéose, réalisé à la fin de ma formation à l'école O'Clock. Ce projet m'a permis de mettre en pratique l'ensemble des compétences acquises pendant ma formation, en développant une application web complète, de la conception à la mise en production en colaboration avec 4 autres développeur.",
+    "formationProjects": [
       {
         "title": "Ghibliothèque",
         "description": "Ce site back-end utilise l'API Studio Ghibli pour offrir un accès à un catalogue complet de films Ghibli, avec images, résumés et détails. Doté d'une recherche intégrée et de EJS pour le rendu, il propose une interface dynamique pour découvrir l'univers Studio Ghibli.",
@@ -71,6 +73,20 @@
         "alt": "ORecipes-accueil",
         "alt2": "ORecipes-favoris",
         "alt3": "Mousse_au_chocolat"
+      }
+    ],
+    "apotheoseProjects": [
+      {
+        "title": "O'MyDnD",
+        "description": "O'MyDnD est une application web de gestion de personnages pour le jeu de rôle Donjons et Dragons. Elle permet aux joueurs de créer, personnaliser et gérer des personnages, avec des fonctionnalités avancées telles que la gestion de l'inventaire, des compétences et des capacités. Dotée d'une interface intuitive et d'un design élégant, elle offre une expérience utilisateur fluide et agréable pour les joueurs de D&D.",
+        "url": "https://www.atlasdd.games/",
+        "github": "",
+        "image": "/images/OMyDnD-accueil.png",
+        "image2": "/images/OMyDnD-races.png",
+        "image3": "/images/OMyDnD-outil.png",
+        "alt": "OMyDnD-accueil",
+        "alt2": "OMyDnD-races",
+        "alt3": "OMyDnD-outil"
       }
     ]
   },

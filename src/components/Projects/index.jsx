@@ -52,7 +52,7 @@ const Projects = () => {
                 <div className="lg:ml-12">
                   <img
                     src={item.image}
-                    alt="project image"
+                    alt={item.alt}
                     className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto  object-contain rounded-lg"
                     width={1000}
                   />
@@ -60,7 +60,7 @@ const Projects = () => {
                 <div className="lg:ml-12">
                   <img
                     src={item.image2}
-                    alt="project image"
+                    alt={item.alt2}
                     className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto  object-contain rounded-lg"
                     width={1000}
                   />
@@ -68,7 +68,7 @@ const Projects = () => {
                 <div className="lg:ml-12">
                   <img
                     src={item.image3}
-                    alt="project image"
+                    alt={item.alt3}
                     className="mt-6 md:mt-12 lg:mt-0 custom-shadow h-auto  object-contain rounded-lg"
                     width={1000}
                   />

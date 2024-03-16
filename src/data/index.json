@@ -16,7 +16,7 @@
       "url": "http://www.example.com/contact"
     }
   ],
-  "hero": {
+  "informations": {
     "firstname": "Guillaume",
     "lastname": "Bréchaire",
     "subtitle": "Je suis un Développeur Full-stack Javascript",
@@ -43,7 +43,10 @@
         "github": "",
         "image": "/images/ghibliotheque-accueil.png",
         "image2": "/images/ghibliotheque-films.png",
-        "image3": "/images/ghibliotheque-detail-film.png"
+        "image3": "/images/ghibliotheque-detail-film.png",
+        "alt": "Ghibliothèque-accueil",
+        "alt2": "Ghibliothèque-films",
+        "alt3": "Ghibliothèque-detail-film"
       },
       {
         "title": "Pokedex",
@@ -52,7 +55,10 @@
         "github": "",
         "image": "/images/pokedex-accueil.png",
         "image2": "/images/pokedex.png",
-        "image3": "/images/detail-pokemon.png"
+        "image3": "/images/detail-pokemon.png",
+        "alt": "Pokedex-accueil",
+        "alt2": "Pokedex",
+        "alt3": "Detail-pokemon"
       },
       {
         "title": "O'Recipes",
@@ -61,7 +67,10 @@
         "github": "",
         "image": "/images/ORecipes-accueil.png",
         "image2": "/images/ORecipes-favoris.png",
-        "image3": "/images/Mousse_au_chocolat.png"
+        "image3": "/images/Mousse_au_chocolat.png",
+        "alt": "ORecipes-accueil",
+        "alt2": "ORecipes-favoris",
+        "alt3": "Mousse_au_chocolat"
       }
     ]
   },

@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import config from '../../data/index.json';
 import Popup from '../Popup';
-import CustomLightbox from './CustomLightbox.jsx';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 const Projects = () => {
   const projects = config.projects;
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
 
   const handleOpenPopup = () => {
     setIsPopupOpen(true);
@@ -17,19 +16,9 @@ const Projects = () => {
     setIsPopupOpen(false);
   };
 
-  const handleOpenLightbox = (image) => {
-    setSelectedImage(image);
-    setIsLightboxOpen(true);
-  };
-
-  const handleCloseLightbox = () => {
-    setIsLightboxOpen(false);
-    setSelectedImage(null);
-  };
-
   return (
     <div id="projets" className="px-8 md:px-16 pb-16 bg-white">
-      <h1 className="pt-12 mb-12 uppercase font-bold text-center text-black text-bold text-4xl">
+      <h1 className="pt-12 mb-12 uppercase font-bold text-center text-black text-4xl">
         {projects.title}
       </h1>
       <div className="flex justify-center">
@@ -63,31 +52,34 @@ const Projects = () => {
               </div>
               <div className="custom-flex flex flex-col">
                 <div className="lg:ml-12">
-                  <img
-                    src={item.image}
-                    alt={item.alt}
-                    className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
-                    width={1000}
-                    onClick={() => handleOpenLightbox(item.image)}
-                  />
+                  <Zoom>
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
+                      width={1000}
+                    />
+                  </Zoom>
                 </div>
                 <div className="lg:ml-12">
-                  <img
-                    src={item.image2}
-                    alt={item.alt2}
-                    className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
-                    width={1000}
-                    onClick={() => handleOpenLightbox(item.image2)}
-                  />
+                  <Zoom>
+                    <img
+                      src={item.image2}
+                      alt={item.alt2}
+                      className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
+                      width={1000}
+                    />
+                  </Zoom>
                 </div>
                 <div className="lg:ml-12">
-                  <img
-                    src={item.image3}
-                    alt={item.alt3}
-                    className="mt-6 md:mt-12 lg:mt-0 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
-                    width={1000}
-                    onClick={() => handleOpenLightbox(item.image3)}
-                  />
+                  <Zoom>
+                    <img
+                      src={item.image3}
+                      alt={item.alt3}
+                      className="mt-6 md:mt-12 lg:mt-0 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
+                      width={1000}
+                    />
+                  </Zoom>
                 </div>
               </div>
             </li>
@@ -95,7 +87,7 @@ const Projects = () => {
         </ul>
       </div>
 
-      <h1 className="pt-12 mb-12 uppercase font-bold text-center text-black text-bold text-4xl">
+      <h1 className="pt-12 mb-12 uppercase font-bold text-center text-black text-4xl">
         {projects.title2}
       </h1>
       <div className="flex justify-center">
@@ -130,31 +122,34 @@ const Projects = () => {
               </div>
               <div className="custom-flex flex flex-col">
                 <div className="lg:ml-12">
-                  <img
-                    src={item.image}
-                    alt={item.alt}
-                    className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
-                    width={1000}
-                    onClick={() => handleOpenLightbox(item.image)}
-                  />
+                  <Zoom>
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
+                      width={1000}
+                    />
+                  </Zoom>
                 </div>
                 <div className="lg:ml-12">
-                  <img
-                    src={item.image2}
-                    alt={item.alt2}
-                    className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
-                    width={1000}
-                    onClick={() => handleOpenLightbox(item.image2)}
-                  />
+                  <Zoom>
+                    <img
+                      src={item.image2}
+                      alt={item.alt2}
+                      className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
+                      width={1000}
+                    />
+                  </Zoom>
                 </div>
                 <div className="lg:ml-12">
-                  <img
-                    src={item.image3}
-                    alt={item.alt3}
-                    className="mt-6 md:mt-12 lg:mt-0 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
-                    width={1000}
-                    onClick={() => handleOpenLightbox(item.image3)}
-                  />
+                  <Zoom>
+                    <img
+                      src={item.image3}
+                      alt={item.alt3}
+                      className="mt-6 md:mt-12 lg:mt-0 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
+                      width={1000}
+                    />
+                  </Zoom>
                 </div>
               </div>
             </li>
@@ -165,8 +160,6 @@ const Projects = () => {
       <Popup isOpen={isPopupOpen} onClose={handleClosePopup}>
         <p>Cette fonctionnalité n&apos;est pas disponible pour le moment.</p>
       </Popup>
-
-      <CustomLightbox isOpen={isLightboxOpen} onClose={handleCloseLightbox} imageSrc={selectedImage} />
     </div>
   );
 };

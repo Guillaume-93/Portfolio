@@ -1,11 +1,13 @@
-import { useState } from "react";
-import config from "../../data/index.json";
-
+import { useState } from 'react';
+import config from '../../data/index.json';
 import Popup from '../Popup';
+import CustomLightbox from './CustomLightbox.jsx';
 
 const Projects = () => {
   const projects = config.projects;
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const handleOpenPopup = () => {
     setIsPopupOpen(true);
@@ -14,8 +16,19 @@ const Projects = () => {
   const handleClosePopup = () => {
     setIsPopupOpen(false);
   };
+
+  const handleOpenLightbox = (image) => {
+    setSelectedImage(image);
+    setIsLightboxOpen(true);
+  };
+
+  const handleCloseLightbox = () => {
+    setIsLightboxOpen(false);
+    setSelectedImage(null);
+  };
+
   return (
-    <div id="projets" className="px-8 md:px-16 md:px-32 pb-16 bg-white">
+    <div id="projets" className="px-8 md:px-16 pb-16 bg-white">
       <h1 className="pt-12 mb-12 uppercase font-bold text-center text-black text-bold text-4xl">
         {projects.title}
       </h1>
@@ -53,24 +66,27 @@ const Projects = () => {
                   <img
                     src={item.image}
                     alt={item.alt}
-                    className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto  object-contain rounded-lg"
+                    className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
                     width={1000}
+                    onClick={() => handleOpenLightbox(item.image)}
                   />
                 </div>
                 <div className="lg:ml-12">
                   <img
                     src={item.image2}
                     alt={item.alt2}
-                    className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto  object-contain rounded-lg"
+                    className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
                     width={1000}
+                    onClick={() => handleOpenLightbox(item.image2)}
                   />
                 </div>
                 <div className="lg:ml-12">
                   <img
                     src={item.image3}
                     alt={item.alt3}
-                    className="mt-6 md:mt-12 lg:mt-0 custom-shadow h-auto  object-contain rounded-lg"
+                    className="mt-6 md:mt-12 lg:mt-0 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
                     width={1000}
+                    onClick={() => handleOpenLightbox(item.image3)}
                   />
                 </div>
               </div>
@@ -117,24 +133,27 @@ const Projects = () => {
                   <img
                     src={item.image}
                     alt={item.alt}
-                    className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto  object-contain rounded-lg"
+                    className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
                     width={1000}
+                    onClick={() => handleOpenLightbox(item.image)}
                   />
                 </div>
                 <div className="lg:ml-12">
                   <img
                     src={item.image2}
                     alt={item.alt2}
-                    className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto  object-contain rounded-lg"
+                    className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
                     width={1000}
+                    onClick={() => handleOpenLightbox(item.image2)}
                   />
                 </div>
                 <div className="lg:ml-12">
                   <img
                     src={item.image3}
                     alt={item.alt3}
-                    className="mt-6 md:mt-12 lg:mt-0 custom-shadow h-auto  object-contain rounded-lg"
+                    className="mt-6 md:mt-12 lg:mt-0 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
                     width={1000}
+                    onClick={() => handleOpenLightbox(item.image3)}
                   />
                 </div>
               </div>
@@ -146,6 +165,8 @@ const Projects = () => {
       <Popup isOpen={isPopupOpen} onClose={handleClosePopup}>
         <p>Cette fonctionnalité n&apos;est pas disponible pour le moment.</p>
       </Popup>
+
+      <CustomLightbox isOpen={isLightboxOpen} onClose={handleCloseLightbox} imageSrc={selectedImage} />
     </div>
   );
 };

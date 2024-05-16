@@ -29,14 +29,14 @@
     "secondary": "Ma passion pour l'apprentissage me pousse à explorer, innover et résoudre des défis techniques. ",
     "tertiary": "Je m'efforce de rester à jour avec les technologies et pratiques récentes, équilibrant le développement front-end et back-end pour développer des applications robustes et visuellement agréables.",
     "quaternary": "Mon objectif est de dépasser les attentes des utilisateurs par des solutions innovantes et intuitives.",
-    "quinary": "Si mon profil vous interresse et que vous souhaitez collaborer, n'hésitez pas à m'envoyer un message dans la section contact."
+    "quinary": "Si mon profil vous intéresse et que vous souhaitez collaborer, n'hésitez pas à m'envoyer un message dans la section contact."
     
   },
   "projects": {
     "title": "Projets de formation",
     "description": "Voici quelques projets que j'ai réalisés lors de ma formation à l'école O'Clock. Ces projets m'ont permis de développer mes compétences en développement web, en utilisant des technologies telles que JavaScript, React, Redux, Typescript, Node.js, Express, PostgreSQL, Git et GitHub.",
     "title2": "Projet d'Apothéose",
-    "description2": "Voici mon projet d'apothéose, réalisé à la fin de ma formation à l'école O'Clock. Ce projet m'a permis de mettre en pratique l'ensemble des compétences acquises pendant ma formation, en développant une application web complète, de la conception à la mise en production en colaboration avec 4 autres développeur.",
+    "description2": "Voici mon projet d'apothéose, réalisé à la fin de ma formation à l'école O'Clock en totale autonomie. Ce projet m'a permis de mettre en pratique l'ensemble des compétences acquises pendant ma formation, en développant une application web complète durant 1 mois, de la conception à la mise en production en collaboration avec 4 développeurs.",
     "formationProjects": [
       {
         "title": "Ghibliothèque",
@@ -81,12 +81,12 @@
         "description": "O'MyDnD est une application web de gestion de personnages pour le jeu de rôle Donjons et Dragons. Elle permet aux joueurs de créer, personnaliser et gérer des personnages, avec des fonctionnalités avancées telles que la gestion de l'inventaire, des compétences et des capacités. Dotée d'une interface intuitive et d'un design élégant, elle offre une expérience utilisateur fluide et agréable pour les joueurs de D&D.",
         "url": "https://www.atlasdd.games/",
         "github": "",
-        "image": "/images/OMyDnD-accueil.png",
-        "image2": "/images/OMyDnD-races.png",
-        "image3": "/images/OMyDnD-outil.png",
+        "image": "/images/OMyDnD-feuille-de-personnage.png",
+        "image2": "/images/OMyDnD-creation-de-personnage.png",
+        "image3": "/images/OMyDnD-infos-tieffelin.png",
         "alt": "OMyDnD-accueil",
-        "alt2": "OMyDnD-races",
-        "alt3": "OMyDnD-outil"
+        "alt2": "OMyDnD-creation-de-personnage",
+        "alt3": "OMyDnD-infos-tieffelin"
       }
     ]
   },

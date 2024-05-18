@@ -17,7 +17,7 @@ const Footer = () => {
         </a>
       </div>
       <span className="text-sm text-center text-neutral-600">
-        © {getYear()} - Developed by Guillaume Bréchaire
+        © {getYear()} - Developed by - Guillaume Bréchaire
       </span>
     </div>
   );

@@ -11,6 +11,11 @@
       "url": "http://www.example.com/portfolio"
     },
     {
+      "title": "Expériences",
+      "ancre": "experiences",
+      "url": "http://www.example.com/experiences"
+    },
+    {
       "title": "Contact",
       "ancre": "contact",
       "url": "http://www.example.com/contact"
@@ -40,7 +45,7 @@
     "formationProjects": [
       {
         "title": "Ghibliothèque",
-        "description": "Ce site back-end utilise l'API Studio Ghibli pour offrir un accès à un catalogue complet de films Ghibli, avec images, résumés et détails. Doté d'une recherche intégrée et de EJS pour le rendu, il propose une interface dynamique pour découvrir l'univers Studio Ghibli.",
+        "description": "Ce site exclusivement back-end utilise l'API Studio Ghibli pour offrir un accès complet à un catalogue de films Ghibli. Chaque film est accompagné d'images, de résumés détaillés et d'informations approfondies. Le site intègre une fonctionnalité de recherche avancée, permettant aux utilisateurs de trouver facilement des films spécifiques ou d'explorer l'ensemble de l'univers de Studio Ghibli. Pour le rendu, le site utilise EJS (Embedded JavaScript), ce qui permet de générer des pages dynamiques et interactives côté serveur. Bien que le site soit exclusivement back-end et qu'il offre une interface riche en fonctionnalités pour une expérience utilisateur fluide et immersive, idéale pour les fans de Studio Ghibli, il n'est pas actuellement déployé en ligne.",
         "url": "",
         "github": "",
         "image": "/images/ghibliotheque-accueil.png",
@@ -52,7 +57,7 @@
       },
       {
         "title": "Pokedex",
-        "description": "Ce site interactif back-end, sans dépendance à l'API Pokémon officielle, permet aux utilisateurs d'ajouter des Pokémon à un Pokedex personnalisé et d'accéder à des statistiques détaillées via une base de données PostgreSQL. Utilisant EJS pour le rendu côté serveur, il offre une expérience riche, inspirée de l'esthétique Pokémon, pour explorer l'univers Pokémon de manière ludique et informative.",
+        "description": "Ce site interactif exclusivement back-end, sans dépendance à l'API Pokémon officielle, permet aux utilisateurs de créer un Pokedex personnalisé en ajoutant leurs propres Pokémon. Grâce à une base de données PostgreSQL, les utilisateurs peuvent accéder à des statistiques détaillées et complètes pour chaque Pokémon ajouté. Utilisant EJS pour le rendu côté serveur, ce site génère des pages dynamiques qui offrent une expérience immersive et ludique. Inspiré de l'esthétique Pokémon, il permet aux utilisateurs d'explorer l'univers Pokémon de manière approfondie et engageante, tout en conservant une interface intuitive et riche en fonctionnalités. Bien que ce site offre une expérience utilisateur complète et captivante, il n'est pas actuellement déployé en ligne.",
         "url": "",
         "github": "",
         "image": "/images/pokedex-accueil.png",
@@ -64,7 +69,7 @@
       },
       {
         "title": "O'Recipes",
-        "description": "Ce site est une plateforme de recettes culinaires rapide et interactive, conçue avec React, Vite et Redux. Il propose une authentification sécurisée, une gestion des tokens et une fonctionnalité de favoris pour une expérience personnalisée. Son design intuitif et élégant facilite la navigation et l'accès à une variété de recettes sur tous les appareils, encourageant l'exploration culinaire.",
+        "description": "Ce site est une plateforme de recettes culinaires, rapide et interactive, conçue avec React, Vite, et Redux pour le front-end, et Node.js et Express pour le back-end. Il propose une authentification sécurisée avec gestion des tokens, ainsi qu'une fonctionnalité de favoris permettant aux utilisateurs de personnaliser leur expérience. Son design intuitif et élégant facilite la navigation et l'accès à une grande variété de recettes sur tous les appareils, qu'il s'agisse d'ordinateurs, de tablettes ou de smartphones. Grâce à cette interface conviviale et performante, les utilisateurs peuvent explorer de nouvelles recettes culinaires de manière simple et agréable, transformant la découverte gastronomique en une expérience enrichissante. Bien que cette plateforme soit complète et offre une expérience utilisateur optimale, elle n'est pas actuellement déployée en ligne",
         "url": "",
         "github": "",
         "image": "/images/ORecipes-accueil.png",
@@ -77,8 +82,8 @@
     ],
     "apotheoseProjects": [
       {
-        "title": "O'MyDnD",
-        "description": "O'MyDnD est une application web de gestion de personnages pour le jeu de rôle Donjons et Dragons. Elle permet aux joueurs de créer, personnaliser et gérer des personnages, avec des fonctionnalités avancées telles que la gestion de l'inventaire, des compétences et des capacités. Dotée d'une interface intuitive et d'un design élégant, elle offre une expérience utilisateur fluide et agréable pour les joueurs de D&D.",
+        "title": "L'Atlas des Royaumes Oubliés",
+        "description": "L'Atlas des Royaumes Oubliés est une application web pour les passionnés du jeu de rôle Donjons et Dragons. Avec elle, plongez dans un univers où vous pouvez non seulement créer, personnaliser et gérer vos personnages, mais aussi concevoir et orchestrer vos propres campagnes en ajoutant des chapitres palpitants. Grâce à ses fonctionnalités avancées, gérez facilement l'inventaire, les compétences et les capacités de vos personnages. L'application propose également une encyclopédie extrêmement complète, située dans le Sanctuaire, qui regroupe toutes les informations sur les races, les classes et bien plus encore. Son interface intuitive et son design élégant assurent une expérience utilisateur fluide et immersive. Pour accéder aux puissants outils de création, tels que la création de personnages ou de campagnes, l'authentification est requise, garantissant ainsi une utilisation sécurisée et personnalisée. Ce site est déployé et accessible en cliquant sur le bouton ci-dessous.",
         "url": "https://www.atlasdd.games/",
         "github": "",
         "image": "/images/OMyDnD-feuille-de-personnage.png",

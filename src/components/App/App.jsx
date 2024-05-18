@@ -1,5 +1,6 @@
 import Header from '../Header/index.jsx'
 import Informations from '../Informations/index.jsx';
+import Resume from '../Resume/index.jsx';
 import About from '../About/index.jsx';
 import Projects from '../Projects/index.jsx';
 import Contact from '../Contact/Contact.jsx';
@@ -14,6 +15,7 @@ function App() {
       <Informations />
       <About />
       <Projects />
+      <Resume />
       <Contact />
       <Footer />
     </div>

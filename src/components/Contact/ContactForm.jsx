@@ -110,7 +110,7 @@ function ContactForm() {
             className="text-lg font-bold p-0.5 mt-6 w-44 bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500"
           >
             <div className="bg-white">
-              <span className="block p-2 font-semibold bg-white font-bold bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500 bg-clip-text text-transparent">
+              <span className="block p-2 font-semibold bg-white bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500 bg-clip-text text-transparent">
                 Envoyer
               </span>
           </div>

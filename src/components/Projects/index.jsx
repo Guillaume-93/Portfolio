@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import config from '../../data/index.json';
-import Popup from '../Popup';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
+import config from '../../data/index.json';
+import Popup from '../Popup';
+import truncateText from '../../utils/truncateText';
 
 const Projects = () => {
   const projects = config.projects;
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [showFullDescription, setShowFullDescription] = useState({});
 
   const handleOpenPopup = () => {
     setIsPopupOpen(true);
@@ -14,6 +16,31 @@ const Projects = () => {
 
   const handleClosePopup = () => {
     setIsPopupOpen(false);
+  };
+
+  const toggleDescription = (index, type) => {
+    setShowFullDescription(prevState => ({
+      ...prevState,
+      [`${type}-${index}`]: !prevState[`${type}-${index}`],
+    }));
+  };
+
+  const getDescription = (description, index, type) => {
+    const isFullDescriptionShown = showFullDescription[`${type}-${index}`];
+    const truncatedDescription = truncateText(description, 37);
+    return (
+      <p className="mt-6">
+        <span>
+          {isFullDescriptionShown ? description : truncatedDescription}
+          <button
+            className="text-blue-500 ml-2"
+            onClick={() => toggleDescription(index, type)}
+          >
+            {isFullDescriptionShown ? 'Voir moins' : 'Voir plus'}
+          </button>
+        </span>
+      </p>
+    );
   };
 
   return (
@@ -26,16 +53,16 @@ const Projects = () => {
       </div>
       <div className="projects__menu">
         <ul>
-          {projects.formationProjects.map((item) => (
+          {projects.formationProjects.map((item, index) => (
             <li key={item.title} className="flex flex-col lg:flex-row mt-12 justify-center">
               <div className="lg:w-1/3">
                 <h2 className="text-2xl">{item.title}</h2>
-                <p className="mt-6">{item.description}</p>
+                {getDescription(item.description, index, 'formation')}
                 <div className="flex mt-4">
                   <div className="text-md text-center font-semibold p-0.5 bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500">
                     <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer">
                       <div className="bg-white">
-                        <span className="block py-0.5 px-2 bg-white bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500 bg-clip-text text-transparent">
+                        <span className="block py-0.5 px-2 bg-white bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500 bg-clip-text text-transparent cursor-not-allowed">
                           Voir le Projet
                         </span>
                       </div>
@@ -43,7 +70,7 @@ const Projects = () => {
                   </div>
                   <div className="bg-white ml-2 font-semibold">
                     <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer">
-                      <span className="block py-1 px-2 bg-white bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500 bg-clip-text text-transparent">
+                      <span className="block py-1 px-2 bg-white bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500 bg-clip-text text-transparent cursor-not-allowed">
                         Code Source
                       </span>
                     </a>
@@ -96,11 +123,11 @@ const Projects = () => {
 
       <div className="projects__menu">
         <ul>
-          {projects.apotheoseProjects.map((item) => (
+          {projects.apotheoseProjects.map((item, index) => (
             <li key={item.title} className="flex flex-col lg:flex-row mt-12 justify-center">
               <div className="lg:w-1/3">
                 <h2 className="text-2xl">{item.title}</h2>
-                <p className="mt-6">{item.description}</p>
+                {getDescription(item.description, index, 'apotheose')}
                 <div className="flex mt-4">
                   <div className="text-md text-center font-semibold p-0.5 bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500">
                     <a href={item.url} target="_blank" rel="noreferrer">
@@ -113,7 +140,7 @@ const Projects = () => {
                   </div>
                   <div className="bg-white ml-2 font-semibold">
                     <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer">
-                      <span className="block py-1 px-2 bg-white bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500 bg-clip-text text-transparent">
+                      <span className="block py-1 px-2 bg-white bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500 bg-clip-text text-transparent cursor-not-allowed">
                         Code Source
                       </span>
                     </a>

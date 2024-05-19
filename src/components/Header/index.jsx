@@ -22,12 +22,15 @@ const Header = () => {
         <div className="flex items-center flex-1">
           <div className="mr-28">
             <a href="#home">
-            <img
-                src="favicon_io/favicon-32x32.png"
-                alt="Home"
-                width="32"
-                height="32"
-              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 3l9.5 9.5-1.41 1.41L18 11.83V20H6v-8.17L3.91 13.91 2.5 12.5 12 3zm1 5h-2v5h2V8zm-6 6h10v2H7v-2z" />
+              </svg>
             </a>
           </div>
           <ul

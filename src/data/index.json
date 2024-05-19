@@ -24,22 +24,22 @@
   "informations": {
     "firstname": "Guillaume",
     "lastname": "Bréchaire",
-    "subtitle": "Je suis un Développeur Full-stack Javascript",
+    "subtitle": "Je suis un Développeur Fullstack Javascript",
     "title": "Ce site est un portfolio interactif, conçu pour présenter mes projets et mon parcours professionnel. Il offre une navigation fluide et intuitive, avec un design minimaliste et élégant. Il est conçu pour être accessible sur tous les appareils, offrant une expérience utilisateur optimale."
   },
   "about": {
     "title": "Qui suis-je ?",
-    "image": "/images/IMG_7393_without_background.png",
-    "primary": "Je suis un jeune développeur fullstack JavaScript passionné, spécialisé en React.js pour créer des interfaces utilisateur performantes. ",
+    "image": "/images/myself.png",
+    "primary": "Je suis un jeune développeur Fullstack JavaScript passionné, spécialisé en React.js pour créer des interfaces utilisateur performantes. ",
     "secondary": "Ma passion pour l'apprentissage me pousse à explorer, innover et résoudre des défis techniques. ",
-    "tertiary": "Je m'efforce de rester à jour avec les technologies et pratiques récentes, équilibrant le développement front-end et back-end pour développer des applications robustes et visuellement agréables.",
+    "tertiary": "Je m'efforce de rester à jour avec les technologies et pratiques récentes, équilibrant le développement frontend et backend pour développer des applications robustes et visuellement agréables.",
     "quaternary": "Mon objectif est de dépasser les attentes des utilisateurs par des solutions innovantes et intuitives.",
     "quinary": "Si mon profil vous intéresse et que vous souhaitez collaborer, n'hésitez pas à m'envoyer un message dans la section contact."
     
   },
   "projects": {
     "title": "Projets de formation",
-    "description": "Voici quelques projets que j'ai réalisés lors de ma formation à l'école O'Clock. Ces projets m'ont permis de développer mes compétences en développement web, en utilisant des technologies telles que JavaScript, React, Redux, Typescript, Node.js, Express, PostgreSQL, Git et GitHub.",
+    "description": "Voici quelques projets que j'ai réalisés lors de ma formation à l'école O'Clock. Ces projets m'ont permis de développer mes compétences en développement web, en utilisant principalement des technologies telles que JavaScript, React, Redux, Typescript, Node.js, Express, PostgreSQL, Git et GitHub.",
     "title2": "Projet d'Apothéose",
     "description2": "Voici mon projet d'apothéose, réalisé à la fin de ma formation à l'école O'Clock en totale autonomie. Ce projet m'a permis de mettre en pratique l'ensemble des compétences acquises pendant ma formation, en développant une application web complète durant 1 mois, de la conception à la mise en production en collaboration avec 4 développeurs.",
     "formationProjects": [
@@ -62,34 +62,34 @@
         "github": "",
         "image": "/images/pokedex-accueil.png",
         "image2": "/images/pokedex.png",
-        "image3": "/images/detail-pokemon.png",
+        "image3": "/images/pokemon-detail.png",
         "alt": "Pokedex-accueil",
         "alt2": "Pokedex",
-        "alt3": "Detail-pokemon"
+        "alt3": "Pokemon-detail"
       },
       {
         "title": "O'Recipes",
-        "description": "Ce site est une plateforme de recettes culinaires, rapide et interactive, conçue avec React, Vite, et Redux pour le front-end, et Node.js et Express pour le back-end. Il propose une authentification sécurisée avec gestion des tokens, ainsi qu'une fonctionnalité de favoris permettant aux utilisateurs de personnaliser leur expérience. Son design intuitif et élégant facilite la navigation et l'accès à une grande variété de recettes sur tous les appareils, qu'il s'agisse d'ordinateurs, de tablettes ou de smartphones. Grâce à cette interface conviviale et performante, les utilisateurs peuvent explorer de nouvelles recettes culinaires de manière simple et agréable, transformant la découverte gastronomique en une expérience enrichissante. Bien que cette plateforme soit complète et offre une expérience utilisateur optimale, elle n'est pas actuellement déployée en ligne",
+        "description": "Ce site est une plateforme de recettes culinaires, rapide et interactive, conçue avec React, Vite, et Redux pour le frontend, et Node.js et Express pour le backend. Il propose une authentification sécurisée avec gestion des tokens, ainsi qu'une fonctionnalité de favoris permettant aux utilisateurs de personnaliser leur expérience. Son design intuitif et élégant facilite la navigation et l'accès à une grande variété de recettes sur tous les appareils, qu'il s'agisse d'ordinateurs, de tablettes ou de smartphones. Grâce à cette interface conviviale et performante, les utilisateurs peuvent explorer de nouvelles recettes culinaires de manière simple et agréable, transformant la découverte gastronomique en une expérience enrichissante. Bien que cette plateforme soit complète et offre une expérience utilisateur optimale, elle n'est pas actuellement déployée en ligne",
         "url": "",
         "github": "",
         "image": "/images/ORecipes-accueil.png",
         "image2": "/images/ORecipes-favoris.png",
-        "image3": "/images/Mousse_au_chocolat.png",
+        "image3": "/images/ORecipes-mousse_au_chocolat.png",
         "alt": "ORecipes-accueil",
         "alt2": "ORecipes-favoris",
-        "alt3": "Mousse_au_chocolat"
+        "alt3": "ORecipes-mousse_au_chocolat"
       }
     ],
     "apotheoseProjects": [
       {
         "title": "L'Atlas des Royaumes Oubliés",
-        "description": "L'Atlas des Royaumes Oubliés est une application web pour les passionnés du jeu de rôle Donjons et Dragons. Avec elle, plongez dans un univers où vous pouvez non seulement créer, personnaliser et gérer vos personnages, mais aussi concevoir et orchestrer vos propres campagnes en ajoutant des chapitres palpitants. Grâce à ses fonctionnalités avancées, gérez facilement l'inventaire, les compétences et les capacités de vos personnages. L'application propose également une encyclopédie extrêmement complète, située dans le Sanctuaire, qui regroupe toutes les informations sur les races, les classes et bien plus encore. Son interface intuitive et son design élégant assurent une expérience utilisateur fluide et immersive. Pour accéder aux puissants outils de création, tels que la création de personnages ou de campagnes, l'authentification est requise, garantissant ainsi une utilisation sécurisée et personnalisée. Ce site est déployé et accessible en cliquant sur le bouton ci-dessous.",
+        "description": "L'Atlas des Royaumes Oubliés est une application web pour les passionnés du jeu de rôle Donjons et Dragons. Avec elle, plongez dans un univers où vous pouvez non seulement créer, personnaliser et gérer vos personnages, mais aussi concevoir et orchestrer vos propres campagnes en ajoutant des chapitres palpitants. Grâce à ses fonctionnalités avancées, gérez facilement l'inventaire, les compétences et les capacités de vos personnages. L'application propose également une encyclopédie extrêmement complète, située dans le Sanctuaire, qui regroupe toutes les informations sur les races, les classes et bien plus encore. Son interface intuitive et son design élégant assurent une expérience utilisateur fluide et immersive. Pour accéder aux puissants outils de création, tels que la création de personnages ou de campagnes, l'authentification est requise, garantissant ainsi une utilisation sécurisée et personnalisée. Ce site est déployé et accessible à l'adresse www.atlasdd.games ou en cliquant sur le bouton voir le projet.",
         "url": "https://www.atlasdd.games/",
         "github": "",
         "image": "/images/OMyDnD-feuille-de-personnage.png",
         "image2": "/images/OMyDnD-creation-de-personnage.png",
         "image3": "/images/OMyDnD-infos-tieffelin.png",
-        "alt": "OMyDnD-accueil",
+        "alt": "OMyDnD-feuille-de-personnage",
         "alt2": "OMyDnD-creation-de-personnage",
         "alt3": "OMyDnD-infos-tieffelin"
       }

@@ -38,7 +38,7 @@ function App() {
       <Projects />
       <Resume isDarkMode={isDarkMode} />
       <Contact />
-      <Footer />
+      <Footer isDarkMode={isDarkMode} />
     </div>
   );
 }

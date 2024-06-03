@@ -1,14 +1,15 @@
+/* eslint-disable react/prop-types */
 import config from "../../data/index.json";
 
-const Footer = () => {
+const Footer = ({ isDarkMode }) => {
   const footer = config.footer;
   const getYear = () => {
     return new Date().getFullYear();
   };
 
   return (
-    <div className="custom-background px-8 py-16 flex justify-center align-center flex-col bg-neutral-800">
-      <div className="mx-auto text-3xl text-neutral-400 mb-8 space-x-10">
+    <div className={` px-8 py-16 flex justify-center align-center flex-col ${!isDarkMode ? 'bg-neutral-900':'bg-[#111827]'}`}>
+      <div className="mx-auto text-3xl mb-8 space-x-10">
         <a rel="noreferrer" href={footer.linkedin} target="_blank">
           <i className="devicon-linkedin-plain"></i>
         </a>

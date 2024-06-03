@@ -1,23 +1,32 @@
-import { useState, useEffect } from "react";
-import config from "../../data/index.json";
+/* eslint-disable react/prop-types */
+// src/components/Header.js
+import { useState, useEffect } from 'react';
+import config from '../../data/index.json';
+import { Expand } from "@theme-toggles/react";
 
-const Header = () => {
+const Header = ({ toggleDarkMode, isDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigation = config.navigation;
+  const [isToggled, setToggle] = useState(isDarkMode);
+
+  useEffect(() => {
+    setToggle(isDarkMode);
+  }, [isDarkMode]);
+
+  const handleToggle = () => {
+    setToggle(!isToggled);
+    toggleDarkMode();
+  };
 
   useEffect(() => {
     const sectionContent = document.querySelector("section");
     if (sectionContent) {
-      if (isOpen) {
-        sectionContent.style.marginTop = "150px";
-      } else {
-        sectionContent.style.marginTop = "0";
-      }
+      sectionContent.style.marginTop = isOpen ? "150px" : "0";
     }
   }, [isOpen]);
 
   return (
-    <div className="header fixed top-0 w-full z-50 bg-white shadow-md">
+    <div className={`text-background fixed top-0 w-full z-50 shadow-md font-mono ${!isDarkMode ? '':'border-b'}`}>
       <div className="flex justify-between items-center px-4 sm:px-8 h-10">
         <div className="flex items-center flex-1">
           <div className="mr-28">
@@ -33,9 +42,7 @@ const Header = () => {
               </svg>
             </a>
           </div>
-          <ul
-            className={`flex-1 justify-start items-center hidden sm:flex gap-x-10`}
-          >
+          <ul className={`flex-1 justify-start items-center hidden sm:flex gap-x-10`}>
             {navigation.map((item) => (
               <li className="cursor-pointer" key={item.title}>
                 <a href={`#${item.ancre}`} onClick={() => setIsOpen(false)}>
@@ -45,6 +52,7 @@ const Header = () => {
             ))}
           </ul>
         </div>
+        <Expand className={`mr-4 ${isOpen ? 'block' : 'hidden'} sm:block`} toggled={isToggled} toggle={handleToggle} />
         <button className="sm:hidden" onClick={() => setIsOpen(!isOpen)}>
           <svg className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
             {isOpen ? (
@@ -62,18 +70,10 @@ const Header = () => {
             )}
           </svg>
         </button>
-        <ul
-          className={`absolute top-10 left-0 w-full sm:hidden ${
-            isOpen ? "block" : "hidden"
-          } bg-white shadow-md`}
-        >
+        <ul className={`absolute top-10 left-0 w-full sm:hidden text-background ${isOpen ? "block" : "hidden"} shadow-md`}>
           {navigation.map((item) => (
             <li className="text-center" key={item.title}>
-              <a
-                href={`#${item.ancre}`}
-                className="block px-4 py-2"
-                onClick={() => setIsOpen(false)}
-              >
+              <a href={`#${item.ancre}`} className="block px-4 py-2" onClick={() => setIsOpen(false)}>
                 {item.title}
               </a>
             </li>

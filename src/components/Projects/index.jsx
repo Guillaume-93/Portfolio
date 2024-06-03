@@ -1,3 +1,4 @@
+// src/components/Projects.js
 import { useState } from 'react';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
@@ -19,7 +20,7 @@ const Projects = () => {
   };
 
   const toggleDescription = (index, type) => {
-    setShowFullDescription(prevState => ({
+    setShowFullDescription((prevState) => ({
       ...prevState,
       [`${type}-${index}`]: !prevState[`${type}-${index}`],
     }));
@@ -33,7 +34,7 @@ const Projects = () => {
         <span>
           {isFullDescriptionShown ? description : truncatedDescription}
           <button
-            className="text-blue-500 ml-2"
+            className="text-blue-500 ml-2 dark:text-blue-300"
             onClick={() => toggleDescription(index, type)}
           >
             {isFullDescriptionShown ? 'Voir moins' : 'Voir plus'}
@@ -44,33 +45,33 @@ const Projects = () => {
   };
 
   return (
-    <div id="projets" className="px-8 md:px-16 pb-16 bg-white">
-      <h1 className="pt-12 mb-12 uppercase font-bold text-center text-black text-4xl">
+    <div id="projets" className="projects px-8 lg:px-16 pb-16 text-background">
+      <h1 className="pt-20 mb-12 uppercase font-bold text-center text-4xl font-kanit">
         {projects.title}
       </h1>
       <div className="flex justify-center">
-        <p className="custom-width text-center mb-12">{projects.description}</p>
+        <p className="custom-width text-justify mb-12 font-mono">{projects.description}</p>
       </div>
-      <div className="projects__menu">
+      <div className="projects__menu ">
         <ul>
           {projects.formationProjects.map((item, index) => (
-            <li key={item.title} className="flex flex-col lg:flex-row mt-12 justify-center">
+            <li key={item.title} className="flex flex-col lg:flex-row mt-12 justify-center font-mono">
               <div className="lg:w-1/3">
-                <h2 className="text-2xl">{item.title}</h2>
-                {getDescription(item.description, index, 'formation')}
-                <div className="flex mt-4">
-                  <div className="text-md text-center font-semibold p-0.5 bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500">
+                <h2 className="text-2xl dark:text-white font-kanit">{item.title}</h2>
+                <div className='font-mono text-justify'>{getDescription(item.description, index, 'formation')}</div>
+                <div className="flex mt-4 ">
+                  <div className="text-md text-center font-semibold p-0.5 gradient-background">
                     <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer">
-                      <div className="bg-white">
-                        <span className="block py-0.5 px-2 bg-white bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500 bg-clip-text text-transparent cursor-not-allowed">
+                      <div className="text-background">
+                        <span className="block py-0.5 px-2 bg-white gradient-text cursor-not-allowed">
                           Voir le Projet
                         </span>
                       </div>
                     </a>
                   </div>
-                  <div className="bg-white ml-2 font-semibold">
+                  <div className="ml-2 font-semibold">
                     <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer">
-                      <span className="block py-1 px-2 bg-white bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500 bg-clip-text text-transparent cursor-not-allowed">
+                      <span className="block py-1 px-2 gradient-text cursor-not-allowed">
                         Code Source
                       </span>
                     </a>
@@ -83,7 +84,7 @@ const Projects = () => {
                     <img
                       src={item.image}
                       alt={item.alt}
-                      className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
+                      className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer"
                       width={1000}
                     />
                   </Zoom>
@@ -93,7 +94,7 @@ const Projects = () => {
                     <img
                       src={item.image2}
                       alt={item.alt2}
-                      className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
+                      className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer"
                       width={1000}
                     />
                   </Zoom>
@@ -103,7 +104,7 @@ const Projects = () => {
                     <img
                       src={item.image3}
                       alt={item.alt3}
-                      className="mt-6 md:mt-12 lg:mt-0 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
+                      className="mt-6 md:mt-12 lg:mt-0 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer"
                       width={1000}
                     />
                   </Zoom>
@@ -114,33 +115,33 @@ const Projects = () => {
         </ul>
       </div>
 
-      <h1 className="pt-12 mb-12 uppercase font-bold text-center text-black text-4xl">
+      <h1 className="pt-12 mb-12 uppercase font-bold text-center text-4xl font-kanit">
         {projects.title2}
       </h1>
       <div className="flex justify-center">
-        <p className="custom-width text-center mb-12">{projects.description2}</p>
+        <p className="custom-width text-justify mb-12">{projects.description2}</p>
       </div>
 
       <div className="projects__menu">
         <ul>
           {projects.apotheoseProjects.map((item, index) => (
-            <li key={item.title} className="flex flex-col lg:flex-row mt-12 justify-center">
+            <li key={item.title} className="flex flex-col lg:flex-row mt-12 justify-center font-mono">
               <div className="lg:w-1/3">
-                <h2 className="text-2xl">{item.title}</h2>
-                {getDescription(item.description, index, 'apotheose')}
+                <h2 className="text-2xl dark:text-white font-kanit">{item.title}</h2>
+                <div className='font-mono text-justify'>{getDescription(item.description, index, 'apotheose')}</div>
                 <div className="flex mt-4">
-                  <div className="text-md text-center font-semibold p-0.5 bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500">
+                  <div className="text-md text-center font-semibold p-0.5 gradient-background">
                     <a href={item.url} target="_blank" rel="noreferrer">
-                      <div className="bg-white">
-                        <span className="block py-0.5 px-2 bg-white bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500 bg-clip-text text-transparent">
+                      <div className="text-background">
+                        <span className="block py-0.5 px-2 gradient-text">
                           Voir le Projet
                         </span>
                       </div>
                     </a>
                   </div>
-                  <div className="bg-white ml-2 font-semibold">
+                  <div className="ml-2 font-semibold">
                     <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer">
-                      <span className="block py-1 px-2 bg-white bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500 bg-clip-text text-transparent cursor-not-allowed">
+                      <span className="block py-1 px-2 bg-white gradient-text cursor-not-allowed">
                         Code Source
                       </span>
                     </a>
@@ -153,7 +154,7 @@ const Projects = () => {
                     <img
                       src={item.image}
                       alt={item.alt}
-                      className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
+                      className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer"
                       width={1000}
                     />
                   </Zoom>
@@ -163,7 +164,7 @@ const Projects = () => {
                     <img
                       src={item.image2}
                       alt={item.alt2}
-                      className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
+                      className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer"
                       width={1000}
                     />
                   </Zoom>
@@ -173,7 +174,7 @@ const Projects = () => {
                     <img
                       src={item.image3}
                       alt={item.alt3}
-                      className="mt-6 md:mt-12 lg:mt-0 custom-shadow h-auto object-contain rounded-lg cursor-pointer"
+                      className="mt-6 md:mt-12 lg:mt-0 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer"
                       width={1000}
                     />
                   </Zoom>

@@ -54,10 +54,10 @@ function ContactForm() {
         onSubmit={handleSubmit} 
         action={`https://formspree.io/f/${contact.formId}`}
         method="post" 
-        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        className="shadow-md rounded px-8 pt-6 pb-8 mb-4 text-background "
       >
         <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
+          <label className="block text-gray-700 font-bold mb-2 text-background" htmlFor="name">
             Nom
           </label>
           <input
@@ -71,7 +71,7 @@ function ContactForm() {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="email">
+          <label className="block text-gray-700 font-bold mb-2 text-background" htmlFor="email">
             Email
           </label>
           <input
@@ -85,7 +85,7 @@ function ContactForm() {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="message">
+          <label className="block text-gray-700 font-bold mb-2 text-background" htmlFor="message">
             Message
           </label>
           <textarea
@@ -107,10 +107,10 @@ function ContactForm() {
           <button 
             type="submit"
             disabled={state.submitting}
-            className="text-lg font-bold p-0.5 mt-6 w-44 bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500"
+            className="text-lg font-bold p-0.5 mt-6 w-44 gradient-background"
           >
-            <div className="bg-white">
-              <span className="block p-2 font-semibold bg-white bg-gradient-to-r from-blue-400 via-lime-500 to-orange-500 bg-clip-text text-transparent">
+            <div className="text-background">
+              <span className="block p-2 font-semibold gradient-text">
                 Envoyer
               </span>
           </div>

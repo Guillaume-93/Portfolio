@@ -107,7 +107,7 @@ function ContactForm() {
           <button 
             type="submit"
             disabled={state.submitting}
-            className="text-lg font-bold p-0.5 mt-6 w-44 gradient-background"
+            className="font-bold p-0.5 mt-6 w-44 gradient-background"
           >
             <div className="text-background">
               <span className="block p-2 font-semibold gradient-text">

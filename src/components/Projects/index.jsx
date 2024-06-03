@@ -57,13 +57,13 @@ const Projects = () => {
           {projects.formationProjects.map((item, index) => (
             <li key={item.title} className="flex flex-col lg:flex-row mt-12 justify-center font-mono">
               <div className="lg:w-1/3">
-                <h2 className="text-2xl dark:text-white font-kanit">{item.title}</h2>
+                <h2 className="text-2xl font-kanit">{item.title}</h2>
                 <div className='font-mono text-justify'>{getDescription(item.description, index, 'formation')}</div>
                 <div className="flex mt-4 ">
-                  <div className="text-md text-center font-semibold p-0.5 gradient-background">
+                  <div className="text-center font-semibold p-0.5 gradient-background">
                     <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer">
                       <div className="text-background">
-                        <span className="block py-0.5 px-2 bg-white gradient-text cursor-not-allowed">
+                        <span className="block py-0.5 px-2 gradient-text cursor-not-allowed">
                           Voir le Projet
                         </span>
                       </div>
@@ -119,7 +119,7 @@ const Projects = () => {
         {projects.title2}
       </h1>
       <div className="flex justify-center">
-        <p className="custom-width text-justify mb-12">{projects.description2}</p>
+        <p className="custom-width text-justify mb-12 font-mono">{projects.description2}</p>
       </div>
 
       <div className="projects__menu">
@@ -130,7 +130,7 @@ const Projects = () => {
                 <h2 className="text-2xl dark:text-white font-kanit">{item.title}</h2>
                 <div className='font-mono text-justify'>{getDescription(item.description, index, 'apotheose')}</div>
                 <div className="flex mt-4">
-                  <div className="text-md text-center font-semibold p-0.5 gradient-background">
+                  <div className="text-center font-semibold p-0.5 gradient-background">
                     <a href={item.url} target="_blank" rel="noreferrer">
                       <div className="text-background">
                         <span className="block py-0.5 px-2 gradient-text">
@@ -186,7 +186,7 @@ const Projects = () => {
       </div>
 
       <Popup isOpen={isPopupOpen} onClose={handleClosePopup}>
-        <p>Cette fonctionnalité n&apos;est pas disponible pour le moment.</p>
+        <p className='font-mono'>Cette fonctionnalité n&apos;est pas disponible pour le moment.</p>
       </Popup>
     </div>
   );

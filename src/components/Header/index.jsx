@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-// src/components/Header.js
 import { useState, useEffect } from 'react';
 import config from '../../data/index.json';
 import { Expand } from "@theme-toggles/react";
@@ -26,7 +25,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
   }, [isOpen]);
 
   return (
-    <div className={`text-background fixed top-0 w-full z-50 shadow-md font-mono ${!isDarkMode ? '':'border-b'}`}>
+    <div className={`text-background fixed top-0 w-full z-50 shadow-md font-mono ${!isDarkMode ? 'border-b':''}`}>
       <div className="flex justify-between items-center px-4 sm:px-8 h-10">
         <div className="flex items-center flex-1">
           <div className="mr-28">
@@ -52,7 +51,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
             ))}
           </ul>
         </div>
-        <Expand className={`mr-4 ${isOpen ? 'block' : 'hidden'} sm:block`} toggled={isToggled} toggle={handleToggle} />
+        <Expand toggled={isToggled} toggle={handleToggle} className="mr-4" />
         <button className="sm:hidden" onClick={() => setIsOpen(!isOpen)}>
           <svg className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
             {isOpen ? (

@@ -6,11 +6,11 @@ const About = () => {
   return (
     <div
       id="a_propos"
-      className="snap-start px-8 md:px-32 pt-12 pb-12 content-center gradient-background custom-size-informations overflow-x-hidden"
+      className="snap-start md:px-32 pt-12 pb-12 content-center gradient-background"
     >
 
       <div className="mt-16 flex flex-col lg:flex-row align-center items-center">
-        <div className="w-full lg:w-1/2 flex justify-center content-center">
+        <div className="w-full lg:w-1/2 flex justify-center content-center px-4">
           <img
             src={about.image}
             alt="Photo de Guillaume Bréchaire"

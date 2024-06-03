@@ -25,7 +25,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
   }, [isOpen]);
 
   return (
-    <div className={`text-background fixed top-0 w-full z-50 shadow-md font-mono ${!isDarkMode ? 'border-b':''}`}>
+    <div className={`text-background fixed top-0 w-full z-50 shadow-md font-mono ${!isDarkMode ? '':'border-b'}`}>
       <div className="flex justify-between items-center px-4 sm:px-8 h-10">
         <div className="flex items-center flex-1">
           <div className="mr-28">

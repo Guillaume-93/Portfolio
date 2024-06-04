@@ -4,7 +4,7 @@ const Informations = () => {
   const informations = config.informations;
 
   return (
-    <section id="home" className="text-background custom-size-informations overflow-x-hidden">
+    <section id="Home" className="text-background custom-size-informations overflow-x-hidden">
       <div className="px-8 lg:px-32 flex flex-col justify-center align-center">
         <h1 className="text-4xl md:text-6xl mt-20 md:mt-32 lg:mt-64 font-bold tracking-wide flex flex-wrap font-kanit animate-fadeInLeft">
           Hey, moi c&apos;est

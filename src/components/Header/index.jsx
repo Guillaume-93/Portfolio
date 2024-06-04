@@ -29,7 +29,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
       <div className="flex justify-between items-center px-4 sm:px-8 h-10">
         <div className="flex items-center flex-1">
           <div className="mr-28">
-            <a href="#home" aria-label="Retour à l'accueil">
+            <a href="#Home" aria-label="Retour à l'accueil">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

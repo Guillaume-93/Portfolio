@@ -1,15 +1,20 @@
 /* eslint-disable react/prop-types */
-import 'tailwindcss/tailwind.css';
 import Zoom from 'react-medium-image-zoom';
+import 'tailwindcss/tailwind.css';
+import useVisibilityObserver from '../../utils/useVisibilityObserver';
 
 const Resume = ({ isDarkMode }) => {
+
+  const [isImageVisible, imageRef] = useVisibilityObserver(0.2);
+
   return (
-    <div id='experiences' className={`w-full h-full flex flex-col items-center justify-center p-8 text-background font-mono ${!isDarkMode ? 'border-t':' border-t border-white'}`}>
+    <div id='experiences' className={`w-full h-full flex flex-col items-center justify-center p-8 text-background font-mono ${!isDarkMode ? 'border-t' : ' border-t border-white'}`}>
       <Zoom>
         <img
+          ref={imageRef}
           src={isDarkMode ? "/images/cv-dark.jpg" : "/images/cv.jpg"}
           alt="CV Guillaume Bréchaire"
-          className="shadow-lg max-w-full lg:max-w-4xl h-auto mb-4 border-2 border-background rounded-lg cursor-pointer"
+          className={`shadow-lg max-w-full lg:max-w-4xl h-auto mb-4 border-2 border-background rounded-lg cursor-pointer transition-opacity duration-500 ${isImageVisible ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
         />
       </Zoom>
       <div className="text-md text-center font-semibold p-0.5 gradient-background">

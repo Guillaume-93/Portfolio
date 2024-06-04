@@ -1,15 +1,20 @@
-// src/components/Projects.js
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 import config from '../../data/index.json';
-import Popup from '../Popup';
 import truncateText from '../../utils/truncateText';
+import useVisibilityObserver from '../../utils/useVisibilityObserver';
+import Popup from '../Popup';
 
 const Projects = () => {
   const projects = config.projects;
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [showFullDescription, setShowFullDescription] = useState({});
+
+  const [isTitleVisible, titleRef] = useVisibilityObserver(1);
+  const [isTitle2Visible, title2Ref] = useVisibilityObserver(1);
+  const [isDescriptionVisible, descriptionRef] = useVisibilityObserver(1);
+  const [isDescription2Visible, description2Ref] = useVisibilityObserver(1);
 
   const handleOpenPopup = () => {
     setIsPopupOpen(true);
@@ -30,7 +35,7 @@ const Projects = () => {
     const isFullDescriptionShown = showFullDescription[`${type}-${index}`];
     const truncatedDescription = truncateText(description, 37);
     return (
-      <p className="mt-6">
+      <p className={`mt-6 ${isTextVisible[index] ? 'animate-fadeInLeft' : 'opacity-0'}`} ref={(el) => (textRefs.current[index] = el)}>
         <span>
           {isFullDescriptionShown ? description : truncatedDescription}
           <button
@@ -44,26 +49,106 @@ const Projects = () => {
     );
   };
 
+  const formationImageRefs = useRef([]);
+  const apotheoseImageRefs = useRef([]);
+  const textRefs = useRef([]);
+  const titleRefs = useRef([]);
+
+  useEffect(() => {
+    formationImageRefs.current = formationImageRefs.current.slice(0, projects.formationProjects.length * 3);
+    apotheoseImageRefs.current = apotheoseImageRefs.current.slice(0, projects.apotheoseProjects.length * 3);
+    textRefs.current = textRefs.current.slice(0, projects.formationProjects.length + projects.apotheoseProjects.length + 2);
+    titleRefs.current = titleRefs.current.slice(0, projects.formationProjects.length + projects.apotheoseProjects.length);
+  }, [projects.formationProjects.length, projects.apotheoseProjects.length]);
+
+  const [isImageVisible, setIsImageVisible] = useState(
+    Array(projects.formationProjects.length * 3 + projects.apotheoseProjects.length * 3).fill(false)
+  );
+
+  const [isTextVisible, setIsTextVisible] = useState(
+    Array(projects.formationProjects.length + projects.apotheoseProjects.length + 2).fill(false)
+  );
+
+  const [isProjectTitleVisible, setIsProjectTitleVisible] = useState(
+    Array(projects.formationProjects.length + projects.apotheoseProjects.length).fill(false)
+  );
+
+  useEffect(() => {
+    const handleIntersection = (setVisible) => (index) => (entries) => {
+      if (entries[0].isIntersecting) {
+        setVisible((prev) => {
+          const newState = [...prev];
+          newState[index] = true;
+          return newState;
+        });
+      }
+    };
+
+    const imageObservers = [
+      ...formationImageRefs.current,
+      ...apotheoseImageRefs.current
+    ].map((ref, index) => new IntersectionObserver(handleIntersection(setIsImageVisible)(index), { threshold: 1 }));
+
+    const textObservers = [
+      ...textRefs.current,
+    ].map((ref, index) => new IntersectionObserver(handleIntersection(setIsTextVisible)(index), { threshold: 0.1 }));
+
+    const titleObservers = [
+      ...titleRefs.current,
+    ].map((ref, index) => new IntersectionObserver(handleIntersection(setIsProjectTitleVisible)(index), { threshold: 0.5 }));
+
+    imageObservers.forEach((observer, index) => {
+      const currentRef = index < formationImageRefs.current.length
+        ? formationImageRefs.current[index]
+        : apotheoseImageRefs.current[index - formationImageRefs.current.length];
+      if (currentRef) {
+        observer.observe(currentRef);
+      }
+    });
+
+    textObservers.forEach((observer, index) => {
+      const currentRef = textRefs.current[index];
+      if (currentRef) {
+        observer.observe(currentRef);
+      }
+    });
+
+    titleObservers.forEach((observer, index) => {
+      const currentRef = titleRefs.current[index];
+      if (currentRef) {
+        observer.observe(currentRef);
+      }
+    });
+
+    return () => {
+      imageObservers.forEach((observer) => observer.disconnect());
+      textObservers.forEach((observer) => observer.disconnect());
+      titleObservers.forEach((observer) => observer.disconnect());
+    };
+  }, [formationImageRefs, apotheoseImageRefs, textRefs, titleRefs]);
+
   return (
     <div id="projets" className="projects px-8 lg:px-16 pb-16 text-background">
-      <h1 className="pt-20 mb-12 uppercase font-bold text-center text-4xl font-kanit">
+      <h1 className={`pt-20 mb-12 uppercase font-bold text-center text-4xl font-kanit ${isTitleVisible ? 'animate-fadeInSlow' : 'opacity-0'}`} ref={titleRef}>
         {projects.title}
       </h1>
       <div className="flex justify-center">
-        <p className="custom-width text-justify mb-12 font-mono">{projects.description}</p>
+        <p className={`custom-width text-justify mb-12 font-mono ${isDescriptionVisible ? 'animate-fadeInSlow' : 'opacity-0'}`} ref={descriptionRef}>
+          {projects.description}
+        </p>
       </div>
-      <div className="projects__menu ">
+      <div className="projects__menu">
         <ul>
           {projects.formationProjects.map((item, index) => (
             <li key={item.title} className="flex flex-col lg:flex-row mt-12 justify-center font-mono">
-              <div className="lg:w-1/3">
-                <h2 className="text-2xl font-kanit">{item.title}</h2>
+              <div className={`lg:w-1/3 ${isProjectTitleVisible[index] ? 'animate-fadeInLeft' : 'opacity-0'}`} ref={(el) => (titleRefs.current[index] = el)}>
+                <h2 className={`text-2xl font-kanit`}>{item.title}</h2>
                 <div className='font-mono text-justify'>{getDescription(item.description, index, 'formation')}</div>
-                <div className="flex mt-4 ">
+                <div className="flex mt-4">
                   <div className="text-center font-semibold p-0.5 gradient-background">
                     <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer">
                       <div className="text-background">
-                        <span className="block py-0.5 px-2 gradient-text cursor-not-allowed">
+                        <span className={`block py-0.5 px-2 gradient-text cursor-not-allowed`}>
                           Voir le Projet
                         </span>
                       </div>
@@ -71,7 +156,7 @@ const Projects = () => {
                   </div>
                   <div className="ml-2 font-semibold">
                     <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer">
-                      <span className="block py-1 px-2 gradient-text cursor-not-allowed">
+                      <span className={`block py-1 px-2 gradient-text cursor-not-allowed`}>
                         Code Source
                       </span>
                     </a>
@@ -82,9 +167,10 @@ const Projects = () => {
                 <div className="lg:ml-12">
                   <Zoom>
                     <img
+                      ref={(el) => (formationImageRefs.current[index * 3] = el)}
                       src={item.image}
                       alt={item.alt}
-                      className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer"
+                      className={`mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer transition-opacity duration-500 ${isImageVisible[index * 3] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
                       width={1000}
                     />
                   </Zoom>
@@ -92,9 +178,10 @@ const Projects = () => {
                 <div className="lg:ml-12">
                   <Zoom>
                     <img
+                      ref={(el) => (formationImageRefs.current[index * 3 + 1] = el)}
                       src={item.image2}
                       alt={item.alt2}
-                      className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer"
+                      className={`mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer transition-opacity duration-500 ${isImageVisible[index * 3 + 1] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
                       width={1000}
                     />
                   </Zoom>
@@ -102,9 +189,10 @@ const Projects = () => {
                 <div className="lg:ml-12">
                   <Zoom>
                     <img
+                      ref={(el) => (formationImageRefs.current[index * 3 + 2] = el)}
                       src={item.image3}
                       alt={item.alt3}
-                      className="mt-6 md:mt-12 lg:mt-0 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer"
+                      className={`mt-6 md:mt-12 lg:mt-0 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer transition-opacity duration-500 ${isImageVisible[index * 3 + 2] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
                       width={1000}
                     />
                   </Zoom>
@@ -115,25 +203,27 @@ const Projects = () => {
         </ul>
       </div>
 
-      <h1 className="pt-12 mb-12 uppercase font-bold text-center text-4xl font-kanit">
+      <h1 className={`pt-12 mb-12 uppercase font-bold text-center text-4xl font-kanit ${isTitle2Visible ? 'animate-fadeInSlow' : 'opacity-0'}`} ref={title2Ref}>
         {projects.title2}
       </h1>
       <div className="flex justify-center">
-        <p className="custom-width text-justify mb-12 font-mono">{projects.description2}</p>
+        <p className={`custom-width text-justify mb-12 font-mono ${isDescription2Visible ? 'animate-fadeInSlow' : 'opacity-0'}`} ref={description2Ref}>
+          {projects.description2}
+        </p>
       </div>
 
       <div className="projects__menu">
         <ul>
           {projects.apotheoseProjects.map((item, index) => (
             <li key={item.title} className="flex flex-col lg:flex-row mt-12 justify-center font-mono">
-              <div className="lg:w-1/3">
-                <h2 className="text-2xl dark:text-white font-kanit">{item.title}</h2>
-                <div className='font-mono text-justify'>{getDescription(item.description, index, 'apotheose')}</div>
+              <div className={`lg:w-1/3 ${isProjectTitleVisible[projects.formationProjects.length + index] ? 'animate-fadeInLeft' : 'opacity-0'}`} ref={(el) => (titleRefs.current[projects.formationProjects.length + index] = el)}>
+                <h2 className={`text-2xl dark:text-white font-kanit`} >{item.title}</h2>
+                <div className='font-mono text-justify'>{getDescription(item.description, projects.formationProjects.length + index, 'apotheose')}</div>
                 <div className="flex mt-4">
                   <div className="text-center font-semibold p-0.5 gradient-background">
                     <a href={item.url} target="_blank" rel="noreferrer">
                       <div className="text-background">
-                        <span className="block py-0.5 px-2 gradient-text">
+                        <span className={`block py-0.5 px-2 gradient-text`}>
                           Voir le Projet
                         </span>
                       </div>
@@ -141,7 +231,7 @@ const Projects = () => {
                   </div>
                   <div className="ml-2 font-semibold">
                     <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer">
-                      <span className="block py-1 px-2 bg-white gradient-text cursor-not-allowed">
+                      <span className={`block py-1 px-2 bg-white gradient-text cursor-not-allowed`}>
                         Code Source
                       </span>
                     </a>
@@ -152,9 +242,10 @@ const Projects = () => {
                 <div className="lg:ml-12">
                   <Zoom>
                     <img
+                      ref={(el) => (apotheoseImageRefs.current[index * 3] = el)}
                       src={item.image}
                       alt={item.alt}
-                      className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer"
+                      className={`mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer transition-opacity duration-500 ${isImageVisible[formationImageRefs.current.length + index * 3] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
                       width={1000}
                     />
                   </Zoom>
@@ -162,9 +253,10 @@ const Projects = () => {
                 <div className="lg:ml-12">
                   <Zoom>
                     <img
+                      ref={(el) => (apotheoseImageRefs.current[index * 3 + 1] = el)}
                       src={item.image2}
                       alt={item.alt2}
-                      className="mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer"
+                      className={`mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer transition-opacity duration-500 ${isImageVisible[formationImageRefs.current.length + index * 3 + 1] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
                       width={1000}
                     />
                   </Zoom>
@@ -172,9 +264,10 @@ const Projects = () => {
                 <div className="lg:ml-12">
                   <Zoom>
                     <img
+                      ref={(el) => (apotheoseImageRefs.current[index * 3 + 2] = el)}
                       src={item.image3}
                       alt={item.alt3}
-                      className="mt-6 md:mt-12 lg:mt-0 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer"
+                      className={`mt-6 md:mt-12 lg:mt-0 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer transition-opacity duration-500 ${isImageVisible[formationImageRefs.current.length + index * 3 + 2] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
                       width={1000}
                     />
                   </Zoom>

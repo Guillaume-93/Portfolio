@@ -1,7 +1,7 @@
 {
   "navigation": [
     {
-      "title": "À propos",
+      "title": "Présentation",
       "ancre": "a_propos",
       "url": "http://www.example.com/about"
     },
@@ -35,7 +35,6 @@
     "tertiary": "Rigoureux et hautement motivé, je suis déterminé à apporter des solutions de qualité et à collaborer efficacement au sein d'équipes dynamiques.",
     "quaternary": "Je suis également passionné par les sciences en tout genre, l'astronomie et les mangas. J'aime explorer de nouveaux horizons, que ce soit dans le monde réel ou dans des univers imaginaires. Je suis toujours à la recherche de nouvelles expériences et de nouvelles connaissances, et je suis convaincu que la curiosité est la clé de la réussite.",
     "quinary": "Je suis actuellement à la recherche d'opportunités professionnelles en tant que développeur Fullstack JavaScript. Si vous avez des offres d'emploi, des missions freelance ou des projets intéressants à me proposer, n'hésitez pas à me contacter. Je serai ravi de discuter de vos besoins et de voir comment je peux vous aider à atteindre vos objectifs."
-    
   },
   "projects": {
     "title": "Projets de formation",

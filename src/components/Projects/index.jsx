@@ -170,7 +170,7 @@ const Projects = () => {
                       ref={(el) => (formationImageRefs.current[index * 3] = el)}
                       src={item.image}
                       alt={item.alt}
-                      className={`mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer transition-opacity duration-500 ${isImageVisible[index * 3] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
+                      className={`mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer ${isImageVisible[index * 3] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
                       width={1000}
                     />
                   </Zoom>
@@ -181,7 +181,7 @@ const Projects = () => {
                       ref={(el) => (formationImageRefs.current[index * 3 + 1] = el)}
                       src={item.image2}
                       alt={item.alt2}
-                      className={`mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer transition-opacity duration-500 ${isImageVisible[index * 3 + 1] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
+                      className={`mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer ${isImageVisible[index * 3 + 1] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
                       width={1000}
                     />
                   </Zoom>
@@ -192,7 +192,7 @@ const Projects = () => {
                       ref={(el) => (formationImageRefs.current[index * 3 + 2] = el)}
                       src={item.image3}
                       alt={item.alt3}
-                      className={`mt-6 md:mt-12 lg:mt-0 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer transition-opacity duration-500 ${isImageVisible[index * 3 + 2] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
+                      className={`mt-6 md:mt-12 lg:mt-0 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer ${isImageVisible[index * 3 + 2] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
                       width={1000}
                     />
                   </Zoom>
@@ -245,7 +245,7 @@ const Projects = () => {
                       ref={(el) => (apotheoseImageRefs.current[index * 3] = el)}
                       src={item.image}
                       alt={item.alt}
-                      className={`mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer transition-opacity duration-500 ${isImageVisible[formationImageRefs.current.length + index * 3] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
+                      className={`mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer ${isImageVisible[formationImageRefs.current.length + index * 3] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
                       width={1000}
                     />
                   </Zoom>
@@ -256,7 +256,7 @@ const Projects = () => {
                       ref={(el) => (apotheoseImageRefs.current[index * 3 + 1] = el)}
                       src={item.image2}
                       alt={item.alt2}
-                      className={`mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer transition-opacity duration-500 ${isImageVisible[formationImageRefs.current.length + index * 3 + 1] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
+                      className={`mt-6 md:mt-12 lg:mt-0 lg:mb-12 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer ${isImageVisible[formationImageRefs.current.length + index * 3 + 1] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
                       width={1000}
                     />
                   </Zoom>
@@ -267,7 +267,7 @@ const Projects = () => {
                       ref={(el) => (apotheoseImageRefs.current[index * 3 + 2] = el)}
                       src={item.image3}
                       alt={item.alt3}
-                      className={`mt-6 md:mt-12 lg:mt-0 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer transition-opacity duration-500 ${isImageVisible[formationImageRefs.current.length + index * 3 + 2] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
+                      className={`mt-6 md:mt-12 lg:mt-0 custom-shadow-light h-auto object-contain rounded-lg cursor-pointer ${isImageVisible[formationImageRefs.current.length + index * 3 + 2] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
                       width={1000}
                     />
                   </Zoom>

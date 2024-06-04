@@ -14,16 +14,16 @@ const About = () => {
       <div className="mt-16 flex flex-col lg:flex-row align-center items-center">
         <div className="w-full lg:w-1/2 flex justify-center content-center px-4">
           <img
-            ref={imageRef}
             src={about.image}
             alt="Photo de Guillaume Bréchaire"
-            className={`shadow-2xl transition-opacity duration-500 rounded-lg ${isImageVisible ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
+            className={`shadow-2xl rounded-lg ${isImageVisible ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
             width={400}
             height={400}
+            ref={imageRef}
           />
         </div>
         <div className="lg:w-1/2 about-text lg:ml-4 text-center lg:text-left max-w-2xl font-mono p-4">
-          <div ref={textRef} className={`about shadow-2xl p-4 rounded-lg transition-opacity duration-500 ${isTextVisible ? 'opacity-100 animate-slideInRight' : 'opacity-0'}`}>
+          <div className={`about shadow-2xl p-4 rounded-lg ${isTextVisible ? 'opacity-100 animate-slideInRight' : 'opacity-0'}`} ref={textRef}>
             <h1 className="uppercase font-semibold text-left custom-text text-2xl font-kanit mb-4 mt-10 lg:mt-0">
               {about.title}
             </h1>

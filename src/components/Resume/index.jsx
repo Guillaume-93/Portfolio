@@ -14,7 +14,7 @@ const Resume = ({ isDarkMode }) => {
           ref={imageRef}
           src={isDarkMode ? "/images/cv-dark.jpg" : "/images/cv.jpg"}
           alt="CV Guillaume Bréchaire"
-          className={`shadow-lg max-w-full lg:max-w-4xl h-auto mb-4 border-2 border-background rounded-lg cursor-pointer transition-opacity duration-500 ${isImageVisible ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
+          className={`shadow-lg max-w-full lg:max-w-4xl h-auto mb-4 border-2 border-background rounded-lg cursor-pointer ${isImageVisible ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
         />
       </Zoom>
       <div className="text-md text-center font-semibold p-0.5 gradient-background">

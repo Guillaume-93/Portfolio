@@ -17,7 +17,7 @@ const About = () => {
             ref={imageRef}
             src={about.image}
             alt="Photo de Guillaume Bréchaire"
-            className={`shadow-2xl transition-opacity duration-500 rounded-lg ${isImageVisible ? 'opacity-100 animate-fadeInSlow' : 'opacity-0'}`}
+            className={`shadow-2xl transition-opacity duration-500 rounded-lg ${isImageVisible ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
             width={400}
             height={400}
           />

@@ -2,22 +2,22 @@
   "navigation": [
     {
       "title": "Présentation",
-      "ancre": "a_propos",
+      "ancre": "Presentation",
       "url": "http://www.example.com/about"
     },
     {
       "title": "Projets",
-      "ancre": "projets",
+      "ancre": "Projets",
       "url": "http://www.example.com/portfolio"
     },
     {
       "title": "Expériences",
-      "ancre": "experiences",
+      "ancre": "Experiences",
       "url": "http://www.example.com/experiences"
     },
     {
       "title": "Contact",
-      "ancre": "contact",
+      "ancre": "Contact",
       "url": "http://www.example.com/contact"
     }
   ],

@@ -8,7 +8,7 @@ const Resume = ({ isDarkMode }) => {
   const [isImageVisible, imageRef] = useVisibilityObserver(0.2);
 
   return (
-    <div id='experiences' className={`w-full h-full flex flex-col items-center justify-center p-8 text-background font-mono ${!isDarkMode ? 'border-t' : ' border-t border-white'}`}>
+    <div id='Experiences' className={`w-full h-full flex flex-col items-center justify-center p-8 text-background font-mono ${!isDarkMode ? 'border-t' : ' border-t border-white'}`}>
       <Zoom>
         <img
           ref={imageRef}

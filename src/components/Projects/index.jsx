@@ -128,7 +128,7 @@ const Projects = () => {
   }, [formationImageRefs, apotheoseImageRefs, textRefs, titleRefs]);
 
   return (
-    <div id="projets" className="projects px-8 lg:px-16 pb-16 text-background">
+    <div id="Projets" className="projects px-8 lg:px-16 pb-16 text-background">
       <h1 className={`pt-20 mb-12 uppercase font-bold text-center text-4xl font-kanit ${isTitleVisible ? 'animate-fadeInSlow' : 'opacity-0'}`} ref={titleRef}>
         {projects.title}
       </h1>

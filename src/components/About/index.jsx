@@ -8,7 +8,7 @@ const About = () => {
 
   return (
     <div
-      id="a_propos"
+      id="Presentation"
       className="snap-start md:px-32 pt-12 pb-12 content-center gradient-background"
     >
       <div className="mt-16 flex flex-col lg:flex-row align-center items-center">

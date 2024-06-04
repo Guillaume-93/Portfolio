@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /private/
+Allow: /
+
+Sitemap: http://https://guillaume-brechaire.netlify.app/sitemap.xml

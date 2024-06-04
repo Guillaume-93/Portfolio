@@ -8,17 +8,19 @@ const Footer = ({ isDarkMode }) => {
   };
 
   return (
-    <div className={` px-8 py-16 flex justify-center align-center flex-col ${!isDarkMode ? 'bg-neutral-900' : 'bg-[#111827]'}`}>
+    <div className={`px-8 py-16 flex justify-center items-center flex-col ${!isDarkMode ? 'bg-neutral-900' : 'bg-[#111827]'}`}>
       <div className="mx-auto text-3xl mb-8 space-x-10">
-        <a rel="noreferrer" href={footer.linkedin} target="_blank">
+        <a rel="noreferrer" href={footer.linkedin} target="_blank" aria-label="Visitez mon profil LinkedIn">
           <i className="devicon-linkedin-plain"></i>
+          <span className="sr-only">LinkedIn</span>
         </a>
-        <a rel="noreferrer" href={footer.github} target="_blank">
+        <a rel="noreferrer" href={footer.github} target="_blank" aria-label="Visitez mon profil GitHub">
           <i className="devicon-github-original"></i>
+          <span className="sr-only">GitHub</span>
         </a>
       </div>
-      <span className="text-sm text-center text-neutral-600">
-        © {getYear()} - Developed by - Guillaume Bréchaire - Inspired by Dylan Arveson
+      <span className="text-sm text-center text-neutral-300">
+        © {getYear()} - Developed by Guillaume Bréchaire - Inspired by Dylan Arveson
       </span>
     </div>
   );

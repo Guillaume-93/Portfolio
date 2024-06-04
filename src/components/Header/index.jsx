@@ -25,11 +25,11 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
   }, [isOpen]);
 
   return (
-    <div className={`text-background fixed top-0 w-full z-50 shadow-md font-mono ${!isDarkMode ? '':'border-b'}`}>
+    <div className={`text-background fixed top-0 w-full z-50 shadow-md font-mono ${!isDarkMode ? '' : 'border-b'}`}>
       <div className="flex justify-between items-center px-4 sm:px-8 h-10">
         <div className="flex items-center flex-1">
           <div className="mr-28">
-            <a href="#home">
+            <a href="#home" aria-label="Retour à l'accueil">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -41,10 +41,11 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
               </svg>
             </a>
           </div>
+
           <ul className={`flex-1 justify-start items-center hidden sm:flex gap-x-10`}>
             {navigation.map((item) => (
               <li className="cursor-pointer" key={item.title}>
-                <a href={`#${item.ancre}`} onClick={() => setIsOpen(false)}>
+                <a href={`#${item.ancre}`} onClick={() => setIsOpen(false)} aria-label={`Aller à la section ${item.title}`}>
                   {item.title}
                 </a>
               </li>

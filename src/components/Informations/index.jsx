@@ -21,7 +21,7 @@ const Informations = () => {
         <p className="mt-8 text-l md:text-2xl font-mono animate-fadeInLeft">
           Ce site est un portfolio interactif, conçu pour me présenter, ainsi que mes projets. Il offre une navigation fluide et intuitive, avec un design minimaliste et élégant. Il est conçu pour être accessible sur tous les appareils, offrant une expérience utilisateur optimale.
         </p>
-        <a href="#a_propos" className="mb-8 text-2xl font-bold p-0.5 mt-6 w-44 gradient-background animate-slideInLeft">
+        <a href="#Presentation" className="mb-8 text-2xl font-bold p-0.5 mt-6 w-44 gradient-background animate-slideInLeft">
           <div className="text-background">
             <span className="block text-center py-0.5 px-2 font-semibold gradient-text font-mono animate-pulse">
               Voir plus

@@ -12,7 +12,7 @@ const Resume = ({ isDarkMode }) => {
       <Zoom>
         <img
           ref={imageRef}
-          src={isDarkMode ? "/images/cv-dark.jpg" : "/images/cv.jpg"}
+          src={isDarkMode ? "/images/cv-dark.webp" : "/images/cv.webp"}
           alt="CV Guillaume Bréchaire"
           className={`shadow-lg max-w-full lg:max-w-4xl h-auto mb-4 border-2 border-background rounded-lg cursor-pointer ${isImageVisible ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
         />

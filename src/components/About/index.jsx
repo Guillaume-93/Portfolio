@@ -24,9 +24,9 @@ const About = () => {
         </div>
         <div className="lg:w-1/2 about-text lg:ml-4 text-center lg:text-left max-w-2xl font-mono p-4">
           <div className={`about shadow-2xl p-4 rounded-lg ${isTextVisible ? 'opacity-100 animate-slideInRight' : 'opacity-0'}`} ref={textRef}>
-            <h1 className="uppercase font-semibold text-left custom-text text-2xl font-kanit mb-4 mt-10 lg:mt-0">
+            <h2 className="uppercase font-semibold text-left custom-text text-2xl font-kanit mb-4 mt-10 lg:mt-0">
               {about.title}
-            </h1>
+            </h2>
             <p className="text-justify">{about.primary}</p>
             <p className="mt-3 text-justify">{about.secondary}</p>
             <p className="mt-3 text-justify">{about.tertiary}</p>

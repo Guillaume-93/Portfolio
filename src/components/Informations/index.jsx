@@ -15,9 +15,9 @@ const Informations = () => {
             {informations.lastname}
           </span>
         </h1>
-        <h1 className="text-4xl md:text-6xl font-bold tracking-wide mt-2 font-kanit animate-fadeInLeft">
+        <h2 className="text-4xl md:text-6xl font-bold tracking-wide mt-2 font-kanit animate-fadeInLeft">
           {informations.subtitle}
-        </h1>
+        </h2>
         <p className="mt-8 text-l md:text-2xl font-mono animate-fadeInLeft">
           Ce site est un portfolio interactif, conçu pour me présenter, ainsi que mes projets. Il offre une navigation fluide et intuitive, avec un design minimaliste et élégant. Il est conçu pour être accessible sur tous les appareils, offrant une expérience utilisateur optimale.
         </p>

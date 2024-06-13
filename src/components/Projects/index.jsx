@@ -128,10 +128,10 @@ const Projects = () => {
   }, [formationImageRefs, apotheoseImageRefs, textRefs, titleRefs]);
 
   return (
-    <div id="Projets" className="projects px-8 lg:px-16 pb-16 text-background">
-      <h1 className={`pt-20 mb-12 uppercase font-bold text-center text-4xl font-kanit ${isTitleVisible ? 'animate-fadeInSlow' : 'opacity-0'}`} ref={titleRef}>
+    <section id="Projets" className="projects px-8 lg:px-16 pb-16 text-background">
+      <h2 className={`pt-20 mb-12 uppercase font-bold text-center text-4xl font-kanit ${isTitleVisible ? 'animate-fadeInSlow' : 'opacity-0'}`} ref={titleRef}>
         {projects.title}
-      </h1>
+      </h2>
       <div className="flex justify-center">
         <p className={`custom-width text-justify mb-12 font-mono ${isDescriptionVisible ? 'animate-fadeInSlow' : 'opacity-0'}`} ref={descriptionRef}>
           {projects.description}
@@ -203,9 +203,9 @@ const Projects = () => {
         </ul>
       </div>
 
-      <h1 className={`pt-12 mb-12 uppercase font-bold text-center text-4xl font-kanit ${isTitle2Visible ? 'animate-fadeInSlow' : 'opacity-0'}`} ref={title2Ref}>
+      <h2 className={`pt-12 mb-12 uppercase font-bold text-center text-4xl font-kanit ${isTitle2Visible ? 'animate-fadeInSlow' : 'opacity-0'}`} ref={title2Ref}>
         {projects.title2}
-      </h1>
+      </h2>
       <div className="flex justify-center">
         <p className={`custom-width text-justify mb-12 font-mono ${isDescription2Visible ? 'animate-fadeInSlow' : 'opacity-0'}`} ref={description2Ref}>
           {projects.description2}
@@ -281,7 +281,7 @@ const Projects = () => {
       <Popup isOpen={isPopupOpen} onClose={handleClosePopup}>
         <p className='font-mono'>Cette fonctionnalité n&apos;est pas disponible pour le moment.</p>
       </Popup>
-    </div>
+    </section>
   );
 };
 

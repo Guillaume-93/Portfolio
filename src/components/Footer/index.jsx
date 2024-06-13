@@ -8,7 +8,7 @@ const Footer = ({ isDarkMode }) => {
   };
 
   return (
-    <div className={`px-8 py-16 flex justify-center items-center flex-col ${!isDarkMode ? 'bg-neutral-900' : 'bg-[#111827]'}`}>
+    <footer className={`px-8 py-16 flex justify-center items-center flex-col ${!isDarkMode ? 'bg-neutral-900' : 'bg-[#111827]'}`}>
       <div className="mx-auto text-3xl mb-8 space-x-10">
         <a rel="noreferrer" href={footer.linkedin} target="_blank" aria-label="Visitez mon profil LinkedIn">
           <i className="devicon-linkedin-plain"></i>
@@ -22,7 +22,7 @@ const Footer = ({ isDarkMode }) => {
       <span className="text-sm text-center text-neutral-300">
         © {getYear()} - Developed by Guillaume Bréchaire - Inspired by Dylan Arveson
       </span>
-    </div>
+    </footer>
   );
 };
 

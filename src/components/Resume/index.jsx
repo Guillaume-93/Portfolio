@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
 import Zoom from 'react-medium-image-zoom';
 import 'tailwindcss/tailwind.css';
 import useVisibilityObserver from '../../utils/useVisibilityObserver';
@@ -28,6 +28,10 @@ const Resume = ({ isDarkMode }) => {
       </div>
     </div>
   );
+};
+
+Resume.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired
 };
 
 export default Resume;

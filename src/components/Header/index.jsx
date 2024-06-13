@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
-import { useState, useEffect } from 'react';
-import config from '../../data/index.json';
 import { Expand } from "@theme-toggles/react";
+import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
+import config from '../../data/index.json';
 
 const Header = ({ toggleDarkMode, isDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,6 +82,11 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
       </div>
     </div>
   );
+};
+
+Header.propTypes = {
+  toggleDarkMode: PropTypes.func.isRequired,
+  isDarkMode: PropTypes.bool.isRequired
 };
 
 export default Header;

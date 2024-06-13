@@ -1,38 +1,4 @@
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --background-white: #ffffff;
-  --background-neutral-800: #2d2d2d;
-  --text-white: #000000;
-  --text-black: #ffffff;
-  --text-neutral-400: #b0b0b0;
-  --text-neutral-600: #a0a0a0;
-  --gradient-from: #2563eb;
-  --gradient-via: #84cc16;
-  --gradient-to: #ea580c;
-  --border-color: #cec3c3;
-  --box-shadow-color: #cec3c3;
-  
-}
-
-.dark {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
-  --background-white: #111827;
-  --background-neutral-800: #121212;
-  --text-white: #ffffff;
-  --text-black: #000000;
-  --text-neutral-400: #b0b0b0;
-  --text-neutral-600: #a0a0a0;
-  --gradient-from: #60a5fa;
-  --gradient-via: #bbf7d0;
-  --gradient-to: #f97316;
-  --border-color: #434242;
-  --box-shadow-color: #000000;
-}
-
+@import 'vars';
 
 html {
   scroll-behavior: smooth;
@@ -120,8 +86,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   color: var(--text-white);
   border: 2px solid var(--text-white);
+}
+
+.popup-close {
+  cursor: pointer;
+  border: 2px solid var(--text-white);
+  border-radius: 5px;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 @media (min-width: 1200px) {

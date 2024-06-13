@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
 import config from "../../data/index.json";
 
 const Footer = ({ isDarkMode }) => {
@@ -24,6 +24,10 @@ const Footer = ({ isDarkMode }) => {
       </span>
     </div>
   );
+};
+
+Footer.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired
 };
 
 export default Footer;

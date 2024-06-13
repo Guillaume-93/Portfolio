@@ -10,7 +10,6 @@ import { useState, useEffect } from 'react';
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Charger la préférence de thème de l'utilisateur depuis localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
@@ -23,10 +22,10 @@ function App() {
     setIsDarkMode(!isDarkMode);
     if (!isDarkMode) {
       document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark'); // Enregistrer la préférence de thème
+      localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light'); // Enregistrer la préférence de thème
+      localStorage.setItem('theme', 'light');
     }
   };
 

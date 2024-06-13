@@ -31,8 +31,10 @@ function ContactForm() {
 
   if (state.succeeded) {
     return (
-      <>
-        <p className="border-2 rounded-lg border-solid border-white text-sm text-white font-bold text-center py-2 px-2 mx-auto mt-6">Merci ! Je vous répondrais dans les meilleurs délais !</p>
+      <div className="mt-10">
+        <dialog className="popup-message">
+          Merci ! Je vous répondrais dans les meilleurs délais !
+        </dialog>
         <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
           <Alert
             onClose={handleClose}
@@ -43,17 +45,17 @@ function ContactForm() {
             Message envoyé avec succès !
           </Alert>
         </Snackbar>
-      </>
+      </div>
     );
   }
 
   return (
-    
+
     <div className="w-full sm:w-full md:w-3/4 lg:w-1/2 mt-16 mx-auto">
-      <form 
-        onSubmit={handleSubmit} 
+      <form
+        onSubmit={handleSubmit}
         action={`https://formspree.io/f/${contact.formId}`}
-        method="post" 
+        method="post"
         className="shadow-md rounded px-8 pt-6 pb-8 mb-4 text-background "
       >
         <div className="mb-4">
@@ -97,14 +99,14 @@ function ContactForm() {
             value={message}
             onChange={(event) => setMessage(event.target.value)}
           />
-          <ValidationError 
-            prefix="Message" 
+          <ValidationError
+            prefix="Message"
             field="message"
             errors={state.errors}
           />
         </div>
         <div className="flex items-center justify-center">
-          <button 
+          <button
             type="submit"
             disabled={state.submitting}
             className="font-bold p-0.5 mt-6 w-44 gradient-background"
@@ -113,11 +115,11 @@ function ContactForm() {
               <span className="block p-2 font-semibold gradient-text">
                 Envoyer
               </span>
-          </div>
-        </button>
+            </div>
+          </button>
         </div>
       </form>
-      
+
     </div>
   );
 }

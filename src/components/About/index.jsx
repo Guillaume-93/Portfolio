@@ -7,7 +7,7 @@ const About = () => {
   const [isTextVisible, textRef] = useVisibilityObserver(0.3);
 
   return (
-    <div
+    <section
       id="Presentation"
       className="snap-start md:px-32 pt-12 pb-12 content-center gradient-background"
     >
@@ -38,7 +38,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

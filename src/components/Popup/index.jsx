@@ -1,4 +1,5 @@
-// eslint-disable-next-line react/prop-types
+import PropTypes from 'prop-types';
+
 const Popup = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
@@ -6,12 +7,18 @@ const Popup = ({ isOpen, onClose, children }) => {
     <div className="popup">
       <div className="popup-message">
         {children}
-        <button onClick={onClose} style={{ marginTop: "10px" }}>
+        <button className='popup-close' onClick={onClose} style={{ marginTop: "10px" }}>
           Fermer
         </button>
       </div>
     </div>
   );
+};
+
+Popup.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Popup;

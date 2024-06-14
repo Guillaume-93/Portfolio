@@ -17,6 +17,7 @@
     "@theme-toggles/react": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.5",
     "react-intersection-observer": "^9.10.2",
     "react-medium-image-zoom": "^5.2.4",
     "react-modal-image": "^2.6.0",

@@ -57,6 +57,7 @@ function ContactForm() {
         action={`https://formspree.io/f/${contact.formId}`}
         method="post"
         className="shadow-md rounded px-8 pt-6 pb-8 mb-4 text-background "
+        autoComplete="on"
       >
         <div className="mb-4">
           <label className="block text-gray-700 font-bold mb-2 text-background" htmlFor="name">
@@ -70,6 +71,7 @@ function ContactForm() {
             placeholder="Entrez votre nom"
             value={name}
             onChange={(event) => setName(event.target.value)}
+            autoComplete="name"
           />
         </div>
         <div className="mb-4">
@@ -84,6 +86,7 @@ function ContactForm() {
             placeholder="Entrez votre adresse mail"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
+            autoComplete="email"
           />
         </div>
         <div className="mb-4">

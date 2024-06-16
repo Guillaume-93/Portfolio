@@ -1,4 +1,3 @@
-// src/components/Contact/ContactForm.jsx
 import { useState, useEffect } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import Snackbar from '@mui/material/Snackbar';

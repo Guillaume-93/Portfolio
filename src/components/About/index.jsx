@@ -1,4 +1,3 @@
-// src/components/About/index.jsx
 import useVisibilityObserver from '../../utils/useVisibilityObserver';
 import { useLanguage } from '../../contexts/languageHooks';
 

@@ -1,4 +1,3 @@
-// src/components/Header/index.jsx
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Expand } from "@theme-toggles/react";

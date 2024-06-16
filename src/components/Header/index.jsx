@@ -46,7 +46,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
             </a>
           </div>
 
-          <ul className={`flex-1 justify-start items-center hidden sm:flex gap-x-10`}>
+          <ul className={`flex-1 justify-start items-center hidden sm:flex md:gap-x-10 gap-x-7`}>
             {navigation.map((item) => (
               <li className="cursor-pointer" key={item.title}>
                 <a href={`#${item.ancre}`} onClick={() => setIsOpen(false)} aria-label={`Aller à la section ${item.title}`}>
@@ -58,21 +58,35 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
         </div>
         <Expand toggled={isToggled} toggle={handleToggle} className="mr-4" />
         {language === 'fr' ? (
-          <ReactCountryFlag
-            countryCode="GB"
-            title="English"
-            svg
-            className="rounded-full cursor-pointer"
-            onClick={toggleLanguage}
-          />
+          <>
+            <ReactCountryFlag
+              countryCode="GB"
+              title="English"
+              svg
+              className="rounded-full cursor-pointer mr-4"
+              onClick={toggleLanguage} />
+            <ReactCountryFlag
+              countryCode="FR"
+              title="Français"
+              svg
+              className="rounded-full cursor-pointer ring-2 ring-gray-500 ring-offset-2 ring-offset-background bg-white"
+              onClick={toggleLanguage} />
+          </>
         ) : (
-          <ReactCountryFlag
-            countryCode="FR"
-            title="Français"
-            svg
-            className="rounded-full cursor-pointer"
-            onClick={toggleLanguage}
-          />
+          <>
+            <ReactCountryFlag
+              countryCode="GB"
+              title="English"
+              svg
+              className="rounded-full cursor-pointer ring-2 ring-gray-500 ring-offset-2 ring-offset-background mr-4 bg-white"
+              onClick={toggleLanguage} />
+            <ReactCountryFlag
+              countryCode="FR"
+              title="Français"
+              svg
+              className="rounded-full cursor-pointer"
+              onClick={toggleLanguage} />
+          </>
         )}
         <button className="sm:hidden ml-4" onClick={() => setIsOpen(!isOpen)}>
           <svg className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
@@ -91,7 +105,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
             )}
           </svg>
         </button>
-        
+
         <ul className={`absolute top-10 left-0 w-full sm:hidden text-background ${isOpen ? "block" : "hidden"} shadow-md`}>
           {navigation.map((item) => (
             <li className="text-center" key={item.title}>

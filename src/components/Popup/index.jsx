@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
+import { useLanguage } from '../../contexts/languageHooks';
 
 const Popup = ({ isOpen, onClose, children }) => {
+  const { t } = useLanguage();
   if (!isOpen) return null;
 
   return (
@@ -8,7 +10,7 @@ const Popup = ({ isOpen, onClose, children }) => {
       <div className="popup-message">
         {children}
         <button className='popup-close' onClick={onClose} style={{ marginTop: "10px" }}>
-          Fermer
+          {t.closeButton}
         </button>
       </div>
     </div>

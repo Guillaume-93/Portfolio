@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
-import config from '../../data/index.json';
 import truncateText from '../../utils/truncateText';
 import useVisibilityObserver from '../../utils/useVisibilityObserver';
 import Popup from '../Popup';
+import { useLanguage } from '../../contexts/languageHooks';
 
 const Projects = () => {
+  const { config, t } = useLanguage();
   const projects = config.projects;
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [showFullDescription, setShowFullDescription] = useState({});
@@ -16,50 +17,10 @@ const Projects = () => {
   const [isDescriptionVisible, descriptionRef] = useVisibilityObserver(1);
   const [isDescription2Visible, description2Ref] = useVisibilityObserver(1);
 
-  const handleOpenPopup = () => {
-    setIsPopupOpen(true);
-  };
-
-  const handleClosePopup = () => {
-    setIsPopupOpen(false);
-  };
-
-  const toggleDescription = (index, type) => {
-    setShowFullDescription((prevState) => ({
-      ...prevState,
-      [`${type}-${index}`]: !prevState[`${type}-${index}`],
-    }));
-  };
-
-  const getDescription = (description, index, type) => {
-    const isFullDescriptionShown = showFullDescription[`${type}-${index}`];
-    const truncatedDescription = truncateText(description, 37);
-    return (
-      <p className={`mt-6 ${isTextVisible[index] ? 'animate-fadeInLeft' : 'opacity-0'}`} ref={(el) => (textRefs.current[index] = el)}>
-        <span>
-          {isFullDescriptionShown ? description : truncatedDescription}
-          <button
-            className="text-blue-500 ml-2 dark:text-blue-300"
-            onClick={() => toggleDescription(index, type)}
-          >
-            {isFullDescriptionShown ? 'Voir moins' : 'Voir plus'}
-          </button>
-        </span>
-      </p>
-    );
-  };
-
   const formationImageRefs = useRef([]);
   const apotheoseImageRefs = useRef([]);
   const textRefs = useRef([]);
   const titleRefs = useRef([]);
-
-  useEffect(() => {
-    formationImageRefs.current = formationImageRefs.current.slice(0, projects.formationProjects.length * 3);
-    apotheoseImageRefs.current = apotheoseImageRefs.current.slice(0, projects.apotheoseProjects.length * 3);
-    textRefs.current = textRefs.current.slice(0, projects.formationProjects.length + projects.apotheoseProjects.length + 2);
-    titleRefs.current = titleRefs.current.slice(0, projects.formationProjects.length + projects.apotheoseProjects.length);
-  }, [projects.formationProjects.length, projects.apotheoseProjects.length]);
 
   const [isImageVisible, setIsImageVisible] = useState(
     Array(projects.formationProjects.length * 3 + projects.apotheoseProjects.length * 3).fill(false)
@@ -125,7 +86,40 @@ const Projects = () => {
       textObservers.forEach((observer) => observer.disconnect());
       titleObservers.forEach((observer) => observer.disconnect());
     };
-  }, [formationImageRefs, apotheoseImageRefs, textRefs, titleRefs]);
+  }, [config, t]);
+
+  const handleOpenPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+  };
+
+  const toggleDescription = (index, type) => {
+    setShowFullDescription((prevState) => ({
+      ...prevState,
+      [`${type}-${index}`]: !prevState[`${type}-${index}`],
+    }));
+  };
+
+  const getDescription = (description, index, type) => {
+    const isFullDescriptionShown = showFullDescription[`${type}-${index}`];
+    const truncatedDescription = truncateText(description, 37);
+    return (
+      <p className={`mt-6 ${isTextVisible[index] ? 'animate-fadeInLeft' : 'opacity-0'}`} ref={(el) => (textRefs.current[index] = el)}>
+        <span>
+          {isFullDescriptionShown ? description : truncatedDescription}
+          <button
+            className="text-blue-500 ml-2 dark:text-blue-300"
+            onClick={() => toggleDescription(index, type)}
+          >
+            {isFullDescriptionShown ? t.lessDescriptionButton : t.moreDescriptionButton}
+          </button>
+        </span>
+      </p>
+    );
+  };
 
   return (
     <section id="Projets" className="projects px-8 lg:px-16 pb-16 text-background">
@@ -140,7 +134,7 @@ const Projects = () => {
       <div className="projects__menu">
         <ul>
           {projects.formationProjects.map((item, index) => (
-            <li key={item.title} className="flex flex-col lg:flex-row mt-12 justify-center font-mono">
+            <li key={`${item.title}-${index}`} className="flex flex-col lg:flex-row mt-12 justify-center font-mono">
               <div className={`lg:w-1/3 ${isProjectTitleVisible[index] ? 'animate-fadeInLeft' : 'opacity-0'}`} ref={(el) => (titleRefs.current[index] = el)}>
                 <h2 className={`text-2xl font-kanit`}>{item.title}</h2>
                 <div className='font-mono text-justify'>{getDescription(item.description, index, 'formation')}</div>
@@ -149,7 +143,7 @@ const Projects = () => {
                     <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer">
                       <div className="text-background">
                         <span className={`block py-0.5 px-2 gradient-text cursor-not-allowed`}>
-                          Voir le Projet
+                          {t.projectsButton}
                         </span>
                       </div>
                     </a>
@@ -157,7 +151,7 @@ const Projects = () => {
                   <div className="ml-2 font-semibold">
                     <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer">
                       <span className={`block py-1 px-2 gradient-text cursor-not-allowed`}>
-                        Code Source
+                        {t.codeSourceButton}
                       </span>
                     </a>
                   </div>
@@ -215,7 +209,7 @@ const Projects = () => {
       <div className="projects__menu">
         <ul>
           {projects.apotheoseProjects.map((item, index) => (
-            <li key={item.title} className="flex flex-col lg:flex-row mt-12 justify-center font-mono">
+            <li key={`${item.title}-${index}`} className="flex flex-col lg:flex-row mt-12 justify-center font-mono">
               <div className={`lg:w-1/3 ${isProjectTitleVisible[projects.formationProjects.length + index] ? 'animate-fadeInLeft' : 'opacity-0'}`} ref={(el) => (titleRefs.current[projects.formationProjects.length + index] = el)}>
                 <h2 className={`text-2xl dark:text-white font-kanit`} >{item.title}</h2>
                 <div className='font-mono text-justify'>{getDescription(item.description, projects.formationProjects.length + index, 'apotheose')}</div>
@@ -224,7 +218,7 @@ const Projects = () => {
                     <a href={item.url} target="_blank" rel="noreferrer">
                       <div className="text-background">
                         <span className={`block py-0.5 px-2 gradient-text`}>
-                          Voir le Projet
+                          {t.projectsButton}
                         </span>
                       </div>
                     </a>
@@ -232,7 +226,7 @@ const Projects = () => {
                   <div className="ml-2 font-semibold">
                     <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer">
                       <span className={`block py-1 px-2 bg-white gradient-text cursor-not-allowed`}>
-                        Code Source
+                        {t.codeSourceButton}
                       </span>
                     </a>
                   </div>
@@ -251,7 +245,7 @@ const Projects = () => {
                   </Zoom>
                 </div>
                 <div className="lg:ml-12">
-                  <Zoom>
+                <Zoom>
                     <img
                       ref={(el) => (apotheoseImageRefs.current[index * 3 + 1] = el)}
                       src={item.image2}
@@ -279,7 +273,7 @@ const Projects = () => {
       </div>
 
       <Popup isOpen={isPopupOpen} onClose={handleClosePopup}>
-        <p className='font-mono'>Cette fonctionnalité n&apos;est pas disponible pour le moment.</p>
+        <p className='font-mono'>{t.popupMessage}</p>
       </Popup>
     </section>
   );

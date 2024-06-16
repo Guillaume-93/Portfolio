@@ -1,11 +1,13 @@
-import { Expand } from "@theme-toggles/react";
+// src/components/Header/index.jsx
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useEffect, useState } from 'react';
-import config from '../../data/index.json';
+import { Expand } from "@theme-toggles/react";
+import { useLanguage } from '../../contexts/languageHooks';
+import ReactCountryFlag from "react-country-flag";
 
 const Header = ({ toggleDarkMode, isDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigation = config.navigation;
+  const { toggleLanguage, language, config, t } = useLanguage();
   const [isToggled, setToggle] = useState(isDarkMode);
 
   useEffect(() => {
@@ -24,12 +26,14 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
     }
   }, [isOpen]);
 
+  const navigation = config.navigation;
+
   return (
     <header className={`text-background fixed top-0 w-full z-50 shadow-md font-mono ${!isDarkMode ? '' : 'border-b'}`}>
       <div className="flex justify-between items-center px-4 sm:px-8 h-10">
         <div className="flex items-center flex-1">
-          <div className="mr-28">
-            <a href="#Home" aria-label="Retour à l'accueil">
+          <div className="mr-10 md:mr-28">
+            <a href="#Home" aria-label={t.home}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -53,7 +57,24 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
           </ul>
         </div>
         <Expand toggled={isToggled} toggle={handleToggle} className="mr-4" />
-        <button className="sm:hidden" onClick={() => setIsOpen(!isOpen)}>
+        {language === 'fr' ? (
+          <ReactCountryFlag
+            countryCode="GB"
+            title="English"
+            svg
+            className="rounded-full cursor-pointer"
+            onClick={toggleLanguage}
+          />
+        ) : (
+          <ReactCountryFlag
+            countryCode="FR"
+            title="Français"
+            svg
+            className="rounded-full cursor-pointer"
+            onClick={toggleLanguage}
+          />
+        )}
+        <button className="sm:hidden ml-4" onClick={() => setIsOpen(!isOpen)}>
           <svg className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
             {isOpen ? (
               <path
@@ -70,6 +91,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
             )}
           </svg>
         </button>
+        
         <ul className={`absolute top-10 left-0 w-full sm:hidden text-background ${isOpen ? "block" : "hidden"} shadow-md`}>
           {navigation.map((item) => (
             <li className="text-center" key={item.title}>

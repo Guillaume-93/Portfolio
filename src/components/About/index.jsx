@@ -1,7 +1,9 @@
-import config from '../../data/index.json';
+// src/components/About/index.jsx
 import useVisibilityObserver from '../../utils/useVisibilityObserver';
+import { useLanguage } from '../../contexts/languageHooks';
 
 const About = () => {
+  const { config } = useLanguage();
   const about = config.about;
   const [isImageVisible, imageRef] = useVisibilityObserver(0.8);
   const [isTextVisible, textRef] = useVisibilityObserver(0.3);
@@ -32,9 +34,6 @@ const About = () => {
             <p className="mt-3 text-justify">{about.tertiary}</p>
             <p className="mt-3 text-justify">{about.quaternary}</p>
             <p className="mt-3 text-justify">{about.quinary}</p>
-            <p className="mt-3 text-justify">{about.senary}</p>
-            <p className="mt-3 text-justify">{about.septenary}</p>
-            <p className="mt-3 text-justify">{about.octonary}</p>
           </div>
         </div>
       </div>

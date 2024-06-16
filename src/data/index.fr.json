@@ -22,10 +22,11 @@
     }
   ],
   "informations": {
+    "intro": "Hey, moi c'est",
     "firstname": "Guillaume",
     "lastname": "Bréchaire",
     "subtitle": "Je suis un Développeur Fullstack Javascript",
-    "title": "Ce site est un portfolio interactif, conçu pour présenter mes projets et mon parcours professionnel. Il offre une navigation fluide et intuitive, avec un design minimaliste et élégant. Il est conçu pour être accessible sur tous les appareils, offrant une expérience utilisateur optimale."
+    "title": "Ce site est un portfolio interactif, conçu pour me présenter, ainsi que mes projets. Il offre une navigation fluide et intuitive, avec un design minimaliste et élégant. Il est conçu pour être accessible sur tous les appareils, offrant une expérience utilisateur optimale."
   },
   "about": {
     "title": "Présentation",

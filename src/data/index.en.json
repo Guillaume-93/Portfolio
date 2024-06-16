@@ -1,0 +1,107 @@
+{
+  "navigation": [
+    {
+      "title": "About",
+      "ancre": "Presentation",
+      "url": "http://www.example.com/about"
+    },
+    {
+      "title": "Projects",
+      "ancre": "Projets",
+      "url": "http://www.example.com/portfolio"
+    },
+    {
+      "title": "Experiences",
+      "ancre": "Experiences",
+      "url": "http://www.example.com/experiences"
+    },
+    {
+      "title": "Contact",
+      "ancre": "Contact",
+      "url": "http://www.example.com/contact"
+    }
+  ],
+  "informations": {
+    "intro": "Hey, I'm",
+    "firstname": "Guillaume",
+    "lastname": "Bréchaire",
+    "subtitle": "I am a Fullstack JavaScript Developer",
+    "title": "This site is an interactive portfolio, designed to introduce myself and my projects. It offers smooth and intuitive navigation, with a minimalist and elegant design. It is designed to be accessible on all devices, providing an optimal user experience."
+  },
+  "about": {
+    "title": "About",
+    "image": "/images/myself.webp",
+    "primary": "I am a Fullstack JavaScript developer, recently graduated with a professional title of web and mobile web developer, equivalent to a Bac +2. Specialized in React.js, I am passionate about continuous learning and solving technical challenges.",
+    "secondary": "I strive to stay up-to-date with the latest technologies and best practices, balancing frontend and backend development to create robust and aesthetically pleasing applications. My goal is to exceed user expectations by providing innovative and intuitive solutions.",
+    "tertiary": "Rigorous and highly motivated, I am determined to deliver quality solutions and collaborate effectively within dynamic teams.",
+    "quaternary": "I am also passionate about all kinds of sciences, astronomy, and mangas. I love exploring new horizons, whether in the real world or in imaginary universes. I am always looking for new experiences and knowledge, and I believe that curiosity is the key to success.",
+    "quinary": "I am currently looking for professional opportunities as a Fullstack JavaScript developer. If you have job offers, freelance missions, or interesting projects to propose, do not hesitate to contact me. I would be happy to discuss your needs and see how I can help you achieve your goals."
+  },
+  "projects": {
+    "title": "Training Projects",
+    "description": "Here are some projects that I completed during my training at O'Clock school. These projects allowed me to develop my web development skills, primarily using technologies such as JavaScript, React, Redux, Typescript, Node.js, Express, PostgreSQL, Git, and GitHub.",
+    "title2": "Apotheosis Project",
+    "description2": "This achievement is the result of my final project at O'Clock school, a challenge I took on entirely autonomously. Over a month, I was able to consolidate all the skills developed during my training by creating a web application from scratch, in collaboration with a team of four developers. This project, in perpetual evolution, is particularly close to my heart. As the lead frontend developer, I continue to enrich the application by regularly integrating new features and optimizations.",
+    "formationProjects": [
+      {
+        "title": "Ghibliothèque",
+        "description": "This exclusively backend site uses the Studio Ghibli API to provide complete access to a catalog of Ghibli films. Each film is accompanied by images, detailed summaries, and in-depth information. The site integrates advanced search functionality, allowing users to easily find specific films or explore the entire Studio Ghibli universe. For rendering, the site uses EJS (Embedded JavaScript), which allows for the generation of dynamic and interactive server-side pages. Although the site is exclusively backend and offers a feature-rich interface for a smooth and immersive user experience, ideal for Studio Ghibli fans, it is not currently deployed online.",
+        "url": "",
+        "github": "",
+        "image": "/images/ghibliotheque-accueil.webp",
+        "image2": "/images/ghibliotheque-films.webp",
+        "image3": "/images/ghibliotheque-detail-film.webp",
+        "alt": "Ghibliothèque-home",
+        "alt2": "Ghibliothèque-movies",
+        "alt3": "Ghibliothèque-movie-detail"
+      },
+      {
+        "title": "Pokedex",
+        "description": "This interactive exclusively backend site, without reliance on the official Pokémon API, allows users to create a personalized Pokedex by adding their own Pokémon. Thanks to a PostgreSQL database, users can access detailed and comprehensive statistics for each added Pokémon. Using EJS for server-side rendering, this site generates dynamic pages that offer an immersive and playful experience. Inspired by the Pokémon aesthetic, it allows users to explore the Pokémon universe in a deep and engaging way while maintaining an intuitive and feature-rich interface. Although this site offers a complete and captivating user experience, it is not currently deployed online.",
+        "url": "",
+        "github": "",
+        "image": "/images/pokedex-accueil.webp",
+        "image2": "/images/pokedex.webp",
+        "image3": "/images/pokemon-detail.webp",
+        "alt": "Pokedex-home",
+        "alt2": "Pokedex",
+        "alt3": "Pokemon-detail"
+      },
+      {
+        "title": "O'Recipes",
+        "description": "This site is a fast and interactive recipe platform, designed with React, Vite, and Redux for the frontend, and Node.js and Express for the backend. It offers secure authentication with token management, as well as a favorites feature allowing users to personalize their experience. Its intuitive and elegant design facilitates navigation and access to a wide variety of recipes on all devices, whether computers, tablets, or smartphones. Thanks to this user-friendly and high-performance interface, users can explore new culinary recipes in a simple and enjoyable way, transforming culinary discovery into a rewarding experience. Although this platform is complete and offers an optimal user experience, it is not currently deployed online",
+        "url": "",
+        "github": "",
+        "image": "/images/ORecipes-accueil.webp",
+        "image2": "/images/ORecipes-favoris.webp",
+        "image3": "/images/ORecipes-mousse_au_chocolat.webp",
+        "alt": "ORecipes-home",
+        "alt2": "ORecipes-favorites",
+        "alt3": "ORecipes-chocolate-mousse"
+      }
+    ],
+    "apotheoseProjects": [
+      {
+        "title": "Atlas of Forgotten Realms",
+        "description": "Atlas of Forgotten Realms is a web application for Dungeons and Dragons enthusiasts. With it, dive into a universe where you can not only create, customize, and manage your characters but also design and orchestrate your own campaigns by adding thrilling chapters. Thanks to its advanced features, easily manage your characters' inventory, skills, and abilities. The application also offers a highly comprehensive encyclopedia, located in the Sanctuary, which gathers all the information about races, classes, and much more. Its intuitive interface and elegant design ensure a smooth and immersive user experience. To access powerful creation tools, such as character or campaign creation, authentication is required, ensuring a secure and personalized use. This site is deployed and accessible at www.atlasdd.games or by clicking the see the project button.",
+        "url": "https://www.atlasdd.games/",
+        "github": "",
+        "image": "/images/OMyDnD-creation-de-personnage.webp",
+        "image2": "/images/OMyDnD-decouvrez-les-races.webp",
+        "image3": "/images/OMyDnD-classe-barbare.webp",
+        "alt": "OMyDnD-character-creation",
+        "alt2": "OMyDnD-discover-races",
+        "alt3": "OMyDnD-barbarian-class"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "This is where you can get in touch with me. Feel free to send me a message to discuss your projects, my skills, or any other topic that interests you. I would be happy to respond. You can also contact me via LinkedIn or GitHub by clicking the icons below.",
+    "formId": "mayreyjo"
+  },
+  "footer": {
+    "linkedin": "https://www.linkedin.com/in/guillaume-brechaire",
+    "github": "https://github.com/Guillaume-93"
+  }
+}

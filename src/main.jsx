@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import App from '../src/components/App/App.jsx'
 import '../src/styles/index.scss'
+import LanguageProvider from './contexts/LanguageContext';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -17,7 +18,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <meta property="og:image" content="https://guillaume-brechaire.netlify.app/images/portfolio-accueil.webp" />
         <meta property="og:url" content="https://guillaume-brechaire.netlify.app/" />
       </Helmet>
-      <App />
+      <LanguageProvider>
+        <App />
+      </LanguageProvider>
     </HelmetProvider>
   </React.StrictMode>,
 )

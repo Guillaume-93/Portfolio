@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
-import config from "../../data/index.json";
+import { useLanguage } from '../../contexts/languageHooks';
 
 const Footer = ({ isDarkMode }) => {
+  const { config, t } = useLanguage();
   const footer = config.footer;
   const getYear = () => {
     return new Date().getFullYear();
@@ -20,7 +21,7 @@ const Footer = ({ isDarkMode }) => {
         </a>
       </div>
       <span className="text-sm text-center text-neutral-300">
-        © {getYear()} - Developed by Guillaume Bréchaire - Inspired by Dylan Arveson
+        © {getYear()} - {t.footer}
       </span>
     </footer>
   );

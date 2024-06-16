@@ -1,8 +1,9 @@
-import config from "../../data/index.json";
 import useVisibilityObserver from '../../utils/useVisibilityObserver';
 import ContactForm from "./ContactForm";
+import { useLanguage } from '../../contexts/languageHooks';
 
 const Contact = () => {
+  const { config } = useLanguage();
   const contact = config.contact;
   const [isTitleVisible, titleRef] = useVisibilityObserver(0.2);
   const [isTextVisible, textRef] = useVisibilityObserver(0.2);

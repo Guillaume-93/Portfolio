@@ -1,11 +1,10 @@
 const translations = {
     fr: {
-        toggleDarkMode: "Changer le mode sombre",
         toggleLanguage: "EN",
         home: "Accueil",
-        about: "À propos",
+        about: "Presentation",
         projects: "Projets",
-        experiences: "Expériences",
+        experiences: "Experiences",
         contact: "Contact",
         nameLabel: "Nom",
         namePlaceholder: "Entrez votre nom",
@@ -24,10 +23,19 @@ const translations = {
         moreDescriptionButton: "Voir plus",
         lessDescriptionButton: "Voir moins",
         downloadResume: "Télécharger",
-        footer: "Développé par Guillaume Bréchaire - Inspiré par Dylan Arveson"
+        footer: "Développé par Guillaume Bréchaire - Inspiré par Dylan Arveson",
+        contactFormTitle: "Formulaire de contact",
+        
+        // Aria-labels
+        toggleDarkMode: "Changer le mode sombre",
+        goToSection: "Aller à la section",
+        ToggleNavigationMenu: "Ouvrir le menu de navigation",
+        NavigationMenu: "Menu de navigation",
+        visitProfilLinkedin: "Visiter mon profil Linkedin",
+        visitProfilGithub: "Visiter mon profil Github",
+
     },
     en: {
-        toggleDarkMode: "Toggle Dark Mode",
         toggleLanguage: "FR",
         home: "Home",
         about: "About",
@@ -51,7 +59,16 @@ const translations = {
         moreDescriptionButton: "See more",
         lessDescriptionButton: "See less",
         downloadResume: "Download",
-        footer: "Developed by Guillaume Bréchaire - Inspired by Dylan Arveson"
+        footer: "Developed by Guillaume Bréchaire - Inspired by Dylan Arveson",
+        contactFormTitle: "Contact form",
+        
+        // Aria-labels
+        toggleDarkMode: "Toggle Dark Mode",
+        goToSection: "Go to section",
+        ToggleNavigationMenu: "Open Navigation Menu",
+        NavigationMenu: "Navigation Menu",
+        visitProfilLinkedin: "Visit my Linkedin profile",
+        visitProfilGithub: "Visit my Github profile",
     },
 };
 

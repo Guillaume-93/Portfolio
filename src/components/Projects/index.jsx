@@ -122,7 +122,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="Projets" className="projects px-8 lg:px-16 pb-16 text-background">
+    <section id={t.projects} className="projects px-8 lg:px-16 pb-16 text-background">
       <h2 className={`pt-20 mb-12 uppercase font-bold text-center text-4xl font-kanit ${isTitleVisible ? 'animate-fadeInSlow' : 'opacity-0'}`} ref={titleRef}>
         {projects.title}
       </h2>
@@ -140,7 +140,7 @@ const Projects = () => {
                 <div className='font-mono text-justify'>{getDescription(item.description, index, 'formation')}</div>
                 <div className="flex mt-4">
                   <div className="text-center font-semibold p-0.5 gradient-background">
-                    <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer">
+                    <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer" aria-label={t.projectsButton}>
                       <div className="text-background">
                         <span className={`block py-0.5 px-2 gradient-text cursor-not-allowed`}>
                           {t.projectsButton}
@@ -149,7 +149,7 @@ const Projects = () => {
                     </a>
                   </div>
                   <div className="ml-2 font-semibold">
-                    <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer">
+                    <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer" aria-label={t.codeSourceButton}>
                       <span className={`block py-1 px-2 gradient-text cursor-not-allowed`}>
                         {t.codeSourceButton}
                       </span>
@@ -215,7 +215,7 @@ const Projects = () => {
                 <div className='font-mono text-justify'>{getDescription(item.description, projects.formationProjects.length + index, 'apotheose')}</div>
                 <div className="flex mt-4">
                   <div className="text-center font-semibold p-0.5 gradient-background">
-                    <a href={item.url} target="_blank" rel="noreferrer">
+                    <a href={item.url} target="_blank" rel="noreferrer" aria-label={t.projectsButton}>
                       <div className="text-background">
                         <span className={`block py-0.5 px-2 gradient-text`}>
                           {t.projectsButton}
@@ -224,7 +224,7 @@ const Projects = () => {
                     </a>
                   </div>
                   <div className="ml-2 font-semibold">
-                    <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer">
+                    <a href="#" onClick={(e) => { e.preventDefault(); handleOpenPopup(); }} rel="noreferrer" aria-label={t.codeSourceButton}>
                       <span className={`block py-1 px-2 bg-white gradient-text cursor-not-allowed`}>
                         {t.codeSourceButton}
                       </span>

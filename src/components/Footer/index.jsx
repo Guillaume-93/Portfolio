@@ -11,11 +11,11 @@ const Footer = ({ isDarkMode }) => {
   return (
     <footer className={`px-8 py-16 flex justify-center items-center flex-col ${!isDarkMode ? 'bg-neutral-900' : 'bg-[#111827]'}`}>
       <div className="mx-auto text-3xl mb-8 space-x-10 text-neutral-300">
-        <a rel="noreferrer" href={footer.linkedin} target="_blank" aria-label="Visitez mon profil LinkedIn">
+        <a rel="noreferrer" href={footer.linkedin} target="_blank" aria-label={t.visitProfilLinkedin}>
           <i className="devicon-linkedin-plain"></i>
           <span className="sr-only">LinkedIn</span>
         </a>
-        <a rel="noreferrer" href={footer.github} target="_blank" aria-label="Visitez mon profil GitHub">
+        <a rel="noreferrer" href={footer.github} target="_blank" aria-label={t.visitProfilGithub}>
           <i className="devicon-github-original"></i>
           <span className="sr-only">GitHub</span>
         </a>

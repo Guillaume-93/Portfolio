@@ -23,7 +23,7 @@
     "react-medium-image-zoom": "^5.2.4",
     "react-modal-image": "^2.6.0",
     "react-router-dom": "^6.21.3",
-    "sass": "^1.70.0"
+    "sass": "^1.77.6"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

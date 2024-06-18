@@ -28,7 +28,7 @@ function ContactForm() {
       return;
     }
     setOpen(false);
-  }
+  };
 
   if (state.succeeded) {
     return (
@@ -56,9 +56,13 @@ function ContactForm() {
         onSubmit={handleSubmit}
         action={`https://formspree.io/f/${contact.formId}`}
         method="post"
-        className="shadow-md rounded px-8 pt-6 pb-8 mb-4 text-background "
+        className="shadow-md rounded px-8 pt-6 pb-8 mb-4 text-background"
         autoComplete="on"
+        aria-labelledby="contact-form-title"
       >
+        <h3 id="contact-form-title" className="sr-only">
+          {t.contactFormTitle}
+        </h3>
         <div className="mb-4">
           <label className="block text-gray-700 font-bold mb-2 text-background" htmlFor="name">
             {t.nameLabel}
@@ -72,6 +76,7 @@ function ContactForm() {
             value={name}
             onChange={(event) => setName(event.target.value)}
             autoComplete="name"
+            aria-required="true"
           />
         </div>
         <div className="mb-4">
@@ -87,6 +92,7 @@ function ContactForm() {
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             autoComplete="email"
+            aria-required="true"
           />
         </div>
         <div className="mb-4">
@@ -101,6 +107,7 @@ function ContactForm() {
             placeholder={t.messagePlaceholder}
             value={message}
             onChange={(event) => setMessage(event.target.value)}
+            aria-required="true"
           />
           <ValidationError
             prefix="Message"
@@ -113,6 +120,7 @@ function ContactForm() {
             type="submit"
             disabled={state.submitting}
             className="font-bold p-0.5 mt-6 w-44 gradient-background"
+            aria-label={t.submitButton}
           >
             <div className="text-background">
               <span className="block p-2 font-semibold gradient-text">

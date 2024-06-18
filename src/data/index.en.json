@@ -2,12 +2,12 @@
   "navigation": [
     {
       "title": "About",
-      "ancre": "Presentation",
+      "ancre": "About",
       "url": "http://www.example.com/about"
     },
     {
       "title": "Projects",
-      "ancre": "Projets",
+      "ancre": "Projects",
       "url": "http://www.example.com/portfolio"
     },
     {

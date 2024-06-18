@@ -2,14 +2,14 @@ import useVisibilityObserver from '../../utils/useVisibilityObserver';
 import { useLanguage } from '../../contexts/languageHooks';
 
 const About = () => {
-  const { config } = useLanguage();
+  const { config, t } = useLanguage();
   const about = config.about;
   const [isImageVisible, imageRef] = useVisibilityObserver(0.8);
   const [isTextVisible, textRef] = useVisibilityObserver(0.3);
 
   return (
     <section
-      id="Presentation"
+      id={t.about}
       className="snap-start md:px-32 pt-12 pb-12 content-center gradient-background"
     >
       <div className="mt-16 flex flex-col lg:flex-row align-center items-center">

@@ -20,7 +20,7 @@ const Resume = ({ isDarkMode }) => {
   };
 
   return (
-    <div id='Experiences' className={`w-full h-full flex flex-col items-center justify-center p-8 text-background font-mono ${!isDarkMode ? 'border-t' : ' border-t border-white'}`}>
+    <div id={t.experiences} className={`w-full h-full flex flex-col items-center justify-center p-8 text-background font-mono ${!isDarkMode ? 'border-t' : ' border-t border-white'}`}>
       <Zoom>
         <img
           ref={imageRef}
@@ -30,7 +30,7 @@ const Resume = ({ isDarkMode }) => {
         />
       </Zoom>
       <div className="text-md text-center font-semibold p-0.5 gradient-background">
-        <a href={getResumePdf()} download={`CV_Guillaume_Brechaire${language === 'en' ? '_en' : ''}.pdf`}>
+        <a href={getResumePdf()} download={`CV_Guillaume_Brechaire${language === 'en' ? '_en' : ''}.pdf`} aria-label={t.downloadResume}>
           <div className="text-background">
             <span className="block py-0.5 px-2 gradient-text">
               {t.downloadResume}

@@ -46,21 +46,21 @@ const Resume = ({ isDarkMode }) => {
                                 <p>
                                     {t.resumeDescription}
                                 </p>
+                            <figcaption className="my-8 text-base">
+                                <div className="font-semibold text-white">Guillaume Bréchaire</div>
+                            </figcaption>
                                 <div className="mt-8 flex justify-start">
                                     <a
                                         href={getResumePdf()}
                                         download={`CV_Guillaume_Brechaire${language === 'en' ? '_en' : ''}.pdf`}
                                         type="text"
-                                        className="rounded-md gradient-button px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 animate-slideInLeft"
+                                        className="rounded-md gradient-button px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                         aria-label={t.downloadResumeButton}
                                     >
                                         {t.downloadResumeButton}
                                     </a>
                                 </div>
                             </blockquote>
-                            <figcaption className="my-8 text-base">
-                                <div className="font-semibold text-white">Guillaume Bréchaire</div>
-                            </figcaption>
                         </figure>
                     </div>
                 </div>

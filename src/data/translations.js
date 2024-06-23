@@ -67,7 +67,7 @@ const translations = {
         closeButton: "Close",
         moreDescriptionButton: "See more",
         lessDescriptionButton: "See less",
-        resumeDescription: "My resume is available and downloadable. Feel free to check it out to learn more about my background and web development skills. You can download it by clicking",
+        resumeDescription: "My resume is available and downloadable. Feel free to check it out to learn more about my background and web development skills.",
         downloadResume: "here",
         footer: "Developed by Guillaume Bréchaire",
         contactFormTitle: "Contact form",

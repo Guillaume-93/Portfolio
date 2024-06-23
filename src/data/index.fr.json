@@ -21,6 +21,115 @@
       "url": "http://www.example.com/contact"
     }
   ],
+  "timeline": [
+    {
+      "name": "Frontend/Backend",
+      "description": "Je m'efforce de me maintenir à jour avec les dernières technologies et meilleures pratiques, en équilibrant le développement frontend et backend pour créer des applications robustes et esthétiquement plaisantes. Mon objectif est de dépasser les attentes des utilisateurs en proposant des solutions innovantes et intuitives.",
+      "date": "Autonomie",
+      "dateTime": "2021-08"
+    },
+    {
+      "name": "Motivation et rigueur",
+      "description": "Rigoureux et hautement motivé, je suis déterminé à apporter des solutions de qualité et à collaborer efficacement au sein d'équipes dynamiques.",
+      "date": "Organisation",
+      "dateTime": "2021-12"
+    },
+    {
+      "name": "Exploration et Curiosité",
+      "description": "Je suis également passionné par les sciences en tout genre, l'astronomie et les mangas. J'aime explorer de nouveaux horizons, que ce soit dans le monde réel ou dans des univers imaginaires. Je suis toujours à la recherche de nouvelles expériences et de nouvelles connaissances, et je suis convaincu que la curiosité est la clé de la réussite.",
+      "date": "Curiosité",
+      "dateTime": "2022-02"
+    },
+    {
+      "name": "À la Recherche de Projets Passionnants",
+      "description": "Je suis actuellement à la recherche d'opportunités professionnelles en tant que développeur Fullstack JavaScript. Si vous avez des offres d'emploi, des missions freelance ou des projets intéressants à me proposer, n'hésitez pas à me contacter. Je serai ravi de discuter de vos besoins et de voir comment je peux vous aider à atteindre vos objectifs.",
+      "date": "Esprit logique",
+      "dateTime": "2022-12"
+    }
+  ],
+  "technologies": [
+    {
+      "title": "Technologies Utilisées",
+      "description": "Voici quelques-unes des technologies que j'utilise pour développer des applications web modernes et performantes.",
+      "alt": ""
+    },
+    {
+      "name": "HTML5",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg",
+      "alt": "HTML5"
+    },
+    {
+      "name": "CSS3",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg",
+      "alt": "CSS3"
+    },
+    {
+      "name": "JavaScript",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg",
+      "alt": "JavaScript"
+    },
+    {
+      "name": "React",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      "alt": "React"
+    },
+    {
+      "name": "Redux",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
+      "alt": "Redux"
+    },
+    {
+      "name": "Node.js",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+      "alt": "Node.js"
+    },
+    {
+      "name": "PostgreSQL",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain.svg",
+      "alt": "PostgreSQL"
+    },
+    {
+      "name": "Git",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+      "alt": "Git"
+    },
+    {
+      "name": "Heroku",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/heroku/heroku-plain.svg",
+      "alt": "Heroku"
+    },
+    {
+      "name": "Visual Studio Code",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
+      "alt": "Visual Studio Code"
+    },
+    {
+      "name": "tailwindcss",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      "alt": "tailwindcss"
+    },
+    {
+      "name": "Vite",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
+      "alt": "Vite"
+    },
+    {
+      "name": "TypeScript",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg",
+      "alt": "TypeScript"
+    },
+    {
+      "name": "sequelize",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sequelize/sequelize-plain.svg",
+      "alt": "sequelize"
+    },
+    {
+      "name": "linux",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
+      "alt": "Linux"
+    }
+  ],
+
   "informations": {
     "intro": "Hey, moi c'est",
     "firstname": "Guillaume",
@@ -31,7 +140,7 @@
   "about": {
     "title": "Présentation",
     "image": "/images/myself.webp",
-    "primary": "Je suis un développeur Fullstack JavaScript récemment diplômé d'un titre professionnel de développeur web et web mobile, équivalent à un Bac +2. Spécialisé en React.js, je suis passionné par l'apprentissage continu et la résolution de défis techniques.",
+    "primary": "Je suis un développeur Fullstack JavaScript récemment diplômé d'un titre professionnel de développeur web et web mobile (Bac +2). Spécialisé en React.js, je suis passionné par l'apprentissage continu et la résolution de défis techniques.",
     "secondary": "Je m'efforce de me maintenir à jour avec les dernières technologies et meilleures pratiques, en équilibrant le développement frontend et backend pour créer des applications robustes et esthétiquement plaisantes. Mon objectif est de dépasser les attentes des utilisateurs en proposant des solutions innovantes et intuitives.",
     "tertiary": "Rigoureux et hautement motivé, je suis déterminé à apporter des solutions de qualité et à collaborer efficacement au sein d'équipes dynamiques.",
     "quaternary": "Je suis également passionné par les sciences en tout genre, l'astronomie et les mangas. J'aime explorer de nouveaux horizons, que ce soit dans le monde réel ou dans des univers imaginaires. Je suis toujours à la recherche de nouvelles expériences et de nouvelles connaissances, et je suis convaincu que la curiosité est la clé de la réussite.",
@@ -42,61 +151,147 @@
     "description": "Voici quelques projets que j'ai réalisés lors de ma formation à l'école O'Clock. Ces projets m'ont permis de développer mes compétences en développement web, en utilisant principalement des technologies telles que JavaScript, React, Redux, Typescript, Node.js, Express, PostgreSQL, Git et GitHub.",
     "title2": "Projet d'Apothéose",
     "description2": "Cette réalisation est le fruit de mon projet de fin d'études à l'école O'Clock, un défi que j'ai relevé en totale autonomie. Durant un mois, j'ai pu concrétiser l'ensemble des compétences développées au cours de ma formation en créant une application web de A à Z, en collaboration avec une équipe de quatre développeurs. Ce projet, en perpétuelle évolution, me tient particulièrement à cœur. En tant que lead développeur frontend, je continue d'enrichir l'application en y intégrant régulièrement de nouvelles fonctionnalités et optimisations.",
+    "description3": "Seul l'Atlas des Royaumes Oubliés est actuellement déployé en ligne. Pour y accéder, cliquez sur le bouton voir le projet.",
     "formationProjects": [
       {
         "title": "Ghibliothèque",
-        "description": "Ce site exclusivement back-end utilise l'API Studio Ghibli pour offrir un accès complet à un catalogue de films Ghibli. Chaque film est accompagné d'images, de résumés détaillés et d'informations approfondies. Le site intègre une fonctionnalité de recherche avancée, permettant aux utilisateurs de trouver facilement des films spécifiques ou d'explorer l'ensemble de l'univers de Studio Ghibli. Pour le rendu, le site utilise EJS (Embedded JavaScript), ce qui permet de générer des pages dynamiques et interactives côté serveur. Bien que le site soit exclusivement back-end et qu'il offre une interface riche en fonctionnalités pour une expérience utilisateur fluide et immersive, idéale pour les fans de Studio Ghibli, il n'est pas actuellement déployé en ligne.",
-        "url": "",
-        "github": "",
-        "image": "/images/ghibliotheque-accueil.webp",
-        "image2": "/images/ghibliotheque-films.webp",
+        "ancre": "ghibliotheque",
+        "description": "Ce site exclusivement back-end utilise l'API Studio Ghibli pour offrir un accès complet à un catalogue de films Ghibli. Chaque film est accompagné d'images, de résumés détaillés et d'informations approfondies. Actuellement, le site n'est pas déployé en ligne.",
+        "technologies": [
+          "JavaScript",
+          "Node.js",
+          "Express",
+          "EJS"
+        ],
+        "image": "/images/ghibliotheque-films.webp",
+        "imageDescription": "Vue générale des films disponibles dans la Ghibliothèque.",
+        "image2": "/images/ghibliotheque-accueil.webp",
+        "image2Description": "Page d'accueil de la Ghibliothèque montrant les dernières sorties.",
         "image3": "/images/ghibliotheque-detail-film.webp",
-        "alt": "Ghibliothèque-accueil",
-        "alt2": "Ghibliothèque-films",
-        "alt3": "Ghibliothèque-detail-film"
+        "image3Description": "Détail d'un film avec toutes ses informations.",
+        "image4": "/images/ghibli-code-detailFilm-ejs.png",
+        "image4Description": "Extrait du code source de la page de détail d'un film.",
+        "image5": "/images/ghibli-code-filmController.png",
+        "image5Description": "Extrait du code source du contrôleur de films.",
+        "image6": "/images/ghibliotheque-totoro.webp",
+        "image6Description": "Image du film Mon Voisin Totoro.",
+        "alt": "Ghibliothèque - Vue générale des films",
+        "alt2": "Ghibliothèque - Page d'accueil",
+        "alt3": "Ghibliothèque - Détail du film",
+        "alt4": "Ghibliothèque - Extrait du code source",
+        "alt5": "Ghibliothèque - Extrait du code source",
+        "alt6": "Ghibliothèque - Mon Voisin Totoro",
+        "url": ""
       },
       {
-        "title": "Pokedex",
-        "description": "Ce site interactif exclusivement back-end, sans dépendance à l'API Pokémon officielle, permet aux utilisateurs de créer un Pokedex personnalisé en ajoutant leurs propres Pokémon. Grâce à une base de données PostgreSQL, les utilisateurs peuvent accéder à des statistiques détaillées et complètes pour chaque Pokémon ajouté. Utilisant EJS pour le rendu côté serveur, ce site génère des pages dynamiques qui offrent une expérience immersive et ludique. Inspiré de l'esthétique Pokémon, il permet aux utilisateurs d'explorer l'univers Pokémon de manière approfondie et engageante, tout en conservant une interface intuitive et riche en fonctionnalités. Bien que ce site offre une expérience utilisateur complète et captivante, il n'est pas actuellement déployé en ligne.",
-        "url": "",
-        "github": "",
-        "image": "/images/pokedex-accueil.webp",
-        "image2": "/images/pokedex.webp",
+        "title": "Pokédex",
+        "ancre": "pokedex",
+        "description": "Ce site interactif exclusivement back-end, sans dépendance à l'API Pokémon officielle, permet aux utilisateurs de créer un Pokedex personnalisé en ajoutant leurs propres Pokémon. Actuellement, le site n'est pas déployé en ligne.",
+        "technologies": [
+          "JavaScript",
+          "Node.js",
+          "Express",
+          "Express Sessions",
+          "PostgreSQL",
+          "EJS"
+        ],
+        "image": "/images/pokedex.webp",
+        "imageDescription": "Vue générale de la liste des Pokémon.",
+        "image2": "/images/pokedex-accueil.webp",
+        "image2Description": "Page d'accueil du Pokedex montrant les Pokémon ajoutés récemment.",
         "image3": "/images/pokemon-detail.webp",
-        "alt": "Pokedex-accueil",
-        "alt2": "Pokedex",
-        "alt3": "Pokemon-detail"
+        "image3Description": "Détail d'un Pokémon avec toutes ses informations.",
+        "image4": "/images/pokedex-favoris.png",
+        "image4Description": "Liste des Pokémon favoris dans le Pokedex.",
+        "image5": "/images/pokedex-code-sql.png",
+        "image5Description": "Extrait du code source de la base de données.",
+        "image6": "/images/pokedex-salameche.webp",
+        "image6Description": "Image du Pokémon Salamèche.",
+        "alt": "Pokedex - Vue générale",
+        "alt2": "Pokedex - Page d'accueil",
+        "alt3": "Pokedex - Détail du Pokémon",
+        "alt4": "Pokedex - Liste des Pokémon favoris",
+        "alt5": "Pokedex - Extrait du code source",
+        "alt6": "Pokedex - Salamèche",
+        "url": ""
       },
       {
         "title": "O'Recipes",
-        "description": "Ce site est une plateforme de recettes culinaires, rapide et interactive, conçue avec React, Vite, et Redux pour le frontend, et Node.js et Express pour le backend. Il propose une authentification sécurisée avec gestion des tokens, ainsi qu'une fonctionnalité de favoris permettant aux utilisateurs de personnaliser leur expérience. Son design intuitif et élégant facilite la navigation et l'accès à une grande variété de recettes sur tous les appareils, qu'il s'agisse d'ordinateurs, de tablettes ou de smartphones. Grâce à cette interface conviviale et performante, les utilisateurs peuvent explorer de nouvelles recettes culinaires de manière simple et agréable, transformant la découverte gastronomique en une expérience enrichissante. Bien que cette plateforme soit complète et offre une expérience utilisateur optimale, elle n'est pas actuellement déployée en ligne",
-        "url": "",
-        "github": "",
-        "image": "/images/ORecipes-accueil.webp",
+        "ancre": "orecipes",
+        "description": "Ce site est une plateforme de recettes culinaires, rapide et interactive, conçue avec React. Ce projet intègre la gestion de l'authentification des utilisateurs et la fonctionnalité de favoris. Actuellement, le site n'est pas déployé en ligne.",
+        "technologies": [
+          "React",
+          "Vite",
+          "Redux",
+          "Typescript",
+          "Node.js",
+          "Express",
+          "Axios",
+          "JsonWebToken"
+        ],
+        "image": "/images/ORecipes-mousse_au_chocolat.webp",
+        "imageDescription": "Page d'une recette de mousse au chocolat.",
         "image2": "/images/ORecipes-favoris.webp",
-        "image3": "/images/ORecipes-mousse_au_chocolat.webp",
-        "alt": "ORecipes-accueil",
-        "alt2": "ORecipes-favoris",
-        "alt3": "ORecipes-mousse_au_chocolat"
-      }
-    ],
-    "apotheoseProjects": [
+        "image2Description": "Liste des recettes favorites sur O'Recipes.",
+        "image3": "/images/ORecipes-accueil.png",
+        "image3Description": "Page d'accueil de O'Recipes montrant les recettes populaires.",
+        "image4": "/images/ORecipes-reducer-user.png",
+        "image4Description": "Extrait du code source du reducer utilisateur.",
+        "image5": "/images/ORecipes-loginForm.png",
+        "image5Description": "Extrait du code source du formulaire de connexion.",
+        "image6": "/images/ORecipes-hamburger.png",
+        "image6Description": "Présentation d'une recette de hamburger.",
+        "alt": "O'Recipes - Mousse au chocolat",
+        "alt2": "O'Recipes - Recettes favorites",
+        "alt3": "O'Recipes - Page d'accueil",
+        "alt4": "O'Recipes - Extrait du code source",
+        "alt5": "O'Recipes - Formulaire de connexion",
+        "alt6": "O'Recipes - Hamburger",
+        "url": ""
+      },
       {
         "title": "L'Atlas des Royaumes Oubliés",
-        "description": "L'Atlas des Royaumes Oubliés est une application web pour les passionnés du jeu de rôle Donjons et Dragons. Avec elle, plongez dans un univers où vous pouvez non seulement créer, personnaliser et gérer vos personnages, mais aussi concevoir et orchestrer vos propres campagnes en ajoutant des chapitres palpitants. Grâce à ses fonctionnalités avancées, gérez facilement l'inventaire, les compétences et les capacités de vos personnages. L'application propose également une encyclopédie extrêmement complète, située dans le Sanctuaire, qui regroupe toutes les informations sur les races, les classes et bien plus encore. Son interface intuitive et son design élégant assurent une expérience utilisateur fluide et immersive. Pour accéder aux puissants outils de création, tels que la création de personnages ou de campagnes, l'authentification est requise, garantissant ainsi une utilisation sécurisée et personnalisée. Ce site est déployé et accessible à l'adresse www.atlasdd.games ou en cliquant sur le bouton voir le projet.",
-        "url": "https://www.atlasdd.games/",
-        "github": "",
+        "ancre": "atlasdd",
+        "description": "L'Atlas des Royaumes Oubliés est une application web pour les passionnés du jeu de rôle Donjons et Dragons. Avec elle, plongez dans un univers où vous pouvez non seulement créer, personnaliser et gérer vos personnages, mais aussi concevoir et orchestrer vos propres campagnes.",
+        "technologies": [
+          "React",
+          "Node.js",
+          "Express",
+          "PostgreSQL",
+          "Sqitch",
+          "Tailwind CSS",
+          "Vite",
+          "Redux Toolkit",
+          "Axios",
+          "Heroku",
+          "JsonWebToken",
+          "Bcrypt"
+
+        ],
         "image": "/images/OMyDnD-creation-de-personnage.webp",
-        "image2": "/images/OMyDnD-decouvrez-les-races.webp",
+        "imageDescription": "Création de personnage dans l'Atlas des Royaumes Oubliés.",
+        "image2": "/images/OMyDnD-decouvrez-les-races.png",
+        "image2Description": "Toutes les races dans l'Atlas des Royaumes Oubliés.",
         "image3": "/images/OMyDnD-classe-barbare.webp",
-        "alt": "OMyDnD-creation-de-personnage",
-        "alt2": "OMyDnD-decouvrez-les-races",
-        "alt3": "OMyDnD-classe-barbare"
+        "image3Description": "Classe barbare dans l'Atlas des Royaumes Oubliés.",
+        "image4": "/images/OMyDnD-protectedRoutes.png",
+        "image4Description": "Extrait du code source des routes protégées.",
+        "image5": "/images/OMyDnD-tableCharacters.png",
+        "image5Description": "Extrait du code source d'un composant personnage.",
+        "image6": "/images/OMyDnD-tieffelin.png",
+        "image6Description": "Image d'une Tieffeline dans l'Atlas des Royaumes Oubliés.",
+        "alt": "Atlas des Royaumes Oubliés - Classe barbare",
+        "alt2": "Atlas des Royaumes Oubliés - Création de personnage",
+        "alt3": "Atlas des Royaumes Oubliés - Découvrez les races",
+        "alt4": "Atlas des Royaumes Oubliés - Extrait du code source",
+        "alt5": "Atlas des Royaumes Oubliés - Extrait du code source",
+        "alt6": "Atlas des Royaumes Oubliés - Tieffeline",
+        "url": "https://www.atlasdd.games/"
       }
     ]
   },
   "contact": {
-    "title": "Contact",
+    "title": "Entrer en contact",
     "description": "C'est ici que vous pouvez prendre contact avec moi. N'hésitez pas à m'envoyer un message pour discuter de vos projets, de mes compétences ou de tout autre sujet qui vous intéresse. Je serai ravi de vous répondre. Vous pouvez également me contacter via LinkedIn ou GitHub en cliquant sur les icônes ci-dessous.",
     "formId": "mayreyjo"
   },

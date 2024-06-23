@@ -1,3 +1,6 @@
+// tailwind.config.js
+import forms from '@tailwindcss/forms';
+
 export const content = [
   './index.html',
   './src/**/*.{js,jsx,ts,tsx}',
@@ -98,9 +101,9 @@ export const theme = {
       marquee1: "marquee1 40s linear infinite",
       marquee2: "marquee2 40s linear infinite",
       fadeInLeft: 'fadeInLeft 1s ease-out',
-      fadeInRight: 'fadeInRight 2s ease-out',
+      fadeInRight: 'fadeInRight 1s ease-out',
       fadeOut: 'fadeOut 1s ease-in',
-      fadeInSlow: 'fadeInSlow 1.5s ease-in-out',
+      fadeInSlow: 'fadeInSlow 3s ease-in-out',
       slideInLeft: 'slideInLeft 1.5s ease-out',
       slideOutLeft: 'slideOutLeft 0.5s ease-in',
       slideInRight: 'slideInRight 1.5s ease-out',
@@ -133,6 +136,25 @@ export const theme = {
       'raleway': ['"Raleway"', 'sans-serif'],
       'kanit': ['"Kanit"', 'sans-serif'],
     },
+    fontSize: {
+      '2xs': '0.625rem',
+      '3xs': '0.5rem',
+      '4xs': '0.375rem',
+      '5xs': '0.25rem',
+      '6xs': '0.125rem',
+      '7xs': '0.0625rem',
+      '8xs': '0.03125rem',
+      '9xs': '0.015625rem',
+      '10xs': '0.0078125rem',
+      '11xs': '0.00390625rem',
+      '12xs': '0.001953125rem',
+      '7xl': '5rem',
+      '8xl': '6rem',
+      '9xl': '7rem',
+      '10xl': '8rem',
+      '11xl': '9rem',
+      '12xl': '10rem',
+    },
   },
 };
 
@@ -148,4 +170,5 @@ export const plugins = [
       h3: { fontSize: theme("fontSize.lg") },
     });
   },
+  forms,
 ];

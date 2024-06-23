@@ -1,4 +1,7 @@
 @import 'vars';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 html {
   scroll-behavior: smooth;
@@ -6,33 +9,46 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 .gradient-text {
-  background: linear-gradient(
-    to right,
-    var(--gradient-from),
-    var(--gradient-via),
-    var(--gradient-to)
-  );
+  background: linear-gradient(to right,
+      var(--gradient-from),
+      var(--gradient-via),
+      var(--gradient-to));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .gradient-background {
-  background: linear-gradient(
-    to top right,
-    var(--gradient-from),
-    var(--gradient-via),
-    var(--gradient-to)
-  );
+  background: linear-gradient(to top right,
+      var(--gradient-from),
+      var(--gradient-via),
+      var(--gradient-to));
+}
+
+.gradient-button {
+  background: linear-gradient(to top right,
+      var(--gradient-from),
+      var(--gradient-via),
+      var(--gradient-to));
+}
+
+.gradient-button:hover {
+  background: linear-gradient(to top right,
+      var(--gradient-button-from),
+      var(--gradient-button-via),
+      var(--gradient-button-to));
+}
+
+.gradient-background-bis {
+  background: linear-gradient(to top right,
+      var(--gradient-bis),
+      var(--gradient-bis-to));
 }
 
 .text-background {
@@ -40,12 +56,30 @@ body {
   color: var(--text-white);
 }
 
+.text-background-dark {
+  background-color: var(--background-black);
+  color: var(--text-black);
+}
+
 .custom-text {
   color: var(--text-black);
 }
 
+.custom-text-white {
+  color: var(--text-white);
+}
+
+.custom-footer {
+  background-color: var(--background-white);
+  color: var(--text-white);
+
+  :hover {
+    color: var(--text-neutral-600);
+  }
+}
+
 .about-text {
-  color: var(--background-white);
+  background-color: var(--background-white);
 }
 
 /* Autres classes personnalisées */

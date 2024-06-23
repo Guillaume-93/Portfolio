@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { Expand } from "@theme-toggles/react";
-import { useLanguage } from '../../contexts/languageHooks';
+import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 import ReactCountryFlag from "react-country-flag";
+import { useLanguage } from '../../contexts/languageHooks';
 
 const Header = ({ toggleDarkMode, isDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +28,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
   const navigation = config.navigation;
 
   return (
-    <header className={`text-background fixed top-0 w-full z-50 shadow-md font-mono ${!isDarkMode ? '' : 'border-b'}`}>
+    <header className={`text-background fixed top-0 w-full z-50 shadow-md ${!isDarkMode ? '' : 'border-b'}`}>
       <div className="flex justify-between items-center px-4 sm:px-8 h-10">
         <div className="flex items-center flex-1">
           <div className="mr-10 md:mr-28">
@@ -49,7 +49,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
           <ul className={`flex-1 justify-start items-center hidden sm:flex md:gap-x-10 gap-x-7`}>
             {navigation.map((item) => (
               <li className="cursor-pointer" key={item.title}>
-                <a href={`#${item.ancre}`} onClick={() => setIsOpen(false)} aria-label={`${t.goToSection} ${item.title}`}>
+                <a key={item.title} href={`#${item.ancre}`} className='font-semibold leading-6' onClick={() => setIsOpen(false)} aria-label={`${t.goToSection} ${item.title}`}>
                   {item.title}
                 </a>
               </li>
@@ -115,7 +115,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
         <ul className={`absolute top-10 left-0 w-full sm:hidden text-background ${isOpen ? "block" : "hidden"} shadow-md`} aria-label={t.NavigationMenu}>
           {navigation.map((item) => (
             <li className="text-center" key={item.title}>
-              <a href={`#${item.ancre}`} className="block px-4 py-2" onClick={() => setIsOpen(false)} aria-label={`${t.goToSection} ${item.title}`}>
+              <a key={item.title} href={`#${item.ancre}`} className="block px-4 py-2 font-semibold leading-6" onClick={() => setIsOpen(false)} aria-label={`${t.goToSection} ${item.title}`}>
                 {item.title}
               </a>
             </li>

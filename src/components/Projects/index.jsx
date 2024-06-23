@@ -122,7 +122,7 @@ const Projects = () => {
   };
 
   return (
-    <section id={t.projects} className="projects px-8 lg:px-16 pb-16 text-background">
+    <section id={t.projects} className="projects px-6 lg:px-16 pb-16 text-background">
       <h2 className={`pt-20 mb-12 uppercase font-bold text-center text-4xl font-kanit ${isTitleVisible ? 'animate-fadeInSlow' : 'opacity-0'}`} ref={titleRef}>
         {projects.title}
       </h2>

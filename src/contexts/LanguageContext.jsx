@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
-import { LanguageContext } from './languageHooks';
-import frenchConfig from '../data/index.fr.json';
-import englishConfig from '../data/index.en.json';
-import translations from '../data/translations';
 import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
+import englishConfig from '../data/index.en.json';
+import frenchConfig from '../data/index.fr.json';
+import translations from '../data/translations';
+import { LanguageContext } from './languageHooks';
 
 const LanguageProvider = ({ children }) => {
     const [language, setLanguage] = useState(() => {

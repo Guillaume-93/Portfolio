@@ -10,10 +10,10 @@ const About = () => {
   return (
     <section
       id={t.about}
-      className="snap-start md:px-32 pt-12 pb-12 content-center gradient-background"
+      className="relative snap-start md:px-32 pt-12 pb-12 content-center gradient-background h-screen w-full flex justify-center items-center"
     >
-      <div className="mt-16 flex flex-col lg:flex-row align-center items-center">
-        <div className="w-full lg:w-1/2 flex justify-center content-center px-4">
+      <div className="relative w-full h-full">
+        <div className="lg:absolute top-20 left-1/3 -translate-x-1/2 lg:w-1/2 flex justify-center content-center px-4">
           <img
             src={about.image}
             alt="Photo de Guillaume Bréchaire"
@@ -23,16 +23,37 @@ const About = () => {
             ref={imageRef}
           />
         </div>
-        <div className="lg:w-1/2 about-text lg:ml-4 text-center lg:text-left max-w-2xl font-mono p-4">
-          <div className={`about shadow-2xl p-4 rounded-lg ${isTextVisible ? 'opacity-100 animate-slideInRight' : 'opacity-0'}`} ref={textRef}>
-            <h2 className="uppercase font-semibold text-left custom-text text-2xl font-kanit mb-4 mt-10 lg:mt-0">
+
+        <div className="absolute top-16 left-16 w-64">
+          <div className={`about shadow-2xl p-4 rounded-lg  ${isTextVisible ? 'opacity-100 animate-slideInRight' : 'opacity-0'}`} ref={textRef}>
+            <h2 className="uppercase font-semibold text-left custom-text text-2xl font-kanit mb-2">
               {about.title}
             </h2>
-            <p className="text-justify">{about.primary}</p>
-            <p className="mt-3 text-justify">{about.secondary}</p>
-            <p className="mt-3 text-justify">{about.tertiary}</p>
-            <p className="mt-3 text-justify">{about.quaternary}</p>
-            <p className="mt-3 text-justify">{about.quinary}</p>
+            <p className="text-justify leading-relaxed">{about.primary}</p>
+          </div>
+        </div>
+
+        <div className="absolute top-40 left-40 w-64">
+          <div className={`about shadow-2xl p-4 rounded-lg  ${isTextVisible ? 'opacity-100 animate-slideInRight' : 'opacity-0'}`} ref={textRef}>
+            <p className="text-justify leading-relaxed">{about.secondary}</p>
+          </div>
+        </div>
+
+        <div className="absolute top-64 left-24 w-64">
+          <div className={`about shadow-2xl p-4 rounded-lg  ${isTextVisible ? 'opacity-100 animate-slideInRight' : 'opacity-0'}`} ref={textRef}>
+            <p className="text-justify leading-relaxed">{about.tertiary}</p>
+          </div>
+        </div>
+
+        <div className="absolute top-80 left-52 w-64">
+          <div className={`about shadow-2xl p-4 rounded-lg  ${isTextVisible ? 'opacity-100 animate-slideInRight' : 'opacity-0'}`} ref={textRef}>
+            <p className="text-justify leading-relaxed">{about.quaternary}</p>
+          </div>
+        </div>
+
+        <div className="absolute top-96 left-12 w-64">
+          <div className={`about shadow-2xl p-4 rounded-lg  ${isTextVisible ? 'opacity-100 animate-slideInRight' : 'opacity-0'}`} ref={textRef}>
+            <p className="text-justify leading-relaxed">{about.quinary}</p>
           </div>
         </div>
       </div>

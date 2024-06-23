@@ -1,11 +1,11 @@
-import Header from '../Header/index.jsx';
-import Informations from '../Informations/index.jsx';
-import Resume from '../Resume/index.jsx';
-import About from '../About/index.jsx';
-import Projects from '../Projects/index.jsx';
+import { useEffect, useState } from 'react';
+import About from '../About/About.jsx';
 import Contact from '../Contact/Contact.jsx';
-import Footer from '../Footer/index.jsx';
-import { useState, useEffect } from 'react';
+import Footer from '../Footer/Footer.jsx';
+import Header from '../Header/Header.jsx';
+import Informations from '../Informations/Informations.jsx';
+import Projects from '../Projects/Projects.jsx';
+import Resume from '../Resume/Resume.jsx';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -34,9 +34,9 @@ function App() {
       <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       <Informations />
       <About />
-      <Projects />
+      <Projects isDarkMode={isDarkMode} />
       <Resume isDarkMode={isDarkMode} />
-      <Contact />
+      <Contact isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />
     </div>
   );

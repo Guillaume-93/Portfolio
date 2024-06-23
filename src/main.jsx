@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom/client'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import App from '../src/components/App/App.jsx'
 import '../src/styles/index.scss'
-import LanguageProvider from './contexts/LanguageContext';
+import '../src/styles/tailwind.css'
+import LanguageProvider from './contexts/LanguageContext'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -168,11 +168,11 @@ const About = () => {
                                 <div className={`w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end`}>
                                     <a href="#pokedex">
                                         <img
-                                            src={projects.formationProjects[1].image6}
-                                            alt={projects.formationProjects[1].alt6}
+                                            src={projects.formationProjects[2].image6}
+                                            alt={projects.formationProjects[2].alt6}
                                             ref={projectImage1Ref}
                                             className={`aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover ${isProjectImage1Visible ? 'opacity-100 animate-fadeInRight' : 'opacity-0'}`}
-                                            aria-label={`${t.goToProject} ${projects.formationProjects[1].title}`}
+                                            aria-label={`${t.goToProject} ${projects.formationProjects[2].title}`}
                                         />
                                     </a>
                                 </div>
@@ -180,33 +180,33 @@ const About = () => {
                                     <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
                                         <a href="#ghibliotheque">
                                             <img
-                                                src={projects.formationProjects[0].image6}
-                                                alt={projects.formationProjects[0].alt6}
+                                                src={projects.formationProjects[1].image6}
+                                                alt={projects.formationProjects[1].alt6}
                                                 ref={projectImage2Ref}
                                                 className={`aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover ${isProjectImage2Visible ? 'opacity-100 animate-fadeInLeft' : 'opacity-0'}`}
-                                                aria-label={`${t.goToProject} ${projects.formationProjects[0].title}`}
+                                                aria-label={`${t.goToProject} ${projects.formationProjects[1].title}`}
                                             />
                                         </a>
                                     </div>
                                     <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
                                         <a href="#atlasdd">
                                             <img
-                                                src={projects.formationProjects[3].image6}
-                                                alt={projects.formationProjects[3].alt6}
+                                                src={projects.formationProjects[0].image6}
+                                                alt={projects.formationProjects[0].alt6}
                                                 ref={projectImage3Ref}
                                                 className={`aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover ${isProjectImage3Visible ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
-                                                aria-label={`${t.goToProject} ${projects.formationProjects[3].title}`}
+                                                aria-label={`${t.goToProject} ${projects.formationProjects[0].title}`}
                                             />
                                         </a>
                                     </div>
                                     <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
                                         <a href="#orecipes">
                                             <img
-                                                src={projects.formationProjects[2].image6}
-                                                alt={projects.formationProjects[2].alt6}
+                                                src={projects.formationProjects[3].image6}
+                                                alt={projects.formationProjects[3].alt6}
                                                 ref={projectImage4Ref}
                                                 className={`aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover ${isProjectImage4Visible ? 'opacity-100 animate-fadeInRight' : 'opacity-0'}`}
-                                                aria-label={`${t.goToProject} ${projects.formationProjects[2].title}`}
+                                                aria-label={`${t.goToProject} ${projects.formationProjects[3].title}`}
                                             />
                                         </a>
                                     </div>

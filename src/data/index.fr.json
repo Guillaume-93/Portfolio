@@ -154,6 +154,45 @@
     "description3": "Seul l'Atlas des Royaumes Oubliés est actuellement déployé en ligne. Pour y accéder, cliquez sur le bouton voir le projet.",
     "formationProjects": [
       {
+        "title": "L'Atlas des Royaumes Oubliés",
+        "ancre": "atlasdd",
+        "description": "L'Atlas des Royaumes Oubliés est une application web pour les passionnés du jeu de rôle Donjons et Dragons. Avec elle, plongez dans un univers où vous pouvez non seulement créer, personnaliser et gérer vos personnages, mais aussi concevoir et orchestrer vos propres campagnes.",
+        "technologies": [
+          "React",
+          "Node.js",
+          "Express",
+          "PostgreSQL",
+          "Sqitch",
+          "Tailwind CSS",
+          "Vite",
+          "Redux Toolkit",
+          "Axios",
+          "Heroku",
+          "JsonWebToken",
+          "Bcrypt"
+
+        ],
+        "image": "/images/OMyDnD-creation-de-personnage.webp",
+        "imageDescription": "Création de personnage dans l'Atlas des Royaumes Oubliés.",
+        "image2": "/images/OMyDnD-decouvrez-les-races.png",
+        "image2Description": "Toutes les races dans l'Atlas des Royaumes Oubliés.",
+        "image3": "/images/OMyDnD-classe-barbare.webp",
+        "image3Description": "Classe barbare dans l'Atlas des Royaumes Oubliés.",
+        "image4": "/images/OMyDnD-protectedRoutes.png",
+        "image4Description": "Extrait du code source des routes protégées.",
+        "image5": "/images/OMyDnD-tableCharacters.png",
+        "image5Description": "Extrait du code source d'un composant personnage.",
+        "image6": "/images/OMyDnD-tieffelin.png",
+        "image6Description": "Image d'une Tieffeline dans l'Atlas des Royaumes Oubliés.",
+        "alt": "Atlas des Royaumes Oubliés - Classe barbare",
+        "alt2": "Atlas des Royaumes Oubliés - Création de personnage",
+        "alt3": "Atlas des Royaumes Oubliés - Découvrez les races",
+        "alt4": "Atlas des Royaumes Oubliés - Extrait du code source",
+        "alt5": "Atlas des Royaumes Oubliés - Extrait du code source",
+        "alt6": "Atlas des Royaumes Oubliés - Tieffeline",
+        "url": "https://www.atlasdd.games/"
+      },
+      {
         "title": "Ghibliothèque",
         "ancre": "ghibliotheque",
         "description": "Ce site exclusivement back-end utilise l'API Studio Ghibli pour offrir un accès complet à un catalogue de films Ghibli. Chaque film est accompagné d'images, de résumés détaillés et d'informations approfondies. Actuellement, le site n'est pas déployé en ligne.",
@@ -248,46 +287,7 @@
         "alt5": "O'Recipes - Formulaire de connexion",
         "alt6": "O'Recipes - Hamburger",
         "url": ""
-      },
-      {
-        "title": "L'Atlas des Royaumes Oubliés",
-        "ancre": "atlasdd",
-        "description": "L'Atlas des Royaumes Oubliés est une application web pour les passionnés du jeu de rôle Donjons et Dragons. Avec elle, plongez dans un univers où vous pouvez non seulement créer, personnaliser et gérer vos personnages, mais aussi concevoir et orchestrer vos propres campagnes.",
-        "technologies": [
-          "React",
-          "Node.js",
-          "Express",
-          "PostgreSQL",
-          "Sqitch",
-          "Tailwind CSS",
-          "Vite",
-          "Redux Toolkit",
-          "Axios",
-          "Heroku",
-          "JsonWebToken",
-          "Bcrypt"
-
-        ],
-        "image": "/images/OMyDnD-creation-de-personnage.webp",
-        "imageDescription": "Création de personnage dans l'Atlas des Royaumes Oubliés.",
-        "image2": "/images/OMyDnD-decouvrez-les-races.png",
-        "image2Description": "Toutes les races dans l'Atlas des Royaumes Oubliés.",
-        "image3": "/images/OMyDnD-classe-barbare.webp",
-        "image3Description": "Classe barbare dans l'Atlas des Royaumes Oubliés.",
-        "image4": "/images/OMyDnD-protectedRoutes.png",
-        "image4Description": "Extrait du code source des routes protégées.",
-        "image5": "/images/OMyDnD-tableCharacters.png",
-        "image5Description": "Extrait du code source d'un composant personnage.",
-        "image6": "/images/OMyDnD-tieffelin.png",
-        "image6Description": "Image d'une Tieffeline dans l'Atlas des Royaumes Oubliés.",
-        "alt": "Atlas des Royaumes Oubliés - Classe barbare",
-        "alt2": "Atlas des Royaumes Oubliés - Création de personnage",
-        "alt3": "Atlas des Royaumes Oubliés - Découvrez les races",
-        "alt4": "Atlas des Royaumes Oubliés - Extrait du code source",
-        "alt5": "Atlas des Royaumes Oubliés - Extrait du code source",
-        "alt6": "Atlas des Royaumes Oubliés - Tieffeline",
-        "url": "https://www.atlasdd.games/"
-      }
+      }      
     ]
   },
   "contact": {

@@ -12,7 +12,7 @@ const About = () => {
     const [isImageVisible, imageRef] = useVisibilityObserver(0.5);
     const [isTextVisible, textRef] = useVisibilityObserver(0.5);
     const [isTechnologiesVisible, technologiesRef] = useVisibilityObserver(0.1);
-    const [isProjectVisible, projectRef] = useVisibilityObserver(0.3);
+    const [isProjectVisible, projectRef] = useVisibilityObserver(0.8);
 
     const [isProjectImage1Visible, projectImage1Ref] = useVisibilityObserver(0.1);
     const [isProjectImage2Visible, projectImage2Ref] = useVisibilityObserver(0.1);
@@ -93,7 +93,7 @@ const About = () => {
                             <div key={`${item.name}-${index}`} ref={(el) => (timelineRefs.current[index] = el)}>
                                 <time
                                     dateTime={item.dateTime}
-                                    className={`flex items-center text-sm font-semibold leading-6 custom-text-white ${timelineVisibility[index] ? 'opacity-100 animate-fadeInLeft' : 'opacity-0'}`}
+                                    className={`flex items-center text-sm font-semibold leading-6 custom-text-white ${timelineVisibility[index] ? 'opacity-100 animate-fadeInLeft transition-delay-${index * 200}' : 'opacity-0'}`}
                                 >
                                     <svg viewBox="0 0 4 4" className="mr-4 h-1 w-1 flex-none" aria-hidden="true">
                                         <circle cx={2} cy={2} r={2} fill="currentColor" />
@@ -104,10 +104,10 @@ const About = () => {
                                         aria-hidden="true"
                                     />
                                 </time>
-                                <p className={`mt-6 text-lg font-semibold leading-8 tracking-tight custom-text-white ${timelineVisibility[index] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}>
+                                <p className={`mt-6 text-lg font-semibold leading-8 tracking-tight custom-text-white ${timelineVisibility[index] ? 'opacity-100 animate-fadeInUp transition-delay-${index * 200}' : 'opacity-0'}`}>
                                     {item.name}
                                 </p>
-                                <p className={`mt-1 text-base leading-7 custom-text-white ${timelineVisibility[index] ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}>
+                                <p className={`mt-1 text-base leading-7 custom-text-white ${timelineVisibility[index] ? 'opacity-100 animate-fadeInUp transition-delay-${index * 200}' : 'opacity-0'}`}>
                                     {item.description}
                                 </p>
                             </div>
@@ -163,15 +163,45 @@ const About = () => {
                                 <p className={`mt-6 text-base leading-7 custom-text-white ${isProjectVisible ? 'opacity-100 animate-fadeInLeft' : 'opacity-0'}`}>
                                     {projects.description3}
                                 </p>
+                                <ul className={`flex flex-col gap-y-3 mt-6 `}>
+                                    <li className={`${isProjectVisible ? 'opacity-100 animate-fadeInRight' : 'opacity-0'}`} >
+                                        <a
+                                            href="#atlasdd"
+                                            className={`font-semibold leading-6 text-blue-700 `}>
+                                            <span className={`bg-blue-100 px-3 py-0.5 rounded-full `}>{projects.formationProjects[0].title}</span>
+                                        </a>
+                                    </li>
+                                    <li className={`${isProjectVisible ? 'opacity-100 animate-fadeInRightSlow1' : 'opacity-0'}`}>
+                                        <a
+                                            href="#ghibliotheque"
+                                            className={`font-semibold leading-6 text-blue-700 `}>
+                                            <span className={`bg-blue-100 px-3 py-0.5 rounded-full `}>{projects.formationProjects[1].title}</span>
+                                        </a>
+                                    </li>
+                                    <li className={`${isProjectVisible ? 'opacity-100 animate-fadeInRightSlow2' : 'opacity-0'}`}>
+                                        <a
+                                            href="#pokedex"
+                                            className={`font-semibold leading-6 text-blue-700 `}>
+                                            <span className={`bg-blue-100 px-3 py-0.5 rounded-full `}>{projects.formationProjects[2].title}</span>
+                                        </a>
+                                    </li>
+                                    <li className={`${isProjectVisible ? 'opacity-100 animate-fadeInRightSlow3' : 'opacity-0'}`}>
+                                        <a
+                                            href="#orecipes"
+                                            className={`font-semibold leading-6 text-blue-700 `}>
+                                            <span className={`bg-blue-100 px-3 py-0.5 rounded-full `}>{projects.formationProjects[3].title}</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                             <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
                                 <div className={`w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end`}>
-                                    <a href="#pokedex">
+                                    <a href="#atlasdd">
                                         <img
-                                            src={projects.formationProjects[2].image6}
-                                            alt={projects.formationProjects[2].alt6}
+                                            src={projects.formationProjects[0].image6}
+                                            alt={projects.formationProjects[0].alt6}
                                             ref={projectImage1Ref}
-                                            className={`aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover ${isProjectImage1Visible ? 'opacity-100 animate-fadeInRight' : 'opacity-0'}`}
+                                            className={`hidden sm:block aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover ${isProjectImage1Visible ? 'opacity-100 animate-fadeInRight transition-delay-200' : 'opacity-0'}`}
                                             aria-label={`${t.goToProject} ${projects.formationProjects[2].title}`}
                                         />
                                     </a>
@@ -183,18 +213,18 @@ const About = () => {
                                                 src={projects.formationProjects[1].image6}
                                                 alt={projects.formationProjects[1].alt6}
                                                 ref={projectImage2Ref}
-                                                className={`aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover ${isProjectImage2Visible ? 'opacity-100 animate-fadeInLeft' : 'opacity-0'}`}
+                                                className={`hidden sm:block aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover ${isProjectImage2Visible ? 'opacity-100 animate-fadeInLeft transition-delay-400' : 'opacity-0'}`}
                                                 aria-label={`${t.goToProject} ${projects.formationProjects[1].title}`}
                                             />
                                         </a>
                                     </div>
                                     <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
-                                        <a href="#atlasdd">
+                                        <a href="#pokedex">
                                             <img
-                                                src={projects.formationProjects[0].image6}
-                                                alt={projects.formationProjects[0].alt6}
+                                                src={projects.formationProjects[2].image6}
+                                                alt={projects.formationProjects[2].alt6}
                                                 ref={projectImage3Ref}
-                                                className={`aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover ${isProjectImage3Visible ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
+                                                className={`hidden sm:block aspect-[7/5] w-[30rem] xl:w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover ${isProjectImage3Visible ? 'opacity-100 animate-fadeInUp transition-delay-600' : 'opacity-0'}`}
                                                 aria-label={`${t.goToProject} ${projects.formationProjects[0].title}`}
                                             />
                                         </a>
@@ -205,7 +235,7 @@ const About = () => {
                                                 src={projects.formationProjects[3].image6}
                                                 alt={projects.formationProjects[3].alt6}
                                                 ref={projectImage4Ref}
-                                                className={`aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover ${isProjectImage4Visible ? 'opacity-100 animate-fadeInRight' : 'opacity-0'}`}
+                                                className={`aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover ${isProjectImage4Visible ? 'opacity-100 animate-slideInRight transition-delay-800' : 'opacity-0'}`}
                                                 aria-label={`${t.goToProject} ${projects.formationProjects[3].title}`}
                                             />
                                         </a>

@@ -12,10 +12,25 @@ const Projects = ({ isDarkMode }) => {
     const { config, t, language } = useLanguage();
     const projects = config.projects;
     const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const [enlargedIndex, setEnlargedIndex] = useState(null);
+    const [openPopoverIndex, setOpenPopoverIndex] = useState(null);
+    const [isLgScreen, setIsLgScreen] = useState(false);
     const projectRefs = useRef([]);
     const [projectVisibility, setProjectVisibility] = useState(
         Array(projects.formationProjects.length).fill(false)
     );
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsLgScreen(window.innerWidth >= 1024);
+        };
+
+        handleResize(); // Initial check
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     useEffect(() => {
         const observers = projectRefs.current.map((ref, index) => {
@@ -56,6 +71,16 @@ const Projects = ({ isDarkMode }) => {
         setIsPopupOpen(false);
     };
 
+    const toggleImageSize = (index) => {
+        if (openPopoverIndex === index) {
+            setOpenPopoverIndex(null);
+            setEnlargedIndex(null);
+        } else {
+            setOpenPopoverIndex(index);
+            setEnlargedIndex(index);
+        }
+    };
+
     return (
         <div className="-z-10 sm:py-32 text-background">
             <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -69,7 +94,7 @@ const Projects = ({ isDarkMode }) => {
                         >
                             <div className="relative isolate overflow-hidden mx-auto flex max-w-2xl flex-col gap-16 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20 bg-gray-900 shadow-2xl">
                                 <img
-                                    className="h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm"
+                                    className={`${isLgScreen && enlargedIndex === index ? 'lg:h-[50rem]' : 'h-96'} w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:max-w-sm`}
                                     src={project.image6}
                                     alt={project.alt6}
                                 />
@@ -79,93 +104,95 @@ const Projects = ({ isDarkMode }) => {
                                         {project.description}
                                     </p>
                                     <div className="mt-10 flex">
-                                        <Popover className="relative isolate z-50">
-                                            <PopoverButton className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-blue-500">
+                                        <Popover>
+                                            <PopoverButton onClick={() => toggleImageSize(index)} className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-blue-500 focus:outline-none focus:ring-0">
                                                 {t.seeMore}
-                                                <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
+                                                <ChevronDownIcon className={`h-5 w-5 transition-transform duration-300 ${openPopoverIndex === index ? 'rotate-180' : ''}`} aria-hidden="true" />
                                             </PopoverButton>
-                                            <PopoverPanel
-                                                transition="true"
-                                                className="relative inset-x-0 bg-transparent mt-2 pt-6 rounded-lg ring-1 ring-gray-900/5 transition data-[closed]:-translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-                                            >
-                                                <div className="mx-auto grid max-w-7xl grid-cols-1">
-                                                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-                                                        {project.image && (
-                                                            <div className="relative flex-none">
-                                                                <Zoom>
-                                                                    <img
-                                                                        className="aspect-[2/1] w-full rounded-lg object-cover sm:aspect-[16/9] sm:h-32 lg:h-auto"
-                                                                        src={project.image}
-                                                                        alt={project.alt}
-                                                                    />
-                                                                </Zoom>
-                                                                <div className="mt-2 text-sm text-gray-600">
-                                                                    {project.imageDescription}
+                                            {openPopoverIndex === index && (
+                                                <PopoverPanel
+                                                    className="relative inset-x-0 bg-transparent mt-2 pt-6 rounded-lg ring-1 ring-gray-900/5 transition data-[closed]:-translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                                                    static
+                                                >
+                                                    <div className="mx-auto grid max-w-7xl grid-cols-1">
+                                                        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+                                                            {project.image && (
+                                                                <div className="relative flex-none">
+                                                                    <Zoom>
+                                                                        <img
+                                                                            className="aspect-[2/1] w-full rounded-lg object-cover sm:aspect-[16/9] sm:h-32 lg:h-auto"
+                                                                            src={project.image}
+                                                                            alt={project.alt}
+                                                                        />
+                                                                    </Zoom>
+                                                                    <div className="mt-2 text-sm text-gray-600">
+                                                                        {project.imageDescription}
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        )}
-                                                        {project.image3 && (
-                                                            <div className="relative flex-none">
-                                                                <Zoom>
-                                                                    <img
-                                                                        className="aspect-[2/1] w-full rounded-lg object-cover sm:aspect-[16/9] sm:h-32 lg:h-auto"
-                                                                        src={project.image3}
-                                                                        alt={project.alt3}
-                                                                    />
-                                                                </Zoom>
-                                                                <div className="mt-2 text-sm text-gray-600">
-                                                                    {project.image3Description}
+                                                            )}
+                                                            {project.image3 && (
+                                                                <div className="relative flex-none">
+                                                                    <Zoom>
+                                                                        <img
+                                                                            className="aspect-[2/1] w-full rounded-lg object-cover sm:aspect-[16/9] sm:h-32 lg:h-auto"
+                                                                            src={project.image3}
+                                                                            alt={project.alt3}
+                                                                        />
+                                                                    </Zoom>
+                                                                    <div className="mt-2 text-sm text-gray-600">
+                                                                        {project.image3Description}
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        )}
-                                                        {project.image4 && (
-                                                            <div className="relative flex-none">
-                                                                <Zoom>
-                                                                    <img
-                                                                        className="aspect-[2/1] w-full rounded-lg object-cover sm:aspect-[16/9] sm:h-32 lg:h-auto"
-                                                                        src={project.image4}
-                                                                        alt={project.alt4}
-                                                                    />
-                                                                </Zoom>
-                                                                <div className="mt-2 text-sm text-gray-600">
-                                                                    {project.image4Description}
+                                                            )}
+                                                            {project.image4 && (
+                                                                <div className="relative flex-none">
+                                                                    <Zoom>
+                                                                        <img
+                                                                            className="aspect-[2/1] w-full rounded-lg object-cover sm:aspect-[16/9] sm:h-32 lg:h-auto"
+                                                                            src={project.image4}
+                                                                            alt={project.alt4}
+                                                                        />
+                                                                    </Zoom>
+                                                                    <div className="mt-2 text-sm text-gray-600">
+                                                                        {project.image4Description}
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        )}
-                                                        {project.image5 && (
-                                                            <div className="relative flex-none">
-                                                                <Zoom>
-                                                                    <img
-                                                                        className="aspect-[2/1] w-full rounded-lg object-cover sm:aspect-[16/9] sm:h-32 lg:h-auto"
-                                                                        src={project.image5}
-                                                                        alt={project.alt5}
-                                                                    />
-                                                                </Zoom>
-                                                                <div className="mt-2 text-sm text-gray-600">
-                                                                    {project.image5Description}
+                                                            )}
+                                                            {project.image5 && (
+                                                                <div className="relative flex-none">
+                                                                    <Zoom>
+                                                                        <img
+                                                                            className="aspect-[2/1] w-full rounded-lg object-cover sm:aspect-[16/9] sm:h-32 lg:h-auto"
+                                                                            src={project.image5}
+                                                                            alt={project.alt5}
+                                                                        />
+                                                                    </Zoom>
+                                                                    <div className="mt-2 text-sm text-gray-600">
+                                                                        {project.image5Description}
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        )}
+                                                            )}
+                                                        </div>
+                                                        <div className="mt-10">
+                                                            <h4 className="text-sm font-bold leading-6 text-white">{t.usedTechnologies}</h4>
+                                                            <ul
+                                                                role="list"
+                                                                className="mt-6 grid grid-cols-1 gap-x-8 gap-y-3 text-sm leading-7 text-white sm:grid-cols-2"
+                                                            >
+                                                                {project.technologies.map((tech) => (
+                                                                    <li key={tech} className="flex gap-x-3">
+                                                                        <CheckCircleIcon className="h-7 w-5 flex-none" aria-hidden="true" />
+                                                                        <span className='text-gray-600'>{tech}</span>
+                                                                    </li>
+                                                                ))}
+                                                            </ul>
+                                                        </div>
+                                                        <button onClick={() => handleOpenPopup(project)} className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-blue-500 mt-6 focus:outline-none focus:ring-0" aria-label={t.projectsButton}>
+                                                            {t.projectsButton} <span aria-hidden="true">&rarr;</span>
+                                                        </button>
                                                     </div>
-                                                    <div className="mt-10">
-                                                        <h4 className="text-sm font-bold leading-6 text-white">{t.usedTechnologies}</h4>
-                                                        <ul
-                                                            role="list"
-                                                            className="mt-6 grid grid-cols-1 gap-x-8 gap-y-3 text-sm leading-7 text-white sm:grid-cols-2"
-                                                        >
-                                                            {project.technologies.map((tech) => (
-                                                                <li key={tech} className="flex gap-x-3">
-                                                                    <CheckCircleIcon className="h-7 w-5 flex-none" aria-hidden="true" />
-                                                                    <span className='text-gray-600'>{tech}</span>
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                    </div>
-                                                    <button onClick={() => handleOpenPopup(project)} className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-blue-500 mt-6" aria-label={t.projectsButton}>
-                                                        {t.projectsButton} <span aria-hidden="true">&rarr;</span>
-                                                    </button>
-                                                </div>
-                                            </PopoverPanel>
+                                                </PopoverPanel>
+                                            )}
                                         </Popover>
                                     </div>
                                 </div>

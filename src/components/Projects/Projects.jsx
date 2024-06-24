@@ -104,7 +104,7 @@ const Projects = ({ isDarkMode }) => {
                                         {project.description}
                                     </p>
                                     <div className="mt-10 flex">
-                                        <Popover>
+                                        <Popover className={`focus:outline-none focus:ring-0`}>
                                             <PopoverButton onClick={() => toggleImageSize(index)} className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-blue-500 focus:outline-none focus:ring-0">
                                                 {t.seeMore}
                                                 <ChevronDownIcon className={`h-5 w-5 transition-transform duration-300 ${openPopoverIndex === index ? 'rotate-180' : ''}`} aria-hidden="true" />

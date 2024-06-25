@@ -31,6 +31,10 @@ const translations = {
         usedTechnologies: "Technologies utilisées",
         seeMore: "Voir plus",
         seeLess: "Voir moins",
+        firstNameRequired: "Le prénom est requis",
+        lastNameRequired: "Le nom est requis",
+        emailRequired: "L'email est requis",
+        messageRequired: "Le message est requis",
 
         // Aria-labels
         toggleDarkMode: "Changer le mode sombre",
@@ -75,6 +79,10 @@ const translations = {
         usedTechnologies: "Used technologies",
         seeMore: "See more",
         seeLess: "See less",
+        firstNameRequired: "First name is required",
+        lastNameRequired: "Last name is required",
+        emailRequired: "Email is required",
+        messageRequired: "Message is required",
 
         // Aria-labels
         toggleDarkMode: "Toggle Dark Mode",

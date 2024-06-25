@@ -9,10 +9,11 @@ const Contact = () => {
     const contact = config.contact;
 
     const [firstName, setFirstName] = useState("");
-    const [LastName, setLastName] = useState("");
+    const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
     const [message, setMessage] = useState("");
+    const [errors, setErrors] = useState({});
 
     const [state, handleSubmit] = useForm(contact.formId);
 
@@ -23,12 +24,41 @@ const Contact = () => {
             setEmail("");
             setPhoneNumber("");
             setMessage("");
+            setErrors({});
         }
     }, [state.succeeded]);
 
+    const validateForm = () => {
+        const newErrors = {};
+        if (!firstName) newErrors.firstName = t.firstNameRequired;
+        if (!lastName) newErrors.lastName = t.lastNameRequired;
+        if (!email) newErrors.email = t.emailRequired;
+        if (!message) newErrors.message = t.messageRequired;
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        if (validateForm()) {
+            if (e.target.honeypot.value) {
+                return;
+            }
+            handleSubmit(e);
+        }
+    };
+
+    useEffect(() => {
+        if (errors && Object.keys(errors).length > 0) {
+            const timer = setTimeout(() => {
+                setErrors({});
+            }, 5000);
+            return () => clearTimeout(timer);
+        }
+    }, [errors]);
+
     if (state.succeeded) {
         return (
-
             <div className="pointer-events-none inset-x-0 bottom-0 sm:flex sm:justify-center sm:px-6 sm:pb-5 lg:px-8 about-text pt-5">
                 <div className="pointer-events-auto flex items-center justify-between gap-x-6 bg-gray-900 px-6 py-2.5 sm:rounded-xl sm:py-3 sm:pl-4 sm:pr-3.5 ring-1 ring-gray-500">
                     <p id={t.contact} className="text-sm leading-6 text-white">
@@ -75,13 +105,12 @@ const Contact = () => {
                             {contact.description}
                         </p>
                         <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
-
                             <div className="flex gap-x-4">
                                 <dt className="flex-none">
                                     <span className="sr-only">Telephone</span>
                                     <PhoneIcon className="h-7 w-6 text-gray-900" aria-hidden="true" />
                                 </dt>
-                                <dd>
+                                <dd className='filter blur-sm transition duration-300 ease-in-out hover:blur-none'>
                                     <a className="text-gray-900 hover:text-gray-600" href="tel:+33614071521">
                                         +33614071521
                                     </a>
@@ -92,7 +121,7 @@ const Contact = () => {
                                     <span className="sr-only">Email</span>
                                     <EnvelopeIcon className="h-7 w-6 text-gray-900" aria-hidden="true" />
                                 </dt>
-                                <dd>
+                                <dd className="filter blur-sm transition duration-300 ease-in-out hover:blur-none">
                                     <a className="text-gray-900 hover:text-gray-600" href="mailto:guillaume.brechaire@gmail.com">
                                         g.brechaire@gmail.com
                                     </a>
@@ -105,14 +134,18 @@ const Contact = () => {
                     action={`https://formspree.io/f/${contact.formId}`}
                     method="POST"
                     className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
-                    onSubmit={handleSubmit}
+                    onSubmit={onSubmit}
                     aria-labelledby="contact-form-title"
                 >
+                    <div className="hidden">
+                        <label htmlFor="honeypot" className="sr-only">Honeypot</label>
+                        <input type="text" name="honeypot" id="honeypot" />
+                    </div>
                     <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
                         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                             <div>
                                 <label htmlFor="first-name" className="block text-sm font-semibold leading-6 custom-text-white">
-                                    {t.firstNameLabel}
+                                    {t.firstNameLabel} <span className='text-red-600'>*</span>
                                 </label>
                                 <div className="mt-2.5">
                                     <input
@@ -124,27 +157,29 @@ const Contact = () => {
                                         autoComplete="given-name"
                                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
+                                    {errors?.firstName && <p className="mt-2 text-sm text-red-600">{errors.firstName}</p>}
                                 </div>
                             </div>
                             <div>
                                 <label htmlFor="last-name" className="block text-sm font-semibold leading-6 custom-text-white">
-                                    {t.nameLabel}
+                                    {t.nameLabel} <span className='text-red-600'>*</span>
                                 </label>
                                 <div className="mt-2.5">
                                     <input
                                         type="text"
                                         name="last-name"
                                         id="last-name"
-                                        value={LastName}
+                                        value={lastName}
                                         onChange={(e) => setLastName(e.target.value)}
                                         autoComplete="family-name"
                                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
+                                    {errors?.lastName && <p className="mt-2 text-sm text-red-600">{errors.lastName}</p>}
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="email" className="block text-sm font-semibold leading-6 custom-text-white">
-                                    {t.emailLabel}
+                                    {t.emailLabel} <span className='text-red-600'>*</span>
                                 </label>
                                 <div className="mt-2.5">
                                     <input
@@ -156,6 +191,7 @@ const Contact = () => {
                                         autoComplete="email"
                                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
+                                    {errors?.email && <p className="mt-2 text-sm text-red-600">{errors.email}</p>}
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
@@ -172,11 +208,12 @@ const Contact = () => {
                                         autoComplete="tel"
                                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
+                                    {errors?.phoneNumber && <p className="mt-2 text-sm text-red-600">{errors.phoneNumber}</p>}
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="message" className="block text-sm font-semibold leading-6 custom-text-white">
-                                    {t.messageLabel}
+                                    {t.messageLabel} <span className='text-red-600'>*</span>
                                 </label>
                                 <div className="mt-2.5">
                                     <textarea
@@ -187,6 +224,8 @@ const Contact = () => {
                                         rows={4}
                                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
+                                    <p className='mt-2 text-sm text-red-600'>* Champs requis</p>
+                                    {errors?.message && <p className="mt-2 text-sm text-red-600">{errors.message}</p>}
                                     <ValidationError
                                         prefix="Message"
                                         field="message"

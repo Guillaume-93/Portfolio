@@ -208,7 +208,7 @@
         "image2Description": "Page d'accueil de la Ghibliothèque montrant les dernières sorties.",
         "image3": "/images/ghibliotheque-detail-film.webp",
         "image3Description": "Détail d'un film avec toutes ses informations.",
-        "image4": "/images/ghibli-code-detailFilm-ejs.png",
+        "image4": "/images/ghibli-code-detailFilm-ejs.webp",
         "image4Description": "Extrait du code source de la page de détail d'un film.",
         "image5": "/images/ghibli-code-filmController.png",
         "image5Description": "Extrait du code source du contrôleur de films.",

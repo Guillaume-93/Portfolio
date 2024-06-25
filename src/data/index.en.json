@@ -202,7 +202,7 @@
         "image2Description": "Ghibliotheque homepage showing the latest releases.",
         "image3": "/images/ghibliotheque-detail-film.webp",
         "image3Description": "Detail of a film with all its information.",
-        "image4": "/images/ghibli-code-detailFilm-ejs.png",
+        "image4": "/images/ghibli-code-detailFilm-ejs.webp",
         "image4Description": "Excerpt from the source code of a movie's detail page.",
         "image5": "/images/ghibli-code-filmController.png",
         "image5Description": "Excerpt from the movie controller source code.",

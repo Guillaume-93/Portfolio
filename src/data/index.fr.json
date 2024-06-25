@@ -135,7 +135,7 @@
     "firstname": "Guillaume",
     "lastname": "Bréchaire",
     "subtitle": "Je suis un Développeur Fullstack Javascript",
-    "title": "Ce site est un portfolio interactif, conçu pour me présenter, ainsi que mes projets. Il offre une navigation fluide et intuitive, avec un design minimaliste et élégant. Il est conçu pour être accessible sur tous les appareils, offrant une expérience utilisateur optimale."
+    "title": "Ce site est un portfolio interactif, conçu pour me présenter, ainsi que mes projets. Il offre une navigation fluide et intuitive, avec quelques animations et un design élégant. Il est conçu pour être accessible sur tous les appareils, offrant une expérience utilisateur optimale."
   },
   "about": {
     "title": "Présentation",
@@ -151,7 +151,7 @@
     "description": "Voici quelques projets que j'ai réalisés lors de ma formation à l'école O'Clock. Ces projets m'ont permis de développer mes compétences en développement web, en utilisant principalement des technologies telles que JavaScript, React, Redux, Typescript, Node.js, Express, PostgreSQL, Git et GitHub.",
     "title2": "Projet d'Apothéose",
     "description2": "Cette réalisation est le fruit de mon projet de fin d'études à l'école O'Clock, un défi que j'ai relevé en totale autonomie. Durant un mois, j'ai pu concrétiser l'ensemble des compétences développées au cours de ma formation en créant une application web de A à Z, en collaboration avec une équipe de quatre développeurs. Ce projet, en perpétuelle évolution, me tient particulièrement à cœur. En tant que lead développeur frontend, je continue d'enrichir l'application en y intégrant régulièrement de nouvelles fonctionnalités et optimisations.",
-    "description3": "Seul l'Atlas des Royaumes Oubliés est actuellement déployé en ligne. Pour y accéder, cliquez sur le bouton voir le projet.",
+    "description3": "Seul l'Atlas des Royaumes Oubliés est actuellement déployé en ligne.",
     "formationProjects": [
       {
         "title": "L'Atlas des Royaumes Oubliés",
@@ -178,10 +178,10 @@
         "image2Description": "Toutes les races dans l'Atlas des Royaumes Oubliés.",
         "image3": "/images/OMyDnD-classe-barbare.webp",
         "image3Description": "Classe barbare dans l'Atlas des Royaumes Oubliés.",
-        "image4": "/images/OMyDnD-protectedRoutes.webp",
-        "image4Description": "Extrait du code source des routes protégées.",
+        "image4": "/images/OMyDnD-tableStats.webp",
+        "image4Description": "Extrait du code source d'un composant personnage pour les statistiques.",
         "image5": "/images/OMyDnD-tableCharacters.webp",
-        "image5Description": "Extrait du code source d'un composant personnage.",
+        "image5Description": "Extrait du code source d'un composant personnage pour certains attributs.",
         "image6": "/images/OMyDnD-tieffelin.webp",
         "image6Description": "Image d'une Tieffeline dans l'Atlas des Royaumes Oubliés.",
         "alt": "Atlas des Royaumes Oubliés - Classe barbare",

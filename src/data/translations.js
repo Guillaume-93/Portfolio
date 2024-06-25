@@ -30,6 +30,7 @@ const translations = {
         contactFormTitle: "Formulaire de contact",
         usedTechnologies: "Technologies utilisées",
         seeMore: "Voir plus",
+        seeLess: "Voir moins",
 
         // Aria-labels
         toggleDarkMode: "Changer le mode sombre",
@@ -73,6 +74,7 @@ const translations = {
         contactFormTitle: "Contact form",
         usedTechnologies: "Used technologies",
         seeMore: "See more",
+        seeLess: "See less",
 
         // Aria-labels
         toggleDarkMode: "Toggle Dark Mode",

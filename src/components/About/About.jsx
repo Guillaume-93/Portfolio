@@ -12,7 +12,8 @@ const About = () => {
     const [isImageVisible, imageRef] = useVisibilityObserver(0.5);
     const [isTextVisible, textRef] = useVisibilityObserver(0.5);
     const [isTechnologiesVisible, technologiesRef] = useVisibilityObserver(0.1);
-    const [isProjectVisible, projectRef] = useVisibilityObserver(0.8);
+    const [isProjectVisible, projectRef] = useVisibilityObserver(0.1);
+    const [isLinkVisible, linkRef] = useVisibilityObserver(1);
 
     const [isProjectImage1Visible, projectImage1Ref] = useVisibilityObserver(0.1);
     const [isProjectImage2Visible, projectImage2Ref] = useVisibilityObserver(0.1);
@@ -164,28 +165,28 @@ const About = () => {
                                     {projects.description3}
                                 </p>
                                 <ul className={`flex flex-col gap-y-3 mt-6 `}>
-                                    <li className={`${isProjectVisible ? 'opacity-100 animate-fadeInRight' : 'opacity-0'}`} >
+                                    <li className={`${isLinkVisible ? 'opacity-100 animate-fadeInRight' : 'opacity-0'}`} ref={linkRef} >
                                         <a
                                             href="#atlasdd"
                                             className={`font-semibold leading-6 text-blue-700 `}>
                                             <span className={`bg-blue-100 px-3 py-0.5 rounded-full `}>{projects.formationProjects[0].title}</span>
                                         </a>
                                     </li>
-                                    <li className={`${isProjectVisible ? 'opacity-100 animate-fadeInRightSlow1' : 'opacity-0'}`}>
+                                    <li className={`${isLinkVisible ? 'opacity-100 animate-fadeInRightSlow1' : 'opacity-0'}`} ref={linkRef}>
                                         <a
                                             href="#ghibliotheque"
                                             className={`font-semibold leading-6 text-blue-700 `}>
                                             <span className={`bg-blue-100 px-3 py-0.5 rounded-full `}>{projects.formationProjects[1].title}</span>
                                         </a>
                                     </li>
-                                    <li className={`${isProjectVisible ? 'opacity-100 animate-fadeInRightSlow2' : 'opacity-0'}`}>
+                                    <li className={`${isLinkVisible ? 'opacity-100 animate-fadeInRightSlow2' : 'opacity-0'}`} ref={linkRef}>
                                         <a
                                             href="#pokedex"
                                             className={`font-semibold leading-6 text-blue-700 `}>
                                             <span className={`bg-blue-100 px-3 py-0.5 rounded-full `}>{projects.formationProjects[2].title}</span>
                                         </a>
                                     </li>
-                                    <li className={`${isProjectVisible ? 'opacity-100 animate-fadeInRightSlow3' : 'opacity-0'}`}>
+                                    <li className={`${isLinkVisible ? 'opacity-100 animate-fadeInRightSlow3' : 'opacity-0'}`} ref={linkRef}>
                                         <a
                                             href="#orecipes"
                                             className={`font-semibold leading-6 text-blue-700 `}>

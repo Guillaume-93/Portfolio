@@ -94,7 +94,7 @@ const About = () => {
                             <div key={`${item.name}-${index}`} ref={(el) => (timelineRefs.current[index] = el)}>
                                 <time
                                     dateTime={item.dateTime}
-                                    className={`flex items-center text-sm font-semibold leading-6 custom-text-white ${timelineVisibility[index] ? 'opacity-100 animate-fadeInLeft transition-delay-${index * 200}' : 'opacity-0'}`}
+                                    className={`flex items-center text-sm font-semibold leading-6 custom-text-white ${timelineVisibility[index] ? 'opacity-100 animate-fadeInSlow transition-delay-${index * 200}' : 'opacity-0'}`}
                                 >
                                     <svg viewBox="0 0 4 4" className="mr-4 h-1 w-1 flex-none" aria-hidden="true">
                                         <circle cx={2} cy={2} r={2} fill="currentColor" />

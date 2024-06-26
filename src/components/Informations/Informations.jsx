@@ -26,7 +26,7 @@ const Informations = () => {
           <a
             href={`#${t.about}`}
             type="text"
-            className="rounded-md gradient-button px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 animate-slideInLeft"
+            className="rounded-md gradient-button px-5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 animate-slideInLeft"
             aria-label={`${t.goToSection} ${t.about}`}
           >
             {t.informationsButton}

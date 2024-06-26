@@ -35,6 +35,7 @@ const translations = {
         lastNameRequired: "Le nom est requis",
         emailRequired: "L'email est requis",
         messageRequired: "Le message est requis",
+        requiredFields: "Les champs obligatoires sont indiqués par un astérisque.",
 
         // Aria-labels
         toggleDarkMode: "Changer le mode sombre",
@@ -83,6 +84,7 @@ const translations = {
         lastNameRequired: "Last name is required",
         emailRequired: "Email is required",
         messageRequired: "Message is required",
+        requiredFields: "Required fields are indicated by an asterisk.",
 
         // Aria-labels
         toggleDarkMode: "Toggle Dark Mode",

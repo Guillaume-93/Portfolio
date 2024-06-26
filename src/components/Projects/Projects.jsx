@@ -7,6 +7,7 @@ import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 import { useLanguage } from '../../contexts/languageHooks';
 import Popup from '../Popup/Popup';
+import TypingAnimation from '../magicui/TypingAnimation.jsx';
 
 const Projects = ({ isDarkMode }) => {
     const { config, t, language } = useLanguage();
@@ -19,13 +20,16 @@ const Projects = ({ isDarkMode }) => {
     const [projectVisibility, setProjectVisibility] = useState(
         Array(projects.formationProjects.length).fill(false)
     );
+    const [animationTriggered, setAnimationTriggered] = useState(
+        Array(projects.formationProjects.length).fill(false)
+    );
 
     useEffect(() => {
         const handleResize = () => {
             setIsLgScreen(window.innerWidth >= 1024);
         };
 
-        handleResize(); // Initial check
+        handleResize();
         window.addEventListener('resize', handleResize);
         return () => {
             window.removeEventListener('resize', handleResize);
@@ -43,10 +47,15 @@ const Projects = ({ isDarkMode }) => {
                                 newVisibility[index] = true;
                                 return newVisibility;
                             });
+                            setAnimationTriggered((prevTriggered) => {
+                                const newTriggered = [...prevTriggered];
+                                newTriggered[index] = true;
+                                return newTriggered;
+                            });
                             observer.disconnect();
                         }
                     },
-                    { threshold: 0.1 }
+                    { threshold: 0.3 }
                 );
                 observer.observe(ref);
                 return observer;
@@ -99,7 +108,12 @@ const Projects = ({ isDarkMode }) => {
                                     alt={project.alt6}
                                 />
                                 <div className="w-full flex-auto">
-                                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">{project.title}</h2>
+                                    {animationTriggered[index] && (
+                                        <TypingAnimation
+                                            className="text-4xl font-bold text-white"
+                                            text={project.title}
+                                        />
+                                    )}
                                     <p className="mt-6 text-lg leading-8 text-gray-400">
                                         {project.description}
                                     </p>

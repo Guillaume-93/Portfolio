@@ -1,4 +1,5 @@
 import { Expand } from "@theme-toggles/react";
+import { motion, useScroll, useSpring } from "framer-motion";
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import ReactCountryFlag from "react-country-flag";
@@ -8,6 +9,12 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { toggleLanguage, language, config, t } = useLanguage();
   const [isToggled, setToggle] = useState(isDarkMode);
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
   useEffect(() => {
     setToggle(isDarkMode);
@@ -29,6 +36,8 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
 
   return (
     <header className={`text-background fixed top-0 w-full z-50 shadow-md ${!isDarkMode ? '' : 'border-b'}`}>
+
+      <motion.div className="progress-bar" style={{ scaleX }} />
       <div className="flex justify-between items-center px-4 sm:px-8 h-10">
         <div className="flex items-center flex-1">
           <div className="mr-10 md:mr-28">

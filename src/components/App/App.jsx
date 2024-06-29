@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import About from '../About/About.jsx';
 import Contact from '../Contact/Contact.jsx';
 import Footer from '../Footer/Footer.jsx';
-import Header from '../Header/Header.jsx';
-import Informations from '../Informations/Informations.jsx';
+import Header from '../Header/Header2.jsx';
+import Informations from '../Informations/Informations2.jsx';
 import Projects from '../Projects/Projects.jsx';
 import Resume from '../Resume/Resume.jsx';
 

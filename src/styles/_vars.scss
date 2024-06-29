@@ -16,7 +16,7 @@
     --gradient-from: #80caff;
     --gradient-via: #5486eb;
     --gradient-to: #4f46e5;
-    
+
     --border-color: #cec3c3;
     --box-shadow-color: #cec3c3;
 
@@ -29,6 +29,24 @@
     --gradient-button-via: #306eeb;
     --gradient-button-to: #251be4;
 
+    --background-progressBar: #9494F1;
+
+
+    --black: #000000;
+    --ash-black: #222;
+    --white: #fafafa;
+    --sky: #00ccff;
+    --green: #22dddd;
+    --blue: #1300ff;
+    --dusk: #6600ff;
+    --purple: #9900ff;
+    --pink: #ff0066;
+    --red: #fe0222;
+    --orange: #fd7702;
+    --yellow: #ffbb00;
+
+    --background: var(--white);
+    --accent: var(--text-white);
 }
 
 .dark {
@@ -58,4 +76,6 @@
     --gradient-button-from: #1d6cf5;
     --gradient-button-via: #4b24f8;
     --gradient-button-to: #8418e9;
+
+    --background-progressBar: #5D2A9D;
 }

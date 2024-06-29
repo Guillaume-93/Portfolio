@@ -17,7 +17,7 @@ const translations = {
         submitButton: "Envoyer le message",
         successPopup: "Message envoyé avec succès",
         successMessage: "Merci ! Je vous répondrai dans les meilleurs délais !",
-        informationsButton: "Voir plus",
+        informationsButton: "Lire plus",
         projectsButton: "Voir le projet",
         codeSourceButton: "Code source",
         popupMessage: "Cette fonctionnalité n'est pas disponible pour le moment.",
@@ -36,6 +36,7 @@ const translations = {
         emailRequired: "L'email est requis",
         messageRequired: "Le message est requis",
         requiredFields: "Les champs obligatoires sont indiqués par un astérisque.",
+        settingButtonHeader: "Paramètres",
 
         // Aria-labels
         toggleDarkMode: "Changer le mode sombre",
@@ -66,7 +67,7 @@ const translations = {
         submitButton: "Send message",
         successPopup: "Message sent successfully",
         successMessage: "Thank you! I will respond as soon as possible!",
-        informationsButton: "See more",
+        informationsButton: "Read more",
         projectsButton: "See project",
         codeSourceButton: "Source code",
         popupMessage: "This feature is not available at the moment.",
@@ -85,6 +86,7 @@ const translations = {
         emailRequired: "Email is required",
         messageRequired: "Message is required",
         requiredFields: "Required fields are indicated by an asterisk.",
+        settingButtonHeader: "Settings",
 
         // Aria-labels
         toggleDarkMode: "Toggle Dark Mode",

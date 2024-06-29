@@ -132,6 +132,67 @@ body {
   padding-right: 1em;
 }
 
+.progress-bar {
+  position: fixed;
+  top: 86px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--background-progressBar);
+  border-radius: 0 8px 8px 0;
+  transform-origin: 0%;
+}
+
+.button-container {
+  display: flex;
+  background-color: var(--background-white);
+  width: 50px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.button {
+  outline: 0 !important;
+  border: 0 !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-4px);
+}
+
+.icon {
+  font-size: 20px;
+  color: var(--text-white);
+}
+
+
+// ::-webkit-scrollbar {
+//   height: 12px;
+//   width: 5px;
+//   background: var(--background-white);
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   background: var(--accent);
+//   -webkit-border-radius: 1ex;
+// }
+
+// ::-webkit-scrollbar-corner {
+//   background: var(--background-white);
+// }
+
 @media (min-width: 1200px) {
   .custom-width {
     width: 50%;

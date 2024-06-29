@@ -96,6 +96,13 @@ export const theme = {
         '0%': { opacity: 0, transform: 'translateY(50px)' },
         '100%': { opacity: 1, transform: 'translateY(0)' },
       },
+      slideInLeftBounce: {
+        '0%': { opacity: 0, transform: 'translateX(-200%)' },
+        '60%': { opacity: 1, transform: 'translateX(25px)' },
+        '75%': { transform: 'translateX(-10px)' },
+        '90%': { transform: 'translateX(5px)' },
+        '100%': { transform: 'translateX(0)' },
+      },
     },
     animation: {
       marquee1: "marquee1 40s linear infinite",
@@ -109,7 +116,7 @@ export const theme = {
       fadeInRightSlow2: 'fadeInRight 2s ease-out',
       fadeInRightSlow3: 'fadeInRight 2.5s ease-out',
       fadeOut: 'fadeOut 1s ease-in',
-      fadeInSlow: 'fadeInSlow 3s ease-in-out',
+      fadeInSlow: 'fadeInSlow 2s ease-in-out',
       slideInLeft: 'slideInLeft 1.5s ease-out',
       slideOutLeft: 'slideOutLeft 0.5s ease-in',
       slideInRight: 'slideInRight 1.5s ease-out',
@@ -123,6 +130,7 @@ export const theme = {
       zoomIn: 'zoomIn 1s ease-out',
       zoomOut: 'zoomOut 0.5s ease-in',
       fadeInUp: 'fadeInUp 1s ease-out',
+      slideInLeftBounce: 'slideInLeftBounce 1.5s ease-out',
     },
     transitionDelay: {
       '0': '0ms',

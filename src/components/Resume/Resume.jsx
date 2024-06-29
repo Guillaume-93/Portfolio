@@ -16,10 +16,10 @@ const Resume = ({ isDarkMode }) => {
     };
 
     return (
-        <div className="about-text pt-28 sm:pt-2 pb-10 md:pb-60">
+        <div className="about-text sm:pt-2 pb-10 md:pb-60">
             <div className="bg-gray-900 pb-20 sm:pb-24 xl:pb-0">
-                <div className={`mx-auto flex max-w-screen-2xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch ${isDarkMode ? 'border-t border-b' : ''}`}>
-                    <div className="-mt-8 sm:-mt-24 w-full max-w-2xl xl:-mb-36 xl:w-96 xl:flex-none lg:ml-8">
+                <div className={`mx-auto flex max-w-screen-3xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch ${isDarkMode ? 'border-t border-b' : ''}`}>
+                    <div className="-mt-8 sm:-mt-24 w-full max-w-2xl xl:-mb-36 xl:w-3/4 xl:flex-none lg:ml-8">
                         <div className="relative aspect-[2/1] h-full md:-mx-8 xl:aspect-auto">
                             <img
                                 src={getResumeImage()}
@@ -46,9 +46,6 @@ const Resume = ({ isDarkMode }) => {
                                 <p>
                                     {t.resumeDescription}
                                 </p>
-                            <figcaption className="my-8 text-base">
-                                <div className="font-semibold text-white">Guillaume Bréchaire</div>
-                            </figcaption>
                                 <div className="my-8 flex justify-start">
                                     <a
                                         href={getResumePdf()}

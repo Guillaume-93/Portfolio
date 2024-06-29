@@ -7,7 +7,6 @@ import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 import { useLanguage } from '../../contexts/languageHooks';
 import Popup from '../Popup/Popup';
-import TypingAnimation from '../magicui/TypingAnimation.jsx';
 
 const Projects = ({ isDarkMode }) => {
     const { config, t, language } = useLanguage();
@@ -18,9 +17,6 @@ const Projects = ({ isDarkMode }) => {
     const [isLgScreen, setIsLgScreen] = useState(false);
     const projectRefs = useRef([]);
     const [projectVisibility, setProjectVisibility] = useState(
-        Array(projects.formationProjects.length).fill(false)
-    );
-    const [animationTriggered, setAnimationTriggered] = useState(
         Array(projects.formationProjects.length).fill(false)
     );
 
@@ -47,15 +43,10 @@ const Projects = ({ isDarkMode }) => {
                                 newVisibility[index] = true;
                                 return newVisibility;
                             });
-                            setAnimationTriggered((prevTriggered) => {
-                                const newTriggered = [...prevTriggered];
-                                newTriggered[index] = true;
-                                return newTriggered;
-                            });
                             observer.disconnect();
                         }
                     },
-                    { threshold: 0.3 }
+                    { threshold: 0.1 }
                 );
                 observer.observe(ref);
                 return observer;
@@ -98,7 +89,7 @@ const Projects = ({ isDarkMode }) => {
                         <div
                             key={`${project.title}-${index}`}
                             id={project.ancre}
-                            className={`py-4 sm:py-16 ${projectVisibility[index] ? 'opacity-100 animate-fadeInSlow' : 'opacity-0'}`}
+                            className={`pb-8 sm:py-28 ${projectVisibility[index] ? 'opacity-100 animate-fadeInSlow' : 'opacity-0'}`}
                             ref={(el) => (projectRefs.current[index] = el)}
                         >
                             <div className="relative isolate overflow-hidden mx-auto flex max-w-2xl flex-col gap-16 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20 bg-gray-900 shadow-2xl">
@@ -108,12 +99,7 @@ const Projects = ({ isDarkMode }) => {
                                     alt={project.alt6}
                                 />
                                 <div className="w-full flex-auto">
-                                    {animationTriggered[index] && (
-                                        <TypingAnimation
-                                            className="text-4xl font-bold text-white"
-                                            text={project.title}
-                                        />
-                                    )}
+                                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">{project.title}</h2>
                                     <p className="mt-6 text-lg leading-8 text-gray-400">
                                         {project.description}
                                     </p>
@@ -210,7 +196,7 @@ const Projects = ({ isDarkMode }) => {
                                         </Popover>
                                     </div>
                                 </div>
-                                <div className="absolute -top-24 right-0 -z-10 transform-gpu blur-3xl" aria-hidden="true">
+                                <div className="absolute -top-24 right-0 -z-10 transform-gpu blur-3xl animate-fadeInLeft" aria-hidden="true">
                                     <div
                                         className="aspect-[1404/767] w-[87.75rem] gradient-background-bis opacity-25"
                                         style={{
@@ -224,7 +210,7 @@ const Projects = ({ isDarkMode }) => {
                     ))}
                 </div>
             </div>
-            <div id={t.experiences}></div>
+            <div className='pb-32' id={t.experiences}></div>
             <Popup isOpen={isPopupOpen} isDarkMode={isDarkMode} onClose={handleClosePopup}>
                 {t.popupMessage}
             </Popup>

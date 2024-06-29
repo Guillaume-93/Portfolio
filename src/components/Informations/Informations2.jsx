@@ -7,7 +7,7 @@ export default function Example() {
 
     return (
         <div id={t.home} className="text-background">
-            <div className="relative isolate px-6 pt-14 lg:px-8 pb-48 sm:pb-16">
+            <div className="relative isolate px-6 pt-8 lg:px-8 pb-48 sm:pb-16">
                 <div className="mx-auto max-w-2xl py-20 sm:py-48 lg:py-56">
                     <div className="text-center">
                         <h1 className="text-4xl font-bold tracking-tight custom-text-white sm:text-6xl animate-fadeInSlow">

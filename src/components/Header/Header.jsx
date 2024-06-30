@@ -1,143 +1,199 @@
-import { Expand } from "@theme-toggles/react";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { Dialog, DialogPanel, Disclosure, DisclosureButton, DisclosurePanel, Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/react';
+import { Bars3Icon, ChevronDownIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import ReactCountryFlag from "react-country-flag";
-import { useLanguage } from '../../contexts/languageHooks';
+import { useLanguage } from '../../contexts/languageHooks.js';
+import LanguageFlagToggle from './LanguageFlagToggle.jsx';
 
-const Header = ({ toggleDarkMode, isDarkMode }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const { toggleLanguage, language, config, t } = useLanguage();
-  const [isToggled, setToggle] = useState(isDarkMode);
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
+export default function Example({ toggleDarkMode, isDarkMode }) {
+    const [isOpen, setIsOpen] = useState(false);
+    const [lastScrollY, setLastScrollY] = useState(0);
+    const [isVisible, setIsVisible] = useState(true);
+    const { config, t } = useLanguage();
 
-  useEffect(() => {
-    setToggle(isDarkMode);
-  }, [isDarkMode]);
+    const navigation = config.navigation;
 
-  const handleToggle = () => {
-    setToggle(!isToggled);
-    toggleDarkMode();
-  };
-
-  useEffect(() => {
-    const sectionContent = document.querySelector("section");
-    if (sectionContent) {
-      sectionContent.style.marginTop = isOpen ? "150px" : "0";
+    function classNames(...classes) {
+        return classes.filter(Boolean).join(' ');
     }
-  }, [isOpen]);
 
-  const navigation = config.navigation;
+    const handleLinkClick = () => {
+        setIsOpen(false);
+    };
 
-  return (
-    <header className={`text-background fixed top-0 w-full z-50 shadow-md ${!isDarkMode ? '' : 'border-b'}`}>
+    const handleScroll = () => {
+        const currentScrollY = window.scrollY;
 
-      <motion.div className="progress-bar" style={{ scaleX }} />
-      <div className="flex justify-between items-center px-4 sm:px-8 h-10">
-        <div className="flex items-center flex-1">
-          <div className="mr-10 md:mr-28">
-            <a href={`#${t.home}`} aria-label={t.home}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path d="M12 3l9.5 9.5-1.41 1.41L18 11.83V20H6v-8.17L3.91 13.91 2.5 12.5 12 3zm1 5h-2v5h2V8zm-6 6h10v2H7v-2z" />
-              </svg>
-            </a>
-          </div>
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            setIsVisible(false);
 
-          <ul className={`flex-1 justify-start items-center hidden sm:flex md:gap-x-10 gap-x-7`}>
-            {navigation.map((item) => (
-              <li className="cursor-pointer" key={item.title}>
-                <a key={item.title} href={`#${item.ancre}`} className='font-semibold leading-6' onClick={() => setIsOpen(false)} aria-label={`${t.goToSection} ${item.title}`}>
-                  {item.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <Expand toggled={isToggled} toggle={handleToggle} className="mr-4" aria-label={t.toggleDarkMode} />
-        {language === 'fr' ? (
-          <>
-            <ReactCountryFlag
-              countryCode="GB"
-              title="English"
-              svg
-              className="rounded-full cursor-pointer mr-4"
-              onClick={toggleLanguage}
-              aria-label="Changer la langue en anglais"
-            />
-            <ReactCountryFlag
-              countryCode="FR"
-              title="Français"
-              svg
-              className="rounded-full cursor-pointer ring-2 ring-gray-500 ring-offset-2 ring-offset-background bg-white"
-              aria-label="Changer la langue en Français"
-            />
-          </>
-        ) : (
-          <>
-            <ReactCountryFlag
-              countryCode="GB"
-              title="English"
-              svg
-              className="rounded-full cursor-pointer ring-2 ring-gray-500 ring-offset-2 ring-offset-background mr-4 bg-white"
-              aria-label="Change language to English"
-            />
-            <ReactCountryFlag
-              countryCode="FR"
-              title="Français"
-              svg
-              className="rounded-full cursor-pointer"
-              onClick={toggleLanguage}
-              aria-label="Change language to French"
-            />
-          </>
-        )}
-        <button className="sm:hidden ml-4" onClick={() => setIsOpen(!isOpen)} aria-label={t.ToggleNavigationMenu}>
-          <svg className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            {isOpen ? (
-              <path
-                fillRule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            ) : (
-              <path
-                fillRule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clipRule="evenodd"
-              />
-            )}
-          </svg>
-        </button>
+        } else if (currentScrollY < lastScrollY || currentScrollY <= 50) {
+            setIsVisible(true);
+            
+        }
+        setLastScrollY(currentScrollY);
+    };
 
-        <ul className={`absolute top-10 left-0 w-full sm:hidden text-background ${isOpen ? "block" : "hidden"} shadow-md`} aria-label={t.NavigationMenu}>
-          {navigation.map((item) => (
-            <li className="text-center" key={item.title}>
-              <a key={item.title} href={`#${item.ancre}`} className="block px-4 py-2 font-semibold leading-6" onClick={() => setIsOpen(false)} aria-label={`${t.goToSection} ${item.title}`}>
-                {item.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </header>
-  );
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [lastScrollY]);
+
+    return (
+        <header className={`text-background fixed top-0 w-full z-10 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+            <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+                <div className="flex lg:flex-1 button-container">
+                    <a href={`#${t.home}`} className="button" onClick={handleLinkClick}>
+                        <span className="sr-only">{t.home}</span>
+                        <svg
+                            className="icon"
+                            stroke="currentColor"
+                            fill="currentColor"
+                            strokeWidth="0"
+                            viewBox="0 0 1024 1024"
+                            height="1.2em"
+                            width="1.2em"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"
+                            ></path>
+                        </svg>
+                    </a>
+                </div>
+                <div className="flex lg:hidden">
+                    <button
+                        type="button"
+                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-background"
+                        onClick={() => setIsOpen(true)}
+                    >
+                        <span className="sr-only">Open main menu</span>
+                        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                    </button>
+                </div>
+                <div className="hidden lg:flex lg:gap-x-12">
+                    {navigation.map((item) => (
+                        <a key={item.title} href={`#${item.ancre}`} className="text-sm font-semibold leading-6 text-background">
+                            {item.title}
+                        </a>
+                    ))}
+                </div>
+                <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
+
+                    <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+                        <Popover className="relative">
+                            {({ open }) => (
+                                <>
+                                    <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-background">
+                                        {t.settingButtonHeader}
+                                        <ChevronDownIcon
+                                            className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
+                                            aria-hidden="true"
+                                        />
+                                    </PopoverButton>
+
+                                    <PopoverPanel
+                                        transition
+                                        className={`absolute right-0 top-16 text-center z-10 mt-3 max-w-md overflow-hidden rounded-3xl text-background shadow-lg ring-1 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in ${isDarkMode ? 'ring-gray-800' : 'ring-gray-200'}`}
+                                    >
+                                        <div className="p-4">
+
+                                            <LanguageFlagToggle toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+                                        </div>
+
+                                    </PopoverPanel>
+                                </>
+                            )}
+                        </Popover>
+                    </PopoverGroup>
+                </div>
+            </nav>
+            <Dialog className="lg:hidden" open={isOpen} onClose={setIsOpen}>
+                <div className="fixed inset-0 z-10" />
+                <DialogPanel className={`fixed inset-y-0 right-0 z-10 w-full overflow-y-auto text-background px-6 py-6 sm:max-w-sm sm:ring-1 ${isDarkMode ? 'sm:ring-gray-600' : 'sm:ring-gray-200'}`}>
+                    <div className="flex items-center justify-between sm:hidden">
+                        <a href={`#${t.home}`} className="button" onClick={handleLinkClick}>
+                            <span className="sr-only">{t.home}</span>
+                            <svg
+                                className="icon"
+                                stroke="currentColor"
+                                fill="currentColor"
+                                strokeWidth="0"
+                                viewBox="0 0 1024 1024"
+                                height="1.2em"
+                                width="1.2em"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"
+                                ></path>
+                            </svg>
+                        </a>
+                        <button
+                            type="button"
+                            className="-m-2.5 rounded-md p-2.5 text-background"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            <span className="sr-only">Close menu</span>
+                            <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                        </button>
+                    </div>
+                    <div className="mt-6 flow-root">
+                        <div className="-my-6 divide-y divide-gray-500/10">
+                            <div className="space-y-2 py-6">
+                                {navigation.map((item) => (
+                                    <a
+                                        key={item.title}
+                                        href={`#${item.ancre}`}
+                                        className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 ${isDarkMode ? "hover:text-black hover:bg-gray-50" : "hover:bg-gray-50"}`}
+                                        onClick={handleLinkClick}
+                                    >
+                                        {item.title}
+                                    </a>
+                                ))}
+
+                            </div>
+                            <div className="py-6">
+                                <Disclosure as="div" className="-mx-3">
+                                    {({ open }) => (
+                                        <>
+                                            <DisclosureButton className={`flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-background ${isDarkMode ? "hover:text-black hover:bg-gray-50" : "hover:bg-gray-50"}`}>
+                                                {t.settingButtonHeader}
+                                                <ChevronDownIcon
+                                                    className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
+                                                    aria-hidden="true"
+                                                />
+                                            </DisclosureButton>
+                                            <DisclosurePanel className="mt-2 space-y-2">
+
+                                                <DisclosureButton
+                                                    key={t.name}
+                                                    as="a"
+                                                    href={t.href}
+                                                    className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-background"
+                                                    onClick={handleLinkClick}
+                                                >
+                                                    <LanguageFlagToggle toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+                                                </DisclosureButton>
+
+                                            </DisclosurePanel>
+                                        </>
+                                    )}
+                                </Disclosure>
+
+                            </div>
+                        </div>
+                    </div>
+                </DialogPanel>
+            </Dialog>
+        </header>
+    );
+}
+
+Example.propTypes = {
+    toggleDarkMode: PropTypes.func.isRequired,
+    isDarkMode: PropTypes.bool.isRequired,
 };
-
-Header.propTypes = {
-  toggleDarkMode: PropTypes.func.isRequired,
-  isDarkMode: PropTypes.bool.isRequired
-};
-
-export default Header;

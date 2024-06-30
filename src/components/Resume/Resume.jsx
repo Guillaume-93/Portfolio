@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import 'tailwindcss/tailwind.css';
 import { useLanguage } from '../../contexts/languageHooks';
-import '../Contact/style.scss';
 
 const Resume = ({ isDarkMode }) => {
     const { language, t } = useLanguage();

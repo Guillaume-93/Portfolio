@@ -55,20 +55,11 @@ const Resume = ({ isDarkMode }) => {
                                         aria-label={t.downloadResumeButton}
                                     >
                                         <svg
-                                            id="UploadToCloud"
-                                            viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg"
                                             height="16px"
-                                            width="16px"
-                                            className={`shadow-sm inline-block mr-2.5 -mt-0.5 ${isDarkMode ? "text-white" : "text-black"}`}
-                                        >
-                                            <path d="M0 0h24v24H0V0z" fill="none"></path>
-                                            <path
-                                                className={`color000000 svgShape text-white `}
-                                                fill="currentColor"
-                                                d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l4.65-4.65c.2-.2.51-.2.71 0L17 13h-3z"
-                                            ></path>
-                                        </svg>
+                                            width="16px" className={`shadow-sm inline-block mr-2.5 -mt-0.5 text-white ${isDarkMode ? "text-white" : "text-black"}`} data-name="Layer 2" id="bdd05811-e15d-428c-bb53-8661459f9307" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg"><path className={`text-white `}
+                                                fill="currentColor" d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path><path className={`text-white `}
+                                                    fill="currentColor" d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path><path className={`text-white `}
+                                                        fill="currentColor" d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path></svg>
                                         {t.downloadResumeButton}
                                     </a>
                                 </div>

@@ -15,7 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <meta name="keywords" content="Guillaume Bréchaire, portfolio, développement web, programmation, web developer, projets, compétences" />
         <meta property="og:title" content="Portfolio de Guillaume Bréchaire" />
         <meta property="og:description" content="Découvrez les projets et compétences en développement web de Guillaume Bréchaire." />
-        <meta property="og:image" content="https://guillaume-brechaire.netlify.app/images/portfolio-accueil.webp" />
+        <meta property="og:image" content="https://guillaume-brechaire.netlify.app/images/portfolio.webp" />
         <meta property="og:url" content="https://guillaume-brechaire.netlify.app/" />
       </Helmet>
       <LanguageProvider>

@@ -1,4 +1,4 @@
-import Proptype from 'prop-types';
+import Proptypes from 'prop-types';
 import Cloud from '../magicui/IconCloud';
 import { useLanguage } from '../../contexts/languageHooks';
 import useVisibilityObserver from '../../utils/useVisibilityObserver';
@@ -43,7 +43,7 @@ function Technologies({ isDarkMode }) {
 }
 
 Technologies.propTypes = {
-    isDarkMode: Proptype.bool.isRequired,
+    isDarkMode: Proptypes.bool.isRequired,
 };
 
 export default Technologies;

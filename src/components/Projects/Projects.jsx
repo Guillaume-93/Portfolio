@@ -72,12 +72,18 @@ const Projects = ({ isDarkMode }) => {
     };
 
     const toggleImageSize = (index) => {
+        const projectElement = document.getElementById(projects.formationProjects[index].ancre);
         if (openPopoverIndex === index) {
             setOpenPopoverIndex(null);
             setEnlargedIndex(null);
         } else {
             setOpenPopoverIndex(index);
             setEnlargedIndex(index);
+            setTimeout(() => {
+                if (projectElement) {
+                    projectElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }, 100);
         }
     };
 

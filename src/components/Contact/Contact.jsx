@@ -122,7 +122,7 @@ const Contact = () => {
                                     <EnvelopeIcon className="h-7 w-6 text-gray-900" aria-hidden="true" />
                                 </dt>
                                 <dd className="filter blur-sm transition duration-300 ease-in-out hover:blur-none">
-                                    <a className="text-gray-900 hover:text-gray-600" href="mailto:guillaume.brechaire@gmail.com">
+                                    <a className="text-gray-900 hover:text-gray-600" href="mailto:g.brechaire@gmail.com">
                                         g.brechaire@gmail.com
                                     </a>
                                 </dd>

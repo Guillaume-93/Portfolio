@@ -30,10 +30,18 @@ const Contact = () => {
 
     const validateForm = () => {
         const newErrors = {};
-        if (!firstName) newErrors.firstName = t.firstNameRequired;
-        if (!lastName) newErrors.lastName = t.lastNameRequired;
-        if (!email) newErrors.email = t.emailRequired;
-        if (!message) newErrors.message = t.messageRequired;
+        if (!firstName.trim()) newErrors.firstName = t.firstNameRequired;
+        if (!lastName.trim()) newErrors.lastName = t.lastNameRequired;
+        if (!email.trim()) {
+            newErrors.email = t.emailRequired;
+        } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
+            newErrors.email = t.emailInvalid;
+        }
+        if (!message.trim()) {
+            newErrors.message = t.messageRequired;
+        } else if (message.trim().length < 10) {
+            newErrors.message = t.messageMinLength;
+        }
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
@@ -251,4 +259,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default Contact;

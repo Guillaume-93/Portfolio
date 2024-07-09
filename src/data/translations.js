@@ -35,6 +35,7 @@ const translations = {
         lastNameRequired: "Le nom est requis",
         emailRequired: "L'email est requis",
         messageRequired: "Le message est requis",
+        messageMinLength: "Le message doit contenir au moins 10 caractères",
         requiredFields: "Les champs obligatoires sont indiqués par un astérisque.",
         settingButtonHeader: "Paramètres",
 
@@ -85,6 +86,7 @@ const translations = {
         lastNameRequired: "Last name is required",
         emailRequired: "Email is required",
         messageRequired: "Message is required",
+        messageMinLength: "Message must be at least 10 characters long",
         requiredFields: "Required fields are indicated by an asterisk.",
         settingButtonHeader: "Settings",
 

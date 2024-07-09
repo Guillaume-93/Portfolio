@@ -44,7 +44,7 @@ export default function Example({ toggleDarkMode, isDarkMode }) {
 
     return (
         <header className={`text-background fixed top-0 w-full z-10 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
-            <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <nav className="flex items-center justify-between p-3 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1 button-container">
                     <a href={`#${t.home}`} className="button" onClick={handleLinkClick}>
                         <span className="sr-only">{t.home}</span>

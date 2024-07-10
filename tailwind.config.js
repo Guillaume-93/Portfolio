@@ -116,7 +116,7 @@ export const theme = {
       fadeInRightSlow2: 'fadeInRight 2s ease-out',
       fadeInRightSlow3: 'fadeInRight 2.5s ease-out',
       fadeOut: 'fadeOut 1s ease-in',
-      fadeInSlow: 'fadeInSlow 2s ease-in-out',
+      fadeInSlow: 'fadeInSlow 1s ease-in-out',
       slideInLeft: 'slideInLeft 1.5s ease-out',
       slideOutLeft: 'slideOutLeft 0.5s ease-in',
       slideInRight: 'slideInRight 1.5s ease-out',

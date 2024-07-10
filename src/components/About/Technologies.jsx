@@ -1,18 +1,21 @@
+import { useMemo } from 'react';
 import Proptypes from 'prop-types';
 import Cloud from '../magicui/IconCloud';
 import { useLanguage } from '../../contexts/languageHooks';
 import useVisibilityObserver from '../../utils/useVisibilityObserver';
 
-
-
-
 function Technologies({ isDarkMode }) {
     const { config } = useLanguage();
 
-    const iconSlugs = ["javascript", "react", "nodejs", "express", "html5", "css3", "sass", "tailwindcss", "git", "github", "heroku", "netlify", "typescript", "redux", "postgresql", "linux", "windows", "axios", "vite", "json", "npm", "yarn", "postman", "sequelize", "trello", "notion"];
+    const iconSlugs = useMemo(() => ["javascript", "react", "nodejs", "express", "html5", "css3", "sass", "tailwindcss", "git", "github", "heroku", "netlify", "typescript", "redux", "postgresql", "linux", "windows", "axios", "vite", "json", "npm", "yarn", "postman", "sequelize", "trello", "notion"], []);
 
-    const technologies = config.technologies;
+    const technologies = useMemo(() => config.technologies, [config.technologies]);
     const [isTechnologiesVisible, technologiesRef] = useVisibilityObserver(0.1);
+
+    // Mémorisation du composant Cloud
+    const cloudElement = useMemo(() => (
+        <Cloud iconSlugs={iconSlugs} isDarkMode={isDarkMode} />
+    ), [iconSlugs, isDarkMode]);
 
     return (
         <div className="mx-auto mt-32 max-w-7xl sm:mt-40 sm:px-6 lg:px-8">
@@ -26,7 +29,7 @@ function Technologies({ isDarkMode }) {
                     {technologies[0].description}
                 </p>
                 <div className="">
-                    <Cloud iconSlugs={iconSlugs} isDarkMode={isDarkMode} />
+                    {cloudElement}
                 </div>
                 <div className="absolute -top-24 right-0 -z-10 transform-gpu blur-3xl" aria-hidden="true">
                     <div

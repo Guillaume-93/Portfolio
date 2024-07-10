@@ -38,7 +38,7 @@ function Weather() {
 
             {weatherData && (
                 <>
-                    <img src={`/weather-icons/${weatherData.iconId}.svg`} className="w-12 h-12" alt="weather icon" />
+                    <img src={`/weather-icons/${weatherData.iconId}.svg`} className="w-10 h-10" alt="weather icon" />
                     <div className="flex gap-x-3">
                         <p className="text-base text-gray-600 font-bold">{weatherData.temperature}°</p>
                         <p className="font-semibold leading-6">{weatherData.city}</p>

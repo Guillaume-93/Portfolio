@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { useLanguage } from '../../contexts/languageHooks.js';
 import LanguageFlagToggle from './LanguageFlagToggle.jsx';
+import Weather from './Weather.jsx';
 
 export default function Example({ toggleDarkMode, isDarkMode }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +30,7 @@ export default function Example({ toggleDarkMode, isDarkMode }) {
 
         } else if (currentScrollY < lastScrollY || currentScrollY <= 50) {
             setIsVisible(true);
-            
+
         }
         setLastScrollY(currentScrollY);
     };
@@ -44,8 +45,8 @@ export default function Example({ toggleDarkMode, isDarkMode }) {
 
     return (
         <header className={`text-background fixed top-0 w-full z-10 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
-            <nav className="flex items-center justify-between p-3 lg:px-8" aria-label="Global">
-                <div className="flex lg:flex-1 button-container">
+            <nav className="flex items-center justify-between px-3 py-0 lg:py-1 lg:px-8" aria-label="Global">
+                <div className="flex items-center gap-4 lg:flex-1">
                     <a href={`#${t.home}`} className="button" onClick={handleLinkClick}>
                         <span className="sr-only">{t.home}</span>
                         <svg
@@ -63,6 +64,7 @@ export default function Example({ toggleDarkMode, isDarkMode }) {
                             ></path>
                         </svg>
                     </a>
+                    <Weather />
                 </div>
                 <div className="flex lg:hidden">
                     <button
@@ -96,8 +98,8 @@ export default function Example({ toggleDarkMode, isDarkMode }) {
                                     </PopoverButton>
 
                                     <PopoverPanel
-                                        transition
-                                        className={`absolute right-0 top-16 text-center z-10 mt-3 max-w-md overflow-hidden rounded-3xl text-background shadow-lg ring-1 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in ${isDarkMode ? 'ring-gray-800' : 'ring-gray-200'}`}
+
+                                        className={`absolute right-0 top-10 text-center z-10 mt-3 max-w-md overflow-hidden rounded-3xl text-background shadow-lg ring-1 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in ${isDarkMode ? 'ring-gray-800' : 'ring-gray-200'}`}
                                     >
                                         <div className="p-4">
 
@@ -154,7 +156,6 @@ export default function Example({ toggleDarkMode, isDarkMode }) {
                                         {item.title}
                                     </a>
                                 ))}
-
                             </div>
                             <div className="py-6">
                                 <Disclosure as="div" className="-mx-3">

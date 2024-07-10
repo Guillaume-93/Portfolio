@@ -12,7 +12,6 @@ function Technologies({ isDarkMode }) {
     const technologies = useMemo(() => config.technologies, [config.technologies]);
     const [isTechnologiesVisible, technologiesRef] = useVisibilityObserver(0.1);
 
-    // Mémorisation du composant Cloud
     const cloudElement = useMemo(() => (
         <Cloud iconSlugs={iconSlugs} isDarkMode={isDarkMode} />
     ), [iconSlugs, isDarkMode]);

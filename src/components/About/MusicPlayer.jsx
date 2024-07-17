@@ -153,7 +153,7 @@ const MusicPlayer = () => {
     };
 
     return (
-        <main className="max-w-md mx-auto my-10">
+        <main className="max-w-md mx-auto mt-10">
             <p className="ml-1 mb-2 font-bold text-2xl">{t.playlistText}</p>
             <div className="bg-gradient-to-br from-[#0D0C0F] to-[#29343A] rounded-xl shadow-md overflow-hidden">
                 <div className="relative flex">

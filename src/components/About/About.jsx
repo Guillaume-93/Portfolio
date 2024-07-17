@@ -3,13 +3,14 @@ import { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../../contexts/languageHooks';
 import useVisibilityObserver from '../../utils/useVisibilityObserver';
 import Technologies from './Technologies';
+import MusicPlayer from './MusicPlayer.jsx';
 
-const About = ({isDarkMode}) => {
+const About = ({ isDarkMode }) => {
     const { config, t } = useLanguage();
     const about = config.about;
     const projects = config.projects;
     const timeline = config.timeline;
-    
+
     const [isImageVisible, imageRef] = useVisibilityObserver(0.5);
     const [isTextVisible, textRef] = useVisibilityObserver(0.5);
     const [isProjectVisible, projectRef] = useVisibilityObserver(0.1);
@@ -67,13 +68,18 @@ const About = ({isDarkMode}) => {
                                 <p className={`text-lg leading-8 custom-text-white ${isTextVisible ? 'opacity-100 animate-fadeInLeft' : 'opacity-0'}`}>
                                     {about.primary}
                                 </p>
+
                             </div>
-                            <img
-                                src="/images/IMG_2779.jpg"
-                                alt=""
-                                className={`mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36 ${isImageVisible ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}
-                                ref={imageRef}
-                            />
+                            <div className={`aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 ${isImageVisible ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}>
+                                <img
+                                    src="/images/IMG_2779.jpg"
+                                    alt=""
+                                    className={`mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36`}
+                                    ref={imageRef}
+                                />
+                                {/* MusicPlayer section */}
+                                <MusicPlayer isDarkMode={isDarkMode} />
+                            </div>
                         </div>
                     </div>
                     <div className="absolute -top-24 right-0 -z-10 transform-gpu blur-3xl" aria-hidden="true">
@@ -116,9 +122,11 @@ const About = ({isDarkMode}) => {
                     </div>
                 </div>
 
+
+
                 {/* Technologies section */}
                 <Technologies isDarkMode={isDarkMode} />
-                
+
                 <div className='pb-20 sm:pb-8' id={t.projects}></div>
 
                 {/* projects section */}

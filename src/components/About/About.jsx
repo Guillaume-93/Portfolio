@@ -78,7 +78,9 @@ const About = ({ isDarkMode }) => {
                                     ref={imageRef}
                                 />
                                 {/* MusicPlayer section */}
-                                <MusicPlayer isDarkMode={isDarkMode} />
+                                <div className='relative overflow-visible'>
+                                    <MusicPlayer />
+                                </div>
                             </div>
                         </div>
                     </div>

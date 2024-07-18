@@ -54,7 +54,7 @@ const About = ({ isDarkMode }) => {
         <div id={t.about} className="text-background sm:pb-12">
             <main className="isolate">
                 {/* Hero section */}
-                <div className="relative isolate -z-10 overflow-hidden pt-24 sm:pt-14">
+                <div className="relative isolate -z-10 overflow-hidden py-24 sm:py-14">
                     <div
                         className="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] shadow-xl shadow-indigo-600/10 sm:-mr-80 sm:w-[180%] md:-mr-64 md:w-[160%] lg:-mr-48 lg:w-[140%] xl:-mr-32 xl:w-[120%] 2xl:-mr-24 2xl:w-[100%] gradient-background opacity-60"
                         aria-hidden="true"
@@ -77,9 +77,7 @@ const About = ({ isDarkMode }) => {
                                     ref={imageRef}
                                 />
                                 {/* MusicPlayer section */}
-                                <div className="pb-20">
-                                    <MusicPlayer />
-                                </div>
+                                <MusicPlayer />
                             </div>
                         </div>
                     </div>

@@ -29,20 +29,20 @@
       "dateTime": "2021-08"
     },
     {
-      "name": "Motivation and Rigor",
+      "name": "Motivation and Discipline",
       "description": "Rigorous and highly motivated, I am determined to deliver quality solutions and collaborate effectively within dynamic teams.",
       "date": "Organization",
       "dateTime": "2021-12"
     },
     {
       "name": "Exploration and Curiosity",
-      "description": "I am also passionate about various sciences, astronomy, and manga. I love exploring new horizons, whether in the real world or imaginary universes. I am always seeking new experiences and knowledge, and I believe curiosity is the key to success.",
+      "description": "I am also passionate about various science fileds, astronomy, and manga. I love exploring new horizons, whether in the real world or imaginary universes. I am always seeking new experiences and knowledge, and I believe curiosity is the key to success.",
       "date": "Curiosity",
       "dateTime": "2022-02"
     },
     {
       "name": "Seeking Exciting Projects",
-      "description": "I am currently looking for professional opportunities as a Fullstack JavaScript developer. If you have job offers, freelance missions, or interesting projects to propose, do not hesitate to contact me. I would be delighted to discuss your needs and see how I can help you achieve your goals.",
+      "description": "I am currently looking for professional opportunities as a Fullstack JavaScript developer. If you have job offers, freelance missions, or interesting projects to suggest/offer, do not hesitate to contact me. I would be delighted to discuss your needs and see how I can help you achieve your goals.",
       "date": "Logical Mind",
       "dateTime": "2022-12"
     }
@@ -147,7 +147,7 @@
     "quinary": "I am currently looking for professional opportunities as a Fullstack JavaScript developer. If you have job offers, freelance missions, or interesting projects to propose, do not hesitate to contact me. I would be delighted to discuss your needs and see how I can help you achieve your goals."
   },
   "projects": {
-    "title": "Training Projects",
+    "title": "Projects",
     "description": "Here are some projects I completed during my training at O'Clock school. These projects allowed me to develop my web development skills, mainly using technologies such as JavaScript, React, Redux, TypeScript, Node.js, Express, PostgreSQL, Git, and GitHub.",
     "title2": "Apotheosis Project",
     "description2": "This achievement is the result of my end-of-studies project at O'Clock school, a challenge I took up in total autonomy. Over a month, I was able to consolidate all the skills developed during my training by creating a web application from scratch, in collaboration with a team of four developers. This project, in perpetual evolution, is particularly close to my heart. As the lead frontend developer, I continue to enrich the application by regularly integrating new features and optimizations.",
@@ -156,7 +156,7 @@
       {
         "title": "Atlas of Forgotten Realms",
         "ancre": "atlasdd",
-        "description": "The Atlas of Forgotten Realms is a web application for fans of the Dungeons and Dragons role-playing game. With it, immerse yourself in a universe where you can not only create, customize, and manage your characters but also design and orchestrate your own campaigns.",
+        "description": "The Atlas of Forgotten Realms is a web application for Dungeons and Dragons fans. With it, immerse yourself in a universe where you can not only create, customize, and manage your characters but also design and orchestrate your own campaigns.",
         "technologies": [
           "React",
           "Node.js",
@@ -251,7 +251,7 @@
       {
         "title": "O'Recipes",
         "ancre": "orecipes",
-        "description": "This site is a fast and interactive culinary recipe platform designed with React. This project integrates user authentication management and the favorites feature. Currently, the site is not deployed online.",
+        "description": "This site is a fast and interactive cooking recipes platform designed with React. This project integrates user authentication and an add to favorite feature. Currently, the site is not deployed online.",
         "technologies": [
           "React",
           "Vite",

@@ -154,8 +154,8 @@ const MusicPlayer = () => {
 
     return (
         <main className="max-w-md mx-auto mt-10">
-            <p className="ml-1 mb-2 font-bold text-2xl">{t.playlistTitle}:</p>
-            <p className="ml-1 mb-4 text-sm">{t.playlistText}.</p>
+            
+            <p className="ml-1 mb-4 text-lg">{t.playlistText}</p>
             <div className="bg-gradient-to-br from-[#0D0C0F] to-[#29343A] rounded-xl shadow-md overflow-hidden">
                 <div className="relative flex">
                     <div className="absolute inset-0 bg-cover bg-center md:hidden" style={{ backgroundImage: `url(./ressources/thumbs/${formatFileName(currentMusic.title)}.webp)` }} role="img" aria-label={`Album cover of ${currentMusic.title} by ${currentMusic.artist}`}></div>

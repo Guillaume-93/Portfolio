@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import 'tailwindcss/tailwind.css';
 import { useLanguage } from '../../contexts/languageHooks';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 const Resume = ({ isDarkMode }) => {
     const { language, t } = useLanguage();
@@ -20,15 +22,17 @@ const Resume = ({ isDarkMode }) => {
             <div className="bg-gray-900 pb-20 sm:pb-24 xl:pb-0">
                 <div className={`mx-auto flex max-w-screen-3xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch ${isDarkMode ? 'border-t border-b' : ''}`}>
                     <div className="-mt-8 sm:-mt-24 w-full max-w-2xl xl:-mb-36 xl:w-3/4 xl:flex-none lg:ml-8">
-                        <div className="relative aspect-[2/1] h-full md:-mx-8 xl:aspect-auto">
-                            <img
-                                src={getResumeImage()}
-                                alt={`CV Guillaume Bréchaire ${language === 'en' ? '(English)' : '(Français)'}`}
-                                className={`absolute inset-0 h-full w-full rounded-2xl object-cover object-top shadow-2xl ${isDarkMode ? 'ring-1 ring-gray-100' : 'ring-1 ring-gray-900'}`}
-                            />
-                        </div>
+                        <Zoom>
+                            <div className="relative aspect-[2/1] h-full md:-mx-8 xl:aspect-auto">
+                                <img
+                                    src={getResumeImage()}
+                                    alt={`CV Guillaume Bréchaire ${language === 'en' ? '(English)' : '(Français)'}`}
+                                    className={`inset-0 h-full w-full rounded-2xl object-cover object-top shadow-2xl ${isDarkMode ? 'ring-1 ring-gray-100' : 'ring-1 ring-gray-900'}`}
+                                />
+                            </div>
+                        </Zoom>
                     </div>
-                    <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
+                    <div className="w-full max-w-2xl xl:max-w-5xl xl:flex-auto xl:px-16 xl:py-24">
                         <figure className="relative isolate pt-6 sm:pt-12">
                             <svg
                                 viewBox="0 0 162 128"

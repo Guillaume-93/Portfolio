@@ -68,9 +68,8 @@ const About = ({ isDarkMode }) => {
                                 <p className={`text-lg leading-8 custom-text-white ${isTextVisible ? 'opacity-100 animate-fadeInLeft' : 'opacity-0'}`}>
                                     {about.primary}
                                 </p>
-
                             </div>
-                            <div className={`aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 ${isImageVisible ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}>
+                            <div className={`relative aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 ${isImageVisible ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}>
                                 <img
                                     src="/images/IMG_2779.jpg"
                                     alt=""
@@ -78,7 +77,7 @@ const About = ({ isDarkMode }) => {
                                     ref={imageRef}
                                 />
                                 {/* MusicPlayer section */}
-                                <div className='relative overflow-visible'>
+                                <div className="overflow-visible pb-20"> {/* Ajout d'un padding-bottom */}
                                     <MusicPlayer />
                                 </div>
                             </div>
@@ -123,8 +122,6 @@ const About = ({ isDarkMode }) => {
                         ))}
                     </div>
                 </div>
-
-
 
                 {/* Technologies section */}
                 <Technologies isDarkMode={isDarkMode} />
@@ -227,8 +224,8 @@ const About = ({ isDarkMode }) => {
                 </div>
             </main>
         </div>
-    )
-}
+    );
+};
 
 About.propTypes = {
     isDarkMode: Proptypes.bool.isRequired,

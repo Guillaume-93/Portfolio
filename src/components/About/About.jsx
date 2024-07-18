@@ -54,7 +54,7 @@ const About = ({ isDarkMode }) => {
         <div id={t.about} className="text-background sm:pb-12">
             <main className="isolate">
                 {/* Hero section */}
-                <div className="relative isolate -z-10 overflow-hidden py-24 sm:py-14">
+                <div className="relative isolate -z-10 overflow-hidden pt-24 sm:pt-14">
                     <div
                         className="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] shadow-xl shadow-indigo-600/10 sm:-mr-80 sm:w-[180%] md:-mr-64 md:w-[160%] lg:-mr-48 lg:w-[140%] xl:-mr-32 xl:w-[120%] 2xl:-mr-24 2xl:w-[100%] gradient-background opacity-60"
                         aria-hidden="true"
@@ -68,16 +68,18 @@ const About = ({ isDarkMode }) => {
                                 <p className={`text-lg leading-8 custom-text-white ${isTextVisible ? 'opacity-100 animate-fadeInLeft' : 'opacity-0'}`}>
                                     {about.primary}
                                 </p>
+                                {/* MusicPlayer section */}
+                                <MusicPlayer />
                             </div>
-                            <div className={`relative aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 ${isImageVisible ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}>
+
+                            <div className={`aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 ${isImageVisible ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}>
                                 <img
                                     src="/images/IMG_2779.jpg"
                                     alt=""
                                     className={`mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36`}
                                     ref={imageRef}
                                 />
-                                {/* MusicPlayer section */}
-                                <MusicPlayer />
+
                             </div>
                         </div>
                     </div>
@@ -93,7 +95,7 @@ const About = ({ isDarkMode }) => {
                 </div>
 
                 {/* Timeline section */}
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="mx-auto -mt-8 max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
                         {timeline.map((item, index) => (
                             <div key={`${item.name}-${index}`} ref={(el) => (timelineRefs.current[index] = el)}>

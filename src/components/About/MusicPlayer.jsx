@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useLanguage } from '../../contexts/languageHooks';
+import useVisibilityObserver from '../../utils/useVisibilityObserver';
 
 const musicsData = [
     { title: "Surround Sound (feat. 21 Savage And Baby Tate)", artist: "J.I.D", id: 1 },
@@ -27,6 +28,8 @@ const MusicPlayer = () => {
     const [shuffle, setShuffle] = useState(false);
     const [repeat, setRepeat] = useState(false);
     const [isDragging, setIsDragging] = useState(false);
+
+    const [isMusicPlayerVisible, musicPlayerRef] = useVisibilityObserver(0.5);
 
     const musicPlayer = useRef(null);
     const progressBarRef = useRef(null);
@@ -153,7 +156,7 @@ const MusicPlayer = () => {
     };
 
     return (
-        <main className="max-w-md mx-auto mt-10">
+        <main className={`max-w-md mx-auto mt-10 ${isMusicPlayerVisible ? 'opacity-100 animate-fadeInSlow' : 'opacity-0'}`} ref={musicPlayerRef}>
             
             <p className="ml-1 mb-4 text-lg">{t.playlistText}</p>
             <div className="bg-gradient-to-br from-[#0D0C0F] to-[#29343A] rounded-xl shadow-md overflow-hidden">

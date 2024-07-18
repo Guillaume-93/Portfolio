@@ -77,7 +77,7 @@ const About = ({ isDarkMode }) => {
                                     ref={imageRef}
                                 />
                                 {/* MusicPlayer section */}
-                                <div className="overflow-visible pb-20"> {/* Ajout d'un padding-bottom */}
+                                <div className="pb-20">
                                     <MusicPlayer />
                                 </div>
                             </div>

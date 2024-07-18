@@ -38,7 +38,8 @@ const translations = {
         messageMinLength: "Le message doit contenir au moins 10 caractères",
         requiredFields: "Les champs obligatoires sont indiqués par un astérisque.",
         settingButtonHeader: "Paramètres",
-        playlistText: "Écoute du moment",
+        playlistTitle: "Playlist",
+        playlistText: "Parcourez mon site avec mes écoutes du moment.",
 
         // Aria-labels
         toggleDarkMode: "Changer le mode sombre",
@@ -90,7 +91,8 @@ const translations = {
         messageMinLength: "Message must be at least 10 characters long",
         requiredFields: "Required fields are indicated by an asterisk.",
         settingButtonHeader: "Settings",
-        playlistText: "Currently listening",
+        playlistTitle: "Playlist",
+        playlistText: "Browse my site with my current listens.",
 
         // Aria-labels
         toggleDarkMode: "Toggle Dark Mode",

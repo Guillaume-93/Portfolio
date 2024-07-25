@@ -7,7 +7,7 @@ import useVisibilityObserver from '../../utils/useVisibilityObserver';
 function Technologies({ isDarkMode }) {
     const { config } = useLanguage();
 
-    const iconSlugs = useMemo(() => ["javascript", "react", "nodejs", "express", "html5", "css3", "sass", "tailwindcss", "git", "github", "heroku", "netlify", "typescript", "redux", "postgresql", "linux", "windows", "axios", "vite", "json", "npm", "yarn", "postman", "sequelize", "trello", "notion"], []);
+    const iconSlugs = useMemo(() => ["javascript", "react", "nodejs", "express", "html5", "css3", "sass", "tailwindcss", "git", "github", "heroku", "netlify", "typescript", "redux", "postgresql", "linux", "windows", "axios", "vite", "json", "npm", "yarn", "postman", "sequelize", "trello", "notion", "antdesign", "arduino", "bulma", "canva", "codepen", "fontawesome", "formspree", "githubcopilot", "googledrive", "googlefonts", "headlessui", "hostinger", "jsonwebtokens", "semanticui", "shadcnui", "simpleicons", "tldraw", "udemy"], []);
 
     const technologies = useMemo(() => config.technologies, [config.technologies]);
     const [isTechnologiesVisible, technologiesRef] = useVisibilityObserver(0.1);

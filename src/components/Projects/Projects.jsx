@@ -216,7 +216,7 @@ const Projects = ({ isDarkMode }) => {
                     ))}
                 </div>
             </div>
-            <div className='pb-32' id={t.experiences}></div>
+            <div className='pb-28 xl:pb-20' id={t.experiences}></div>
             <Popup isOpen={isPopupOpen} isDarkMode={isDarkMode} onClose={handleClosePopup}>
                 {t.popupMessage}
             </Popup>

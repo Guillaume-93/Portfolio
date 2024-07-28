@@ -1,19 +1,56 @@
-// tailwind.config.js
 import forms from '@tailwindcss/forms';
+import { default as flattenColorPalette } from 'tailwindcss/lib/util/flattenColorPalette';
 
 export const content = [
   './index.html',
   './src/**/*.{js,jsx,ts,tsx}',
-  "./pages/**/*.{js,ts,jsx,tsx}",
-  "./components/**/*.{js,ts,jsx,tsx}",
-  "./app/**/*.{js,ts,jsx,tsx}",
+  './pages/**/*.{js,ts,jsx,tsx}',
+  './components/**/*.{js,ts,jsx,tsx}',
+  './app/**/*.{js,ts,jsx,tsx}',
 ];
 
 export const darkMode = "class";
 
 export const theme = {
   extend: {
+    animation: {
+      aurora: "aurora 60s linear infinite",
+      marquee1: "marquee1 40s linear infinite",
+      marquee2: "marquee2 40s linear infinite",
+      fadeInLeft: 'fadeInLeft 1s ease-out',
+      fadeInLeftSlow1: 'fadeInLeft 1.5s ease-out',
+      fadeInLeftSlow2: 'fadeInLeft 2s ease-out',
+      fadeInLeftSlow3: 'fadeInLeft 3s ease-out',
+      fadeInRight: 'fadeInRight 1s ease-out',
+      fadeInRightSlow1: 'fadeInRight 1.5s ease-out',
+      fadeInRightSlow2: 'fadeInRight 2s ease-out',
+      fadeInRightSlow3: 'fadeInRight 2.5s ease-out',
+      fadeOut: 'fadeOut 1s ease-in',
+      fadeInSlow: 'fadeInSlow 1s ease-in-out',
+      slideInLeft: 'slideInLeft 1.5s ease-out',
+      slideOutLeft: 'slideOutLeft 0.5s ease-in',
+      slideInRight: 'slideInRight 1.5s ease-out',
+      slideOutRight: 'slideOutRight 0.5s ease-in',
+      bounceIn: 'bounceIn 1s ease-out',
+      bounceOut: 'bounceOut 1s ease-in',
+      pulse: 'pulse 2s infinite',
+      flip: 'flip 1s ease-in-out',
+      rotateIn: 'rotateIn 1s ease-out',
+      rotateOut: 'rotateOut 1s ease-in',
+      zoomIn: 'zoomIn 1s ease-out',
+      zoomOut: 'zoomOut 0.5s ease-in',
+      fadeInUp: 'fadeInUp 1s ease-out',
+      slideInLeftBounce: 'slideInLeftBounce 1.5s ease-out',
+    },
     keyframes: {
+      aurora: {
+        from: {
+          backgroundPosition: "50% 50%, 50% 50%",
+        },
+        to: {
+          backgroundPosition: "350% 50%, 350% 50%",
+        },
+      },
       marquee1: {
         "0%": { transform: "translateX(0%)" },
         "100%": { transform: "translateX(-100%)" },
@@ -104,34 +141,6 @@ export const theme = {
         '100%': { transform: 'translateX(0)' },
       },
     },
-    animation: {
-      marquee1: "marquee1 40s linear infinite",
-      marquee2: "marquee2 40s linear infinite",
-      fadeInLeft: 'fadeInLeft 1s ease-out',
-      fadeInLeftSlow1: 'fadeInLeft 1.5s ease-out',
-      fadeInLeftSlow2: 'fadeInLeft 2s ease-out',
-      fadeInLeftSlow3: 'fadeInLeft 3s ease-out',
-      fadeInRight: 'fadeInRight 1s ease-out',
-      fadeInRightSlow1: 'fadeInRight 1.5s ease-out',
-      fadeInRightSlow2: 'fadeInRight 2s ease-out',
-      fadeInRightSlow3: 'fadeInRight 2.5s ease-out',
-      fadeOut: 'fadeOut 1s ease-in',
-      fadeInSlow: 'fadeInSlow 1s ease-in-out',
-      slideInLeft: 'slideInLeft 1.5s ease-out',
-      slideOutLeft: 'slideOutLeft 0.5s ease-in',
-      slideInRight: 'slideInRight 1.5s ease-out',
-      slideOutRight: 'slideOutRight 0.5s ease-in',
-      bounceIn: 'bounceIn 1s ease-out',
-      bounceOut: 'bounceOut 1s ease-in',
-      pulse: 'pulse 2s infinite',
-      flip: 'flip 1s ease-in-out',
-      rotateIn: 'rotateIn 1s ease-out',
-      rotateOut: 'rotateOut 1s ease-in',
-      zoomIn: 'zoomIn 1s ease-out',
-      zoomOut: 'zoomOut 0.5s ease-in',
-      fadeInUp: 'fadeInUp 1s ease-out',
-      slideInLeftBounce: 'slideInLeftBounce 1.5s ease-out',
-    },
     transitionDelay: {
       '0': '0ms',
       '200': '200ms',
@@ -169,6 +178,14 @@ export const theme = {
       '11xl': '9rem',
       '12xl': '10rem',
     },
+    boxShadow: {
+      '3xl': '-2px 3px 3px 3px rgba(0, 0, 0, 0.4)',
+      '4xl': '-2px 5px 3px 3px rgba(0, 0, 0, 0.4)',
+      '5xl': '8px 8px 3px 3px rgba(0, 0, 0, 0.4)',
+      '3bisxl': '3px 3px 3px 3px rgba(255, 255, 255, 0.4)',
+      '4bisxl': '5px 5px 3px 3px rgba(255, 255, 255, 0.4)',
+      '5bisxl': '8px 8px 3px 3px rgba(255, 255, 255, 0.4)',
+    },
   },
 };
 
@@ -182,6 +199,16 @@ export const plugins = [
       h1: { fontSize: theme("fontSize.2xl") },
       h2: { fontSize: theme("fontSize.xl") },
       h3: { fontSize: theme("fontSize.lg") },
+    });
+
+    // Add each Tailwind color as a global CSS variable
+    let allColors = flattenColorPalette(theme("colors"));
+    let newVars = Object.fromEntries(
+      Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+    );
+
+    addBase({
+      ":root": newVars,
     });
   },
   forms,

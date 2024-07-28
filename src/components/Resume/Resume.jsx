@@ -3,9 +3,11 @@ import 'tailwindcss/tailwind.css';
 import { useLanguage } from '../../contexts/languageHooks';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
+import LinkPreview from '../ui/LinkPreview.jsx'; // Assurez-vous que le chemin est correct
 
 const Resume = ({ isDarkMode }) => {
     const { language, t } = useLanguage();
+
     const getResumeImage = () => {
         if (language === 'en') {
             return isDarkMode ? '/images/CV/cv-dark_en.webp' : '/images/CV/cv_en.webp';
@@ -17,13 +19,20 @@ const Resume = ({ isDarkMode }) => {
         return language === 'en' ? '/pdf/CV_Guillaume_Brechaire_en.pdf' : '/pdf/CV_Guillaume_Brechaire.pdf';
     };
 
+    const getPreviewImage = () => {
+        if (language === 'en') {
+            return isDarkMode ? '/images/CV/cv-dark_en.webp' : '/images/CV/cv_en.webp';
+        }
+        return isDarkMode ? '/images/CV/cv-dark.webp' : '/images/CV/cv.webp';
+    };
+
     return (
         <div className="about-text sm:pt-2 pb-10 md:pb-60">
             <div className="bg-gray-900 pb-20 sm:pb-24 xl:pb-0">
                 <div className={`mx-auto flex max-w-screen-3xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch ${isDarkMode ? 'border-t border-b' : ''}`}>
-                    <div className="-mt-8 sm:-mt-24 w-full max-w-2xl xl:-mb-36 xl:w-3/4 xl:flex-none lg:ml-8">
+                    <div className="-mt-8 sm:-mt-24 w-full max-w-2xl xl:-mb-36 xl:w-3/4 xl:flex-none ">
                         <Zoom>
-                            <div className="relative aspect-[2/1] h-full md:-mx-8 xl:aspect-auto">
+                            <div className="relative aspect-[2/1] h-full  xl:aspect-auto">
                                 <img
                                     src={getResumeImage()}
                                     alt={`CV Guillaume Bréchaire ${language === 'en' ? '(English)' : '(Français)'}`}
@@ -51,21 +60,47 @@ const Resume = ({ isDarkMode }) => {
                                     {t.resumeDescription}
                                 </p>
                                 <div className="my-8 flex justify-start">
-                                    <a
-                                        href={getResumePdf()}
-                                        download={`CV_Guillaume_Brechaire${language === 'en' ? '_en' : ''}.pdf`}
-                                        type="text"
-                                        className="rounded-md gradient-button px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                        aria-label={t.downloadResumeButton}
+                                    <LinkPreview
+                                        url={getResumePdf()}
+                                        imageSrc={getPreviewImage()}
+                                        className="font-bold"
+                                        isStatic
                                     >
-                                        <svg
-                                            height="16px"
-                                            width="16px" className={`shadow-sm inline-block mr-2.5 -mt-0.5 text-white ${isDarkMode ? "text-white" : "text-black"}`} data-name="Layer 2" id="bdd05811-e15d-428c-bb53-8661459f9307" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg"><path className={`text-white `}
-                                                fill="currentColor" d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path><path className={`text-white `}
-                                                    fill="currentColor" d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path><path className={`text-white `}
-                                                        fill="currentColor" d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path></svg>
-                                        {t.downloadResumeButton}
-                                    </a>
+                                        <a
+                                            href={getResumePdf()}
+                                            download={`CV_Guillaume_Brechaire${language === 'en' ? '_en' : ''}.pdf`}
+                                            type="text"
+                                            className="rounded-md gradient-button px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                            aria-label={t.downloadResumeButton}
+                                        >
+                                            <svg
+                                                height="16px"
+                                                width="16px"
+                                                className={`shadow-sm inline-block mr-2.5 -mt-0.5 text-white ${isDarkMode ? "text-white" : "text-black"}`}
+                                                data-name="Layer 2"
+                                                id="bdd05811-e15d-428c-bb53-8661459f9307"
+                                                viewBox="0 0 35 35"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    className="text-white"
+                                                    fill="currentColor"
+                                                    d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"
+                                                ></path>
+                                                <path
+                                                    className="text-white"
+                                                    fill="currentColor"
+                                                    d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"
+                                                ></path>
+                                                <path
+                                                    className="text-white"
+                                                    fill="currentColor"
+                                                    d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"
+                                                ></path>
+                                            </svg>
+                                            {t.downloadResumeButton}
+                                        </a>
+                                    </LinkPreview>
                                 </div>
                             </blockquote>
                         </figure>

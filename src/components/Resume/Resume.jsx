@@ -28,11 +28,11 @@ const Resume = ({ isDarkMode }) => {
 
     return (
         <div className="about-text sm:pt-2 pb-10 md:pb-60">
-            <div className="bg-gray-900 pb-20 sm:pb-24 xl:pb-0">
+            <div className="bg-[#18181B] pb-20 sm:pb-24 xl:pb-0">
                 <div className={`mx-auto flex max-w-screen-3xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch ${isDarkMode ? 'border-t border-b' : ''}`}>
                     <div className="-mt-8 sm:-mt-24 w-full max-w-2xl xl:-mb-36 xl:w-3/4 xl:flex-none ">
                         <Zoom>
-                            <div className="relative aspect-[2/1] h-full  xl:aspect-auto">
+                            <div className="relative aspect-[2/1] h-full  xl:aspect-auto z-10">
                                 <img
                                     src={getResumeImage()}
                                     alt={`CV Guillaume Bréchaire ${language === 'en' ? '(English)' : '(Français)'}`}
@@ -43,6 +43,15 @@ const Resume = ({ isDarkMode }) => {
                     </div>
                     <div className="w-full max-w-2xl xl:max-w-5xl xl:flex-auto xl:px-16 xl:py-24">
                         <figure className="relative isolate pt-6 sm:pt-12">
+                            <div className="absolute -top-24 right-0 -z-10 transform-gpu blur-3xl animate-fadeInLeft" aria-hidden="true">
+                                <div
+                                    className="aspect-[1404/767] w-[87.75rem] gradient-background-bis opacity-25"
+                                    style={{
+                                        clipPath:
+                                            'polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)',
+                                    }}
+                                />
+                            </div>
                             <svg
                                 viewBox="0 0 162 128"
                                 fill="none"

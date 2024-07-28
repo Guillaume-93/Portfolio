@@ -147,7 +147,7 @@
     "quinary": "Je suis actuellement à la recherche d'opportunités professionnelles en tant que développeur Fullstack JavaScript. Si vous avez des offres d'emploi, des missions freelance ou des projets intéressants à me proposer, n'hésitez pas à me contacter. Je serai ravi de discuter de vos besoins et de voir comment je peux vous aider à atteindre vos objectifs."
   },
   "projects": {
-    "title": "Projets de formation",
+    "title": "Projets",
     "description": "Voici quelques projets que j'ai réalisés lors de ma formation à l'école O'Clock. Ces projets m'ont permis de développer mes compétences en développement web, en utilisant principalement des technologies telles que JavaScript, React, Redux, Typescript, Node.js, Express, PostgreSQL, Git et GitHub.",
     "title2": "Projet d'Apothéose",
     "description2": "Cette réalisation est le fruit de mon projet de fin d'études à l'école O'Clock, un défi que j'ai relevé en totale autonomie. Durant un mois, j'ai pu concrétiser l'ensemble des compétences développées au cours de ma formation en créant une application web de A à Z, en collaboration avec une équipe de quatre développeurs. Ce projet, en perpétuelle évolution, me tient particulièrement à cœur. En tant que lead développeur frontend, je continue d'enrichir l'application en y intégrant régulièrement de nouvelles fonctionnalités et optimisations.",
@@ -287,7 +287,7 @@
   },
   "contact": {
     "title": "Entrer en contact",
-    "description": "C'est ici que vous pouvez prendre contact avec moi. Envoyez moi un message pour discuter de vos projets, de mes compétences ou de tout autre sujet qui vous intéresse. Je serai ravi de vous répondre. Vous pouvez également me contacter via LinkedIn ou GitHub en cliquant sur les icônes plus bas.",
+    "description": "C'est ici que vous pouvez prendre contact avec moi. Envoyez moi un message pour discuter de vos projets, de mes compétences ou de tout autre sujet qui vous intéresse. Je serai ravi de vous répondre. Vous pouvez également me contacter via LinkedIn ou GitHub.",
     "formId": "mayreyjo"
   },
   "footer": {

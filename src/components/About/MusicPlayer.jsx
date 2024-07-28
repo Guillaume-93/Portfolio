@@ -12,10 +12,10 @@ import useVisibilityObserver from '../../utils/useVisibilityObserver';
 // ];
 
 const musicsData = [
-    { title: "Still Lake", artist: "Lawrence Walther and softy and Tibeauthetraveler", id: 1 },
+    { title: "Still Lake", artist: "Lawrence Walther | Softy | Tibeauthetraveler", id: 1 },
     { title: "Spring Fields (Live Session)", artist: "Dimension 32", id: 2 },
-    { title: "Finally Stops Studying", artist: "Lofi Girl", id: 3 },
-    { title: "Snowman", artist: "Lofi Girl", id: 4 },
+    { title: "Snowman", artist: "Lofi Girl", id: 3 },
+    { title: "Finally Stops Studying", artist: "Lofi Girl", id: 4 },
 ];
 
 const formatFileName = (title) => {

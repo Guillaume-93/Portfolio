@@ -137,36 +137,36 @@ const About = ({ isDarkMode }) => {
                                 <p className={`mt-6 text-xl leading-8 custom-text-white ${isProjectVisible ? 'opacity-100 animate-fadeInLeft' : 'opacity-0'}`}>
                                     {projects.description}
                                 </p>
-                                <p className={`mt-6 text-base leading-7 custom-text-white ${isProjectVisible ? 'opacity-100 animate-fadeInLeft' : 'opacity-0'}`}>
+                                {/* <p className={`mt-6 text-base leading-7 custom-text-white ${isProjectVisible ? 'opacity-100 animate-fadeInLeft' : 'opacity-0'}`}>
                                     {projects.description3}
-                                </p>
+                                </p> */}
                                 <ul className={`flex flex-col gap-y-3 mt-6 `}>
                                     <li className={`${isLinkVisible ? 'opacity-100 animate-fadeInRight' : 'opacity-0'}`} ref={linkRef} >
                                         <a
                                             href="#atlasdd"
-                                            className={`font-semibold leading-6 text-blue-700 `}>
-                                            <span className={`bg-blue-100 px-3 py-0.5 rounded-full `}>{projects.formationProjects[0].title}</span>
+                                            className={`font-semibold leading-6`}>
+                                            <span className={`font-bold `}>{projects.formationProjects[0].title}</span>
                                         </a>
                                     </li>
                                     <li className={`${isLinkVisible ? 'opacity-100 animate-fadeInRightSlow1' : 'opacity-0'}`} ref={linkRef}>
                                         <a
                                             href="#ghibliotheque"
-                                            className={`font-semibold leading-6 text-blue-700 `}>
-                                            <span className={`bg-blue-100 px-3 py-0.5 rounded-full `}>{projects.formationProjects[1].title}</span>
+                                            className={`font-semibold leading-6`}>
+                                            <span className={`font-bold`}>{projects.formationProjects[1].title}</span>
                                         </a>
                                     </li>
                                     <li className={`${isLinkVisible ? 'opacity-100 animate-fadeInRightSlow2' : 'opacity-0'}`} ref={linkRef}>
                                         <a
                                             href="#pokedex"
-                                            className={`font-semibold leading-6 text-blue-700 `}>
-                                            <span className={`bg-blue-100 px-3 py-0.5 rounded-full `}>{projects.formationProjects[2].title}</span>
+                                            className={`font-semibold leading-6`}>
+                                            <span className={`font-bold `}>{projects.formationProjects[2].title}</span>
                                         </a>
                                     </li>
                                     <li className={`${isLinkVisible ? 'opacity-100 animate-fadeInRightSlow3' : 'opacity-0'}`} ref={linkRef}>
                                         <a
                                             href="#orecipes"
-                                            className={`font-semibold leading-6 text-blue-700 `}>
-                                            <span className={`bg-blue-100 px-3 py-0.5 rounded-full `}>{projects.formationProjects[3].title}</span>
+                                            className={`font-semibold leading-6`}>
+                                            <span className={`font-bold `}>{projects.formationProjects[3].title}</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -174,47 +174,47 @@ const About = ({ isDarkMode }) => {
                             <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
                                 <div className={`w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end`}>
                                     {/* <a href="#atlasdd"> */}
-                                        <img
-                                            src={projects.formationProjects[0].image6}
-                                            alt={projects.formationProjects[0].alt6}
-                                            ref={projectImage1Ref}
-                                            className={`hidden sm:block aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover ${isProjectImage1Visible ? 'opacity-100 animate-fadeInRight transition-delay-200' : 'opacity-0'}`}
-                                            aria-label={`${t.goToProject} ${projects.formationProjects[2].title}`}
-                                        />
+                                    <img
+                                        src={projects.formationProjects[0].image6}
+                                        alt={projects.formationProjects[0].alt6}
+                                        ref={projectImage1Ref}
+                                        className={`hidden sm:block aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover ${isProjectImage1Visible ? 'opacity-100 animate-fadeInRight transition-delay-200' : 'opacity-0'}`}
+                                        aria-label={`${t.goToProject} ${projects.formationProjects[0].title}`}
+                                    />
                                     {/* </a> */}
                                 </div>
                                 <div className={`contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8`}>
                                     <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
                                         {/* <a href="#ghibliotheque"> */}
-                                            <img
-                                                src={projects.formationProjects[1].image6}
-                                                alt={projects.formationProjects[1].alt6}
-                                                ref={projectImage2Ref}
-                                                className={`hidden sm:block aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover ${isProjectImage2Visible ? 'opacity-100 animate-fadeInLeft transition-delay-400' : 'opacity-0'}`}
-                                                aria-label={`${t.goToProject} ${projects.formationProjects[1].title}`}
-                                            />
+                                        <img
+                                            src={projects.formationProjects[1].image6}
+                                            alt={projects.formationProjects[1].alt6}
+                                            ref={projectImage2Ref}
+                                            className={`hidden sm:block aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover ${isProjectImage2Visible ? 'opacity-100 animate-fadeInLeft transition-delay-400' : 'opacity-0'}`}
+                                            aria-label={`${t.goToProject} ${projects.formationProjects[1].title}`}
+                                        />
                                         {/* </a> */}
                                     </div>
                                     <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
                                         {/* <a href="#pokedex"> */}
-                                            <img
-                                                src={projects.formationProjects[2].image6}
-                                                alt={projects.formationProjects[2].alt6}
-                                                ref={projectImage3Ref}
-                                                className={`hidden sm:block aspect-[7/5] w-[30rem] xl:w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover ${isProjectImage3Visible ? 'opacity-100 animate-fadeInUp transition-delay-600' : 'opacity-0'}`}
-                                                aria-label={`${t.goToProject} ${projects.formationProjects[0].title}`}
-                                            />
+                                        <img
+                                            src={projects.formationProjects[2].image6}
+                                            alt={projects.formationProjects[2].alt6}
+                                            ref={projectImage3Ref}
+                                            className={`hidden sm:block aspect-[7/5] w-[30rem] xl:w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover ${isProjectImage3Visible ? 'opacity-100 animate-fadeInUp transition-delay-600' : 'opacity-0'}`}
+                                            aria-label={`${t.goToProject} ${projects.formationProjects[2].title}`}
+                                        />
                                         {/* </a> */}
                                     </div>
                                     <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
                                         {/* <a href="#orecipes"> */}
-                                            <img
-                                                src={projects.formationProjects[3].image6}
-                                                alt={projects.formationProjects[3].alt6}
-                                                ref={projectImage4Ref}
-                                                className={`aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover ${isProjectImage4Visible ? 'opacity-100 animate-slideInRight transition-delay-800' : 'opacity-0'}`}
-                                                aria-label={`${t.goToProject} ${projects.formationProjects[3].title}`}
-                                            />
+                                        <img
+                                            src={projects.formationProjects[3].image6}
+                                            alt={projects.formationProjects[3].alt6}
+                                            ref={projectImage4Ref}
+                                            className={`aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover ${isProjectImage4Visible ? 'opacity-100 animate-slideInRight transition-delay-800' : 'opacity-0'}`}
+                                            aria-label={`${t.goToProject} ${projects.formationProjects[3].title}`}
+                                        />
                                         {/* </a> */}
                                     </div>
                                 </div>

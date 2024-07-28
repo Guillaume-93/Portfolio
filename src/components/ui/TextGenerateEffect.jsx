@@ -49,7 +49,7 @@ export default function TextGenerateEffect({ words, className, filter = true, du
     return (
         <div ref={elementRef} className={cn("", className)}>
             <div className="mt-4">
-                <div className={`mt-6 text-lg leading-8 text-gray-900 ${isTextVisible ? 'opacity-100 animate-fadeInLeft' : 'opacity-0'}`}>
+                <div className={`mt-6 text-lg leading-8 text-gray-900`}>
                     {renderWords()}
                 </div>
             </div>

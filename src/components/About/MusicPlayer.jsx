@@ -2,13 +2,20 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { useLanguage } from '../../contexts/languageHooks';
 import useVisibilityObserver from '../../utils/useVisibilityObserver';
 
+// const musicsDataFirst = [
+//     { title: "Surround Sound (feat. 21 Savage And Baby Tate)", artist: "J.I.D", id: 1 },
+//     { title: "Les masques", artist: "Joysad", id: 2 },
+//     { title: "Kill Bill", artist: "SZA", id: 3 },
+//     { title: "Search And Rescue", artist: "Drake", id: 4 },
+//     { title: "Save Your Tears", artist: "The Weeknd", id: 5 },
+//     { title: "Come and Get Your Love", artist: "Redbone", id: 6 }
+// ];
+
 const musicsData = [
-    { title: "Surround Sound (feat. 21 Savage And Baby Tate)", artist: "J.I.D", id: 1 },
-    { title: "Les masques", artist: "Joysad", id: 2 },
-    { title: "Kill Bill", artist: "SZA", id: 3 },
-    { title: "Search And Rescue", artist: "Drake", id: 4 },
-    { title: "Save Your Tears", artist: "The Weeknd", id: 5 },
-    { title: "Come and Get Your Love", artist: "Redbone", id: 6 }
+    { title: "Still Lake", artist: "Lawrence Walther and softy and Tibeauthetraveler", id: 1 },
+    { title: "Spring Fields (Live Session)", artist: "Dimension 32", id: 2 },
+    { title: "Finally Stops Studying", artist: "Lofi Girl", id: 3 },
+    { title: "Snowman", artist: "Lofi Girl", id: 4 },
 ];
 
 const formatFileName = (title) => {
@@ -159,7 +166,7 @@ const MusicPlayer = () => {
         <main className={`max-w-md mx-auto mt-10 ${isMusicPlayerVisible ? 'opacity-100 animate-fadeInSlow' : 'opacity-0'}`} ref={musicPlayerRef}>
             
             <p className="ml-1 mb-4 text-lg">{t.playlistText}</p>
-            <div className="bg-gradient-to-br from-[#0D0C0F] to-[#29343A] rounded-xl shadow-md overflow-hidden">
+            <div className="bg-gradient-to-br from-[#0D0C0F] to-[#29343A] rounded-xl shadow-3xl overflow-hidden">
                 <div className="relative flex">
                     <div className="absolute inset-0 bg-cover bg-center md:hidden" style={{ backgroundImage: `url(./ressources/thumbs/${formatFileName(currentMusic.title)}.webp)` }} role="img" aria-label={`Album cover of ${currentMusic.title} by ${currentMusic.artist}`}></div>
                     <div className="md:flex-shrink-0 hidden md:block">

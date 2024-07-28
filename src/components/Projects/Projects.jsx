@@ -88,7 +88,7 @@ const Projects = ({ isDarkMode }) => {
     };
 
     return (
-        <div className="-z-10 sm:py-32 text-background">
+        <div className="sm:py-32 text-background">
             <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div className="">
                     {projects.formationProjects.map((project, index) => (
@@ -98,7 +98,7 @@ const Projects = ({ isDarkMode }) => {
                             className={`pb-8 sm:py-28 ${projectVisibility[index] ? 'opacity-100 animate-fadeInSlow' : 'opacity-0'}`}
                             ref={(el) => (projectRefs.current[index] = el)}
                         >
-                            <div className="relative isolate overflow-hidden mx-auto flex max-w-2xl flex-col gap-16 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20 bg-gray-900 shadow-2xl">
+                            <div className="relative isolate overflow-hidden mx-auto flex max-w-2xl flex-col gap-16 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20 bg-[#18181B] shadow-2xl">
                                 <img
                                     className={`${isLgScreen && enlargedIndex === index ? 'lg:h-[50rem]' : 'h-96'} w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:max-w-sm`}
                                     src={project.image6}

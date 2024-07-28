@@ -32,7 +32,7 @@ function App() {
   return (
     <div className='snap-y snap-mandatory'>
       <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-      <Informations />
+      <Informations isDarkMode={isDarkMode} />
       <About isDarkMode={isDarkMode}/>
       <Projects isDarkMode={isDarkMode} />
       <Resume isDarkMode={isDarkMode} />

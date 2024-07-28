@@ -76,7 +76,7 @@ const About = ({ isDarkMode }) => {
                                 <img
                                     src="/images/IMG_2779.jpg"
                                     alt=""
-                                    className={`mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36`}
+                                    className={`shadow-4xl mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36`}
                                     ref={imageRef}
                                 />
 
@@ -173,7 +173,7 @@ const About = ({ isDarkMode }) => {
                             </div>
                             <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
                                 <div className={`w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end`}>
-                                    <a href="#atlasdd">
+                                    {/* <a href="#atlasdd"> */}
                                         <img
                                             src={projects.formationProjects[0].image6}
                                             alt={projects.formationProjects[0].alt6}
@@ -181,11 +181,11 @@ const About = ({ isDarkMode }) => {
                                             className={`hidden sm:block aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover ${isProjectImage1Visible ? 'opacity-100 animate-fadeInRight transition-delay-200' : 'opacity-0'}`}
                                             aria-label={`${t.goToProject} ${projects.formationProjects[2].title}`}
                                         />
-                                    </a>
+                                    {/* </a> */}
                                 </div>
                                 <div className={`contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8`}>
                                     <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
-                                        <a href="#ghibliotheque">
+                                        {/* <a href="#ghibliotheque"> */}
                                             <img
                                                 src={projects.formationProjects[1].image6}
                                                 alt={projects.formationProjects[1].alt6}
@@ -193,10 +193,10 @@ const About = ({ isDarkMode }) => {
                                                 className={`hidden sm:block aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover ${isProjectImage2Visible ? 'opacity-100 animate-fadeInLeft transition-delay-400' : 'opacity-0'}`}
                                                 aria-label={`${t.goToProject} ${projects.formationProjects[1].title}`}
                                             />
-                                        </a>
+                                        {/* </a> */}
                                     </div>
                                     <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
-                                        <a href="#pokedex">
+                                        {/* <a href="#pokedex"> */}
                                             <img
                                                 src={projects.formationProjects[2].image6}
                                                 alt={projects.formationProjects[2].alt6}
@@ -204,10 +204,10 @@ const About = ({ isDarkMode }) => {
                                                 className={`hidden sm:block aspect-[7/5] w-[30rem] xl:w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover ${isProjectImage3Visible ? 'opacity-100 animate-fadeInUp transition-delay-600' : 'opacity-0'}`}
                                                 aria-label={`${t.goToProject} ${projects.formationProjects[0].title}`}
                                             />
-                                        </a>
+                                        {/* </a> */}
                                     </div>
                                     <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
-                                        <a href="#orecipes">
+                                        {/* <a href="#orecipes"> */}
                                             <img
                                                 src={projects.formationProjects[3].image6}
                                                 alt={projects.formationProjects[3].alt6}
@@ -215,7 +215,7 @@ const About = ({ isDarkMode }) => {
                                                 className={`aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover ${isProjectImage4Visible ? 'opacity-100 animate-slideInRight transition-delay-800' : 'opacity-0'}`}
                                                 aria-label={`${t.goToProject} ${projects.formationProjects[3].title}`}
                                             />
-                                        </a>
+                                        {/* </a> */}
                                     </div>
                                 </div>
                             </div>

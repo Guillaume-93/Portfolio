@@ -3,7 +3,7 @@ import './style.scss';
 
 const Footer = () => {
   const { config, t } = useLanguage();
-  const footer = config.footer;
+  // const footer = config.footer;
 
   const navigation = config.navigation;
   const getYear = () => {
@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
           ))}
         </nav>
-        <div className="mt-16 flex justify-center space-x-10  text-3xl">
+        {/* <div className="mt-16 flex justify-center space-x-10  text-3xl">
           <ul className="example-2">
             <li className="icon-content">
               <a
@@ -74,7 +74,7 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
         <p className="mt-10 text-center text-xs leading-5 custom-text-white">
           © {getYear()} - {t.footer}
         </p>

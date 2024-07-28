@@ -43,7 +43,7 @@ export default function Example({ toggleDarkMode, isDarkMode }) {
     }, [lastScrollY]);
 
     return (
-        <header className={`text-background fixed top-0 w-full z-10 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+        <header className={`text-background fixed top-0 w-full z-50 transition-transform duration-300 border-b  ${isDarkMode ? 'border-gray-600' : 'border-gray-300'} ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
             <nav className="flex items-center justify-between p-3 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1 button-container">
                     <a href={`#${t.home}`} className="button" onClick={handleLinkClick}>
@@ -143,7 +143,7 @@ export default function Example({ toggleDarkMode, isDarkMode }) {
                     </div>
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/10">
-                            <div className="space-y-2 py-6">
+                            <div className="space-y-2 py-6 sm:py-16">
                                 {navigation.map((item) => (
                                     <a
                                         key={item.title}

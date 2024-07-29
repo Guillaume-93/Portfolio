@@ -1,3 +1,4 @@
+import LinkPreview from '../ui/LinkPreview.jsx';
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
@@ -111,7 +112,7 @@ const Projects = ({ isDarkMode }) => {
                                     </p>
                                     <div className="mt-10 flex">
                                         <Popover className={`focus:outline-none focus:ring-0`}>
-                                            <PopoverButton onClick={() => toggleImageSize(index)} className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-blue-500 focus:outline-none focus:ring-0">
+                                            <PopoverButton onClick={() => toggleImageSize(index)} className="inline-flex rounded-md gradient-button px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                                                 {openPopoverIndex === index ? t.seeLess : t.seeMore}
                                                 <ChevronDownIcon className={`h-5 w-5 transition-transform duration-500 ${openPopoverIndex === index ? 'rotate-180' : ''}`} aria-hidden="true" />
                                             </PopoverButton>
@@ -193,9 +194,19 @@ const Projects = ({ isDarkMode }) => {
                                                                 ))}
                                                             </ul>
                                                         </div>
-                                                        <button onClick={() => handleOpenPopup(project)} className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-blue-500 mt-6 focus:outline-none focus:ring-0" aria-label={t.projectsButton}>
-                                                            {t.projectsButton} <span aria-hidden="true">&rarr;</span>
-                                                        </button>
+                                                        <LinkPreview
+                                                            url={project.url}
+                                                            imageSrc={project.imagePreview}
+                                                            alt={`${project.altPreview}`}
+                                                            className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-blue-500 mt-6 focus:outline-none focus:ring-0"
+                                                            width={200}
+                                                            height={125}
+                                                            isStatic
+                                                        >
+                                                            <button className='rounded-md gradient-button px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' onClick={() => handleOpenPopup(project)} aria-label={t.projectsButton}>
+                                                                {t.projectsButton} <span aria-hidden="true">&rarr;</span>
+                                                            </button>
+                                                        </LinkPreview>
                                                     </div>
                                                 </PopoverPanel>
                                             )}

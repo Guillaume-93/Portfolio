@@ -9,7 +9,6 @@ import {
 } from "framer-motion";
 import { cn } from "../../utils/lib.js";
 import PropTypes from "prop-types";
-import { useLanguage } from "../../contexts/languageHooks";
 
 export default function LinkPreview({
     children,
@@ -19,13 +18,13 @@ export default function LinkPreview({
     height = 125,
     isStatic = false,
     imageSrc = "",
+    alt,
     ...props // Propager les autres props comme href, download, type, etc.
 }) {
     let src = isStatic ? imageSrc : url;
 
     const [isOpen, setOpen] = React.useState(false);
     const [isMounted, setIsMounted] = React.useState(false);
-    const { t } = useLanguage();
 
     React.useEffect(() => {
         setIsMounted(true);
@@ -51,7 +50,7 @@ export default function LinkPreview({
                         src={src}
                         width={width}
                         height={height}
-                        alt={t.downloadResumeButton}
+                        alt={alt}
                     />
                 </div>
             )}
@@ -125,4 +124,5 @@ LinkPreview.propTypes = {
     height: PropTypes.number,
     isStatic: PropTypes.bool,
     imageSrc: PropTypes.string,
+    alt: PropTypes.string,
 };

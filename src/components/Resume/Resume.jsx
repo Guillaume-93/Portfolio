@@ -37,6 +37,8 @@ const Resume = ({ isDarkMode }) => {
                                     src={getResumeImage()}
                                     alt={`CV Guillaume Bréchaire ${language === 'en' ? '(English)' : '(Français)'}`}
                                     className={`inset-0 h-full w-full rounded-2xl object-cover object-top shadow-2xl ${isDarkMode ? 'ring-1 ring-gray-100' : 'ring-1 ring-gray-900'}`}
+                                    width={200}
+                                    height={125}
                                 />
                             </div>
                         </Zoom>
@@ -72,6 +74,7 @@ const Resume = ({ isDarkMode }) => {
                                     <LinkPreview
                                         url={getResumePdf()}
                                         imageSrc={getPreviewImage()}
+                                        alt={`CV Guillaume Bréchaire ${language === 'en' ? '(English)' : '(Français)'}`}
                                         className="font-bold"
                                         isStatic
                                     >

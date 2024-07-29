@@ -164,7 +164,7 @@ const MusicPlayer = () => {
 
     return (
         <main className={`max-w-md mx-auto mt-10 ${isMusicPlayerVisible ? 'opacity-100 animate-fadeInSlow' : 'opacity-0'}`} ref={musicPlayerRef}>
-            
+
             <p className="ml-1 mb-4 text-lg">{t.playlistText}</p>
             <div className="bg-gradient-to-br from-[#0D0C0F] to-[#29343A] rounded-xl shadow-3xl overflow-hidden">
                 <div className="relative flex">
@@ -173,7 +173,14 @@ const MusicPlayer = () => {
                         <img className="w-36 object-cover h-full" src={`./ressources/thumbs/${formatFileName(currentMusic.title)}.webp`} alt={`Album cover of ${currentMusic.title} by ${currentMusic.artist}`} />
                     </div>
                     <div className="relative px-4 py-1 md:p-4 mx-auto w-full bg-black bg-opacity-75 md:bg-opacity-0">
-                        <h1 className="block mt-1 text-sm leading-tight font-medium text-white">{currentMusic.title}</h1>
+                        <h1 className="mt-1 text-sm leading-tight font-medium text-white flex items-center justify-between">
+                            {currentMusic.title}
+                            <img
+                                src={`./ressources/icons/${isPlaying ? 'icons8-music-record.gif' : 'icons8-music-record-static.png'}`}
+                                alt="Music record"
+                                className="w-7 h-7 ml-2 rounded-full bg-white"
+                            />
+                        </h1>
                         <p className="mt-2 text-sm text-gray-500">{currentMusic.artist}</p>
                         <audio ref={musicPlayer} onLoadedMetadata={() => setTotalDuration(musicPlayer.current.duration)} onTimeUpdate={updateProgress} onEnded={handleSongEnd} aria-label="Music player controls"></audio>
                         <div className="relative mt-4">

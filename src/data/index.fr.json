@@ -184,12 +184,14 @@
         "image5Description": "Extrait du code source d'un composant personnage pour certains attributs.",
         "image6": "/images/OMyDnD/OMyDnD-tieffelin.webp",
         "image6Description": "Image d'une Tieffeline dans l'Atlas des Royaumes Oubliés.",
+        "imagePreview": "/images/OMyDnD/OMyDnD-accueil.png",
         "alt": "Atlas des Royaumes Oubliés - Classe barbare",
         "alt2": "Atlas des Royaumes Oubliés - Création de personnage",
         "alt3": "Atlas des Royaumes Oubliés - Découvrez les races",
         "alt4": "Atlas des Royaumes Oubliés - Extrait du code source",
         "alt5": "Atlas des Royaumes Oubliés - Extrait du code source",
         "alt6": "Atlas des Royaumes Oubliés - Tieffeline",
+        "altPreview": "Atlas des Royaumes Oubliés - Page d'accueil",
         "url": "https://www.atlasdd.games/"
       },
       {
@@ -209,12 +211,14 @@
         "image5Description": "Extrait du code source du composant pour afficher les films.",
         "image6": "/images/Ghibliotheque/ghibliotheque-totoro.webp",
         "image6Description": "Image du film Mon Voisin Totoro.",
+        "imagePreview": "/images/Ghibliotheque/ghibliotheque-accueil.png",
         "alt": "Ghibliothèque - Page d'accueil",
         "alt2": "",
         "alt3": "Ghibliothèque - Page des Films",
         "alt4": "Ghibliothèque - Page de Détail du film",
         "alt5": "Ghibliothèque - Extrait du code source",
         "alt6": "Ghibliothèque - Mon Voisin Totoro",
+        "altPreview": "Ghibliothèque - Page d'accueil",
         "url": "https://ghibliotheque.guillaume-brechaire.fr/"
       },
       {
@@ -241,12 +245,14 @@
         "image5Description": "Extrait du code source de la base de données.",
         "image6": "/images/Pokedex/pokedex-salameche.webp",
         "image6Description": "Image du Pokémon Salamèche.",
+        "imagePreview": "/images/Pokedex/pokedex-accueil.webp",
         "alt": "Pokedex - Vue générale",
         "alt2": "Pokedex - Page d'accueil",
         "alt3": "Pokedex - Détail du Pokémon",
         "alt4": "Pokedex - Liste des Pokémon favoris",
         "alt5": "Pokedex - Extrait du code source",
         "alt6": "Pokedex - Salamèche",
+        "altPreview": "Pokedex - Page d'accueil",
         "url": ""
       },
       {
@@ -275,12 +281,14 @@
         "image5Description": "Extrait du code source du formulaire de connexion.",
         "image6": "/images/ORecipes/ORecipes-hamburger.webp",
         "image6Description": "Présentation d'une recette de hamburger.",
+        "imagePreview": "/images/ORecipes/ORecipes-accueil.webp",
         "alt": "O'Recipes - Mousse au chocolat",
         "alt2": "O'Recipes - Recettes favorites",
         "alt3": "O'Recipes - Page d'accueil",
         "alt4": "O'Recipes - Extrait du code source",
         "alt5": "O'Recipes - Formulaire de connexion",
         "alt6": "O'Recipes - Hamburger",
+        "altPreview": "O'Recipes - Page d'accueil",	
         "url": ""
       }      
     ]

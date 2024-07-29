@@ -209,7 +209,7 @@ const Contact = () => {
                         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                             <div>
                                 <label htmlFor="first-name" className="block text-sm font-semibold leading-6 custom-text-white">
-                                    {t.firstNameLabel} <span className='text-red-600'>*</span>
+                                    {t.firstNameLabel} <span className='text-red-500'>*</span>
                                 </label>
                                 <div className="mt-2.5">
                                     <input
@@ -222,12 +222,12 @@ const Contact = () => {
                                         autoComplete="given-name"
                                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
-                                    {errors?.firstName && <p className="mt-2 text-sm text-red-600">{errors.firstName}</p>}
+                                    {errors?.firstName && <p className="mt-2 text-sm text-red-500">{errors.firstName}</p>}
                                 </div>
                             </div>
                             <div>
                                 <label htmlFor="last-name" className="block text-sm font-semibold leading-6 custom-text-white">
-                                    {t.nameLabel} <span className='text-red-600'>*</span>
+                                    {t.nameLabel} <span className='text-red-500'>*</span>
                                 </label>
                                 <div className="mt-2.5">
                                     <input
@@ -240,12 +240,12 @@ const Contact = () => {
                                         autoComplete="family-name"
                                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
-                                    {errors?.lastName && <p className="mt-2 text-sm text-red-600">{errors.lastName}</p>}
+                                    {errors?.lastName && <p className="mt-2 text-sm text-red-500">{errors.lastName}</p>}
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="email" className="block text-sm font-semibold leading-6 custom-text-white">
-                                    {t.emailLabel} <span className='text-red-600'>*</span>
+                                    {t.emailLabel} <span className='text-red-500'>*</span>
                                 </label>
                                 <div className="mt-2.5">
                                     <input
@@ -258,7 +258,7 @@ const Contact = () => {
                                         autoComplete="email"
                                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
-                                    {errors?.email && <p className="mt-2 text-sm text-red-600">{errors.email}</p>}
+                                    {errors?.email && <p className="mt-2 text-sm text-red-500">{errors.email}</p>}
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
@@ -275,12 +275,12 @@ const Contact = () => {
                                         autoComplete="tel"
                                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
-                                    {errors?.phoneNumber && <p className="mt-2 text-sm text-red-600">{errors.phoneNumber}</p>}
+                                    {errors?.phoneNumber && <p className="mt-2 text-sm text-red-500">{errors.phoneNumber}</p>}
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="message" className="block text-sm font-semibold leading-6 custom-text-white">
-                                    {t.messageLabel} <span className='text-red-600'>*</span>
+                                    {t.messageLabel} <span className='text-red-500'>*</span>
                                 </label>
                                 <div className="mt-2.5">
                                     <textarea
@@ -292,8 +292,8 @@ const Contact = () => {
                                         required
                                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
-                                    {errors?.message && <p className="mt-2 text-sm text-red-600">{errors.message}</p>}
-                                    <p className='mt-2 text-sm text-red-600'>* {t.requiredFields}</p>
+                                    {errors?.message && <p className="mt-2 text-sm text-red-500">{errors.message}</p>}
+                                    <p className='mt-2 text-sm text-red-500'>* {t.requiredFields}</p>
                                     <ValidationError
                                         prefix="Message"
                                         field="message"

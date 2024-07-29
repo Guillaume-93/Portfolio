@@ -183,12 +183,14 @@
         "image5Description": "Extract the source code of a character component for certain attributes",
         "image6": "/images/OMyDnD/OMyDnD-tieffelin.webp",
         "image6Description": "Image of a Tiefling in the Atlas of Forgotten Realms.",
+        "imagePreview": "/images/OMyDnD/OMyDnD-accueil.png",
         "alt": "Atlas of Forgotten Realms - Barbarian class",
         "alt2": "Atlas of Forgotten Realms - Character creation",
         "alt3": "Atlas of Forgotten Realms - Discover the races",
         "alt4": "Atlas of Forgotten Realms - Source code excerpt",
         "alt5": "Atlas of Forgotten Realms - Source code excerpt",
         "alt6": "Atlas of Forgotten Realms - Tiefling",
+        "altPreview": "Atlas of Forgotten Realms - Home page",
         "url": "https://www.atlasdd.games/"
       },
       {
@@ -208,12 +210,14 @@
         "image5Description": "Excerpt from the source code of the component to display the films.",
         "image6": "/images/Ghibliotheque/ghibliotheque-totoro.webp",
         "image6Description": "Image from the film My Neighbor Totoro.",
+        "imagePreview": "/images/Ghibliotheque/ghibliotheque-accueil.png",
         "alt": "Ghibliothèque - Home page",
         "alt2": "",
         "alt3": "Ghibliothèque - Films page",
         "alt4": "Ghibliothèque - Film detail page",
         "alt5": "Ghibliothèque - Source code excerpt",
         "alt6": "Ghibliothèque - My Neighbor Totoro",
+        "altPreview": "Ghibliothèque - Home page",
         "url": "https://ghibliotheque.guillaume-brechaire.fr/"
       },
       {
@@ -240,12 +244,14 @@
         "image5Description": "Excerpt from the database source code.",
         "image6": "/images/Pokedex/pokedex-salameche.webp",
         "image6Description": "Image of the Pokémon Charmander.",
+        "imagePreview": "/images/Pokedex/pokedex-accueil.webp",
         "alt": "Pokedex - General view",
         "alt2": "Pokedex - Homepage",
         "alt3": "Pokedex - Pokémon detail",
         "alt4": "Pokedex - List of favorite Pokémon",
         "alt5": "Pokedex - Source code excerpt",
         "alt6": "Pokedex - Charmander",
+        "altPreview": "Pokedex - Homepage",
         "url": ""
       },
       {
@@ -274,12 +280,14 @@
         "image5Description": "Excerpt from the source code of the login form.",
         "image6": "/images/ORecipes/ORecipes-hamburger.webp",
         "image6Description": "Presentation of a hamburger recipe.",
+        "imagePreview": "/images/ORecipes/ORecipes-accueil.webp",
         "alt": "O'Recipes - Chocolate mousse",
         "alt2": "O'Recipes - Favorite recipes",
         "alt3": "O'Recipes - Homepage",
         "alt4": "O'Recipes - Source code excerpt",
         "alt5": "O'Recipes - Login form",
         "alt6": "O'Recipes - Hamburger",
+        "altPreview": "O'Recipes - Homepage",
         "url": ""
       }
     ]

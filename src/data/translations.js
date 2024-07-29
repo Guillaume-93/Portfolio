@@ -40,6 +40,7 @@ const translations = {
         settingButtonHeader: "Paramètres",
         playlistTitle: "Playlist",
         playlistText: "Parcourez mon site avec mes écoutes du moment.",
+        footerIcons: "icône par",
 
         // Aria-labels
         toggleDarkMode: "Changer le mode sombre",
@@ -93,6 +94,7 @@ const translations = {
         settingButtonHeader: "Settings",
         playlistTitle: "Playlist",
         playlistText: "Browse my site with my current listens.",
+        footerIcons: "icone by",
 
         // Aria-labels
         toggleDarkMode: "Toggle Dark Mode",

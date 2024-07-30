@@ -17,6 +17,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <meta property="og:description" content="Découvrez les projets et compétences en développement web de Guillaume Bréchaire." />
         <meta property="og:image" content="https://guillaume-brechaire.netlify.app/images/portfolio.webp" />
         <meta property="og:url" content="https://guillaume-brechaire.netlify.app/" />
+        <meta name="twitter:title" content="Portfolio de Guillaume Bréchaire" />
+        <meta name="twitter:description" content="Découvrez les projets et compétences en développement web de Guillaume Bréchaire." />
+        <meta name="twitter:image" content="https://guillaume-brechaire.netlify.app/images/portfolio.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <LanguageProvider>
         <App />

@@ -48,8 +48,8 @@ export default function LinkPreview({
                 <div className="hidden">
                     <img
                         src={src}
-                        width={width}
-                        height={height}
+                        // width={width}
+                        // height={height}
                         alt={alt}
                     />
                 </div>

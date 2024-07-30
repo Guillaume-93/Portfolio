@@ -4,8 +4,9 @@ import { useEffect, useState } from 'react';
 import 'tailwindcss/tailwind.css';
 import { useLanguage } from '../../contexts/languageHooks';
 import TextGenerateEffect from '../ui/TextGenerateEffect';
+import Proptypes from 'prop-types';
 
-const Contact = () => {
+const Contact = ({ isDarkMode }) => {
     const { config, t } = useLanguage();
     const contact = config.contact;
     const footer = config.footer;
@@ -209,7 +210,7 @@ const Contact = () => {
                         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                             <div>
                                 <label htmlFor="first-name" className="block text-sm font-semibold leading-6 custom-text-white">
-                                    {t.firstNameLabel} <span className='text-red-500'>*</span>
+                                    {t.firstNameLabel} <span className={`${isDarkMode ? 'text-red-500' : 'text-red-700'}`}>*</span>
                                 </label>
                                 <div className="mt-2.5">
                                     <input
@@ -227,7 +228,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <label htmlFor="last-name" className="block text-sm font-semibold leading-6 custom-text-white">
-                                    {t.nameLabel} <span className='text-red-500'>*</span>
+                                    {t.nameLabel} <span className={`${isDarkMode ? 'text-red-500' : 'text-red-700'}`}>*</span>
                                 </label>
                                 <div className="mt-2.5">
                                     <input
@@ -245,7 +246,7 @@ const Contact = () => {
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="email" className="block text-sm font-semibold leading-6 custom-text-white">
-                                    {t.emailLabel} <span className='text-red-500'>*</span>
+                                    {t.emailLabel} <span className={`${isDarkMode ? 'text-red-500' : 'text-red-700'}`}>*</span>
                                 </label>
                                 <div className="mt-2.5">
                                     <input
@@ -317,6 +318,10 @@ const Contact = () => {
             </div>
         </div>
     )
+}
+
+Contact.propTypes = {
+    isDarkMode: Proptypes.bool.isRequired,
 }
 
 export default Contact;

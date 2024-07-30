@@ -74,7 +74,7 @@ const About = ({ isDarkMode }) => {
 
                             <div className={`aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 ${isImageVisible ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}`}>
                                 <img
-                                    src="/images/IMG_2779.jpg"
+                                    src="/images/IMG_2779.webp"
                                     alt=""
                                     className={`shadow-4xl mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36`}
                                     ref={imageRef}

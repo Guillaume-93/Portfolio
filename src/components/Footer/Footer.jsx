@@ -1,7 +1,8 @@
 import { useLanguage } from '../../contexts/languageHooks';
 import './style.scss';
+import Proptypes from 'prop-types';
 
-const Footer = () => {
+const Footer = ({isDarkMode}) => {
   const { config, t } = useLanguage();
   const navigation = config.navigation;
   const getYear = () => {
@@ -27,12 +28,21 @@ const Footer = () => {
             <a target="_blank" href="https://icons8.com" rel="noreferrer" className="underline">Icons8</a>
           </p>
         </div>
-        <p className="mt-2 text-center text-xs leading-5 custom-text-white">
+        <p className="flex justify-center mt-2 text-center text-xs leading-5 custom-text-white items-center">
           © {getYear()} - {t.footer}
+          <img
+            src="/favicon_io/favicon.ico"
+            alt="Favicon"
+            className={`w-5 h-5 inline-block ml-2 ring-1 rounded-full p-0.5 ${isDarkMode ? 'ring-white' : 'ring-black'}`}
+          />
         </p>
       </div>
     </footer>
   );
+};
+
+Footer.propTypes = {
+  isDarkMode: Proptypes.bool,
 };
 
 export default Footer;

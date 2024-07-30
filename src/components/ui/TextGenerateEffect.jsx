@@ -26,6 +26,28 @@ export default function TextGenerateEffect({ words, className, filter = true, du
         }
     }, [isTextVisible, animate, duration, filter]);
 
+    useEffect(() => {
+        if (isTextVisible) {
+            animate(
+                "span",
+                { opacity: 0, filter: filter ? "blur(10px)" : "none" },
+                { duration: 0 }
+            ).then(() => {
+                animate(
+                    "span",
+                    {
+                        opacity: 1,
+                        filter: filter ? "blur(0px)" : "none",
+                    },
+                    {
+                        duration: duration ? duration : 1,
+                        delay: stagger(0.1),
+                    }
+                );
+            });
+        }
+    }, [words, isTextVisible, animate, duration, filter]);
+
     const renderWords = () => {
         return (
             <motion.div ref={scope}>

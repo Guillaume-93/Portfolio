@@ -23,7 +23,6 @@ const Footer = ({isDarkMode}) => {
         </nav>
         <div className="mt-16 text-center">
           <p className="text-xs leading-5 custom-text-white">
-            <a target="_blank" href="https://icons8.com/icon/9P70tJJKRpAo/music-record" rel="noreferrer" className="underline">Music Record</a>
             <span> {t.footerIcons} </span>
             <a target="_blank" href="https://icons8.com" rel="noreferrer" className="underline">Icons8</a>
           </p>

@@ -2,12 +2,12 @@
   "navigation": [
     {
       "title": "About",
-      "ancre": "About",
+      "ancre": "Presentation",
       "url": "http://www.example.com/about"
     },
     {
       "title": "Projects",
-      "ancre": "Projects",
+      "ancre": "Projets",
       "url": "http://www.example.com/portfolio"
     },
     {
@@ -29,28 +29,28 @@
       "dateTime": "2021-08"
     },
     {
-      "name": "Motivation and Discipline",
+      "name": "Motivation and Rigor",
       "description": "Rigorous and highly motivated, I am determined to deliver quality solutions and collaborate effectively within dynamic teams.",
       "date": "Organization",
       "dateTime": "2021-12"
     },
     {
       "name": "Exploration and Curiosity",
-      "description": "I am also passionate about various science fileds, astronomy, and manga. I love exploring new horizons, whether in the real world or imaginary universes. I am always seeking new experiences and knowledge, and I believe curiosity is the key to success.",
+      "description": "I am also passionate about various sciences, astronomy, and manga. I love exploring new horizons, whether in the real world or in imaginary universes. I am always seeking new experiences and knowledge, and I believe curiosity is the key to success.",
       "date": "Curiosity",
       "dateTime": "2022-02"
     },
     {
       "name": "Seeking Exciting Projects",
-      "description": "I am currently looking for professional opportunities as a Fullstack JavaScript developer. If you have job offers, freelance missions, or interesting projects to suggest/offer, do not hesitate to contact me. I would be delighted to discuss your needs and see how I can help you achieve your goals.",
+      "description": "I am currently looking for professional opportunities as a Fullstack JavaScript developer. If you have job offers, freelance missions, or interesting projects to propose, do not hesitate to contact me. I would be delighted to discuss your needs and see how I can help you achieve your goals.",
       "date": "Logical Mind",
       "dateTime": "2022-12"
     }
   ],
   "technologies": [
     {
-      "title": "Technologies Used",
-      "description": "Here are some of the technologies that I use, or have already used, to develop modern, high-performance web applications.",
+      "title": "Technologies and Tools Used",
+      "description": "Here are some of the tools and technologies that I use, or have already used, to develop modern and high-performance web applications.",
       "alt": ""
     },
     {
@@ -104,9 +104,9 @@
       "alt": "Visual Studio Code"
     },
     {
-      "name": "tailwindcss",
-      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-      "alt": "tailwindcss"
+      "name": "Tailwind CSS",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-plain.svg",
+      "alt": "Tailwind CSS"
     },
     {
       "name": "Vite",
@@ -119,12 +119,12 @@
       "alt": "TypeScript"
     },
     {
-      "name": "sequelize",
+      "name": "Sequelize",
       "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sequelize/sequelize-plain.svg",
-      "alt": "sequelize"
+      "alt": "Sequelize"
     },
     {
-      "name": "linux",
+      "name": "Linux",
       "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
       "alt": "Linux"
     }
@@ -134,29 +134,29 @@
     "intro": "Hey, my name is",
     "firstname": "Guillaume",
     "lastname": "Bréchaire",
-    "subtitle": "I am a Fullstack Javascript Developer",
+    "subtitle": "I am a Fullstack JavaScript Developer",
     "title": "This site is an interactive portfolio, designed to introduce myself and my projects. It offers smooth and intuitive navigation, with some animations and an elegant design. It is designed to be accessible on all devices, providing an optimal user experience."
   },
   "about": {
-    "title": "About",
+    "title": "About Me",
     "image": "/images/myself.webp",
-    "primary": "I am a Fullstack JavaScript developer graduated with a professional degree in web and mobile web development (Bac +2). Specialized in React.js, I am passionate about continuous learning and solving technical challenges.",
+    "primary": "I am a Fullstack JavaScript developer with a professional degree in web and mobile web development (Bac +2). Specialized in React.js, I am passionate about continuous learning and solving technical challenges. I launched myself as a freelancer by creating my company, Albalino Web Studio, where I offer my web development services to help my clients realize their digital projects.",
     "secondary": "I strive to stay up to date with the latest technologies and best practices, balancing frontend and backend development to create robust and aesthetically pleasing applications. My goal is to exceed user expectations by providing innovative and intuitive solutions.",
     "tertiary": "Rigorous and highly motivated, I am determined to deliver quality solutions and collaborate effectively within dynamic teams.",
-    "quaternary": "I am also passionate about various sciences, astronomy, and manga. I love exploring new horizons, whether in the real world or imaginary universes. I am always seeking new experiences and knowledge, and I believe curiosity is the key to success.",
-    "quinary": "I am currently looking for professional opportunities as a Fullstack JavaScript developer. If you have job offers, freelance missions, or interesting projects to propose, do not hesitate to contact me. I would be delighted to discuss your needs and see how I can help you achieve your goals."
+    "quaternary": "I am also passionate about various sciences, astronomy, and manga. I love exploring new horizons, whether in the real world or in imaginary universes. I am always seeking new experiences and knowledge, and I believe curiosity is the key to success.",
+    "quinary": "I am currently looking for professional opportunities as a Fullstack JavaScript developer. If you have job offers, freelance missions, or interesting projects to propose, don't hesitate to contact me. I would be delighted to discuss your needs and see how I can help you achieve your goals."
   },
   "projects": {
     "title": "Projects",
-    "description": "Here are some projects I completed during my training at O'Clock school. These projects allowed me to develop my web development skills, mainly using technologies such as JavaScript, React, Redux, TypeScript, Node.js, Express, PostgreSQL, Git, and GitHub.",
+    "description": "Here is a selection of projects that I have successfully completed during my training at O'Clock school and since working as a freelancer. These achievements have allowed me to develop and refine my skills in web development, mainly implementing technologies such as JavaScript, React, Redux, TypeScript, Node.js, Express, PostgreSQL, WordPress, as well as tools like Git and GitHub.",
     "title2": "Apotheosis Project",
-    "description2": "This achievement is the result of my end-of-studies project at O'Clock school, a challenge I took up in total autonomy. Over a month, I was able to consolidate all the skills developed during my training by creating a web application from scratch, in collaboration with a team of four developers. This project, in perpetual evolution, is particularly close to my heart. As the lead frontend developer, I continue to enrich the application by regularly integrating new features and optimizations.",
-    "description3": "Only the Atlas of Forgotten Realms is currently deployed online. To access it, click the view project button.",
+    "description2": "This achievement is the result of my end-of-studies project at O'Clock school, a challenge I took up in total autonomy. Over a month, I was able to concretize all the skills developed during my training by creating a web application from A to Z, in collaboration with a team of four developers. This project, in perpetual evolution, is particularly close to my heart. As the lead frontend developer, I continue to enrich the application by regularly integrating new features and optimizations.",
+    "description3": "Only the Atlas of Forgotten Realms is currently deployed online.",
     "formationProjects": [
       {
         "title": "Atlas of Forgotten Realms",
         "ancre": "atlasdd",
-        "description": "The Atlas of Forgotten Realms is a web application for Dungeons and Dragons fans. With it, immerse yourself in a universe where you can not only create, customize, and manage your characters but also design and orchestrate your own campaigns.",
+        "description": "The Atlas of Forgotten Realms is a web application for Dungeons and Dragons enthusiasts. Dive into a universe where you can not only create, customize, and manage your characters but also design and orchestrate your own campaigns.",
         "technologies": [
           "React",
           "Node.js",
@@ -178,9 +178,9 @@
         "image3": "/images/OMyDnD/OMyDnD-classe-barbare.webp",
         "image3Description": "Barbarian class in the Atlas of Forgotten Realms.",
         "image4": "/images/OMyDnD/OMyDnD-tableStats.webp",
-        "image4Description": "Extract from the source code of a character component for statistics.",
+        "image4Description": "Excerpt from the source code of a character component for statistics.",
         "image5": "/images/OMyDnD/OMyDnD-tableCharacters.webp",
-        "image5Description": "Extract the source code of a character component for certain attributes",
+        "image5Description": "Excerpt from the source code of a character component for certain attributes.",
         "image6": "/images/OMyDnD/OMyDnD-tieffelin.webp",
         "image6Description": "Image of a Tiefling in the Atlas of Forgotten Realms.",
         "imagePreview": "/images/OMyDnD/OMyDnD-accueil.webp",
@@ -194,36 +194,36 @@
         "url": "https://www.atlasdd.games/"
       },
       {
-        "title": "Ghibliothèque",
+        "title": "Ghibliotheque",
         "ancre": "ghibliotheque",
-        "description": "This site, now entirely front-end, uses React, Redux, Tailwind, and several libraries to provide full access to the Studio Ghibli film catalog. Each film is accompanied by images, detailed summaries, and various information. Currently, the site is deployed online.",
+        "description": "This site, now entirely front-end, uses React, Redux, Tailwind, and some libraries to provide complete access to the Studio Ghibli film catalog. Each film is accompanied by images, detailed summaries, and various information. Currently, the site is deployed online.",
         "technologies": ["JavaScript", "React", "Redux", "Tailwind CSS", "Framer Motion", "React Router", "Vite", "Axios"],
         "image": "/images/Ghibliotheque/ghibliotheque-accueil.webp",
-        "imageDescription": "Home page of the Ghibli Library",
+        "imageDescription": "Home page of the Ghibliotheque",
         "image2": "",
         "image2Description": "",
         "image3": "/images/Ghibliotheque/ghibliotheque-films.webp",
-        "image3Description": "Overview of the films available in the Ghibli Library.",
+        "image3Description": "General view of the films available in the Ghibliotheque.",
         "image4": "/images/Ghibliotheque/ghibliotheque-detail-film.webp",
-        "image4Description": "Film detail with all its information.",
+        "image4Description": "Detail of a film with all its information.",
         "image5": "/images/Ghibliotheque/ghibli-component-films.webp",
         "image5Description": "Excerpt from the source code of the component to display the films.",
         "image6": "/images/Ghibliotheque/ghibliotheque-totoro.webp",
         "image6Description": "Image from the film My Neighbor Totoro.",
         "imagePreview": "/images/Ghibliotheque/ghibliotheque-accueil.webp",
-        "alt": "Ghibliothèque - Home page",
+        "alt": "Ghibliotheque - Home page",
         "alt2": "",
-        "alt3": "Ghibliothèque - Films page",
-        "alt4": "Ghibliothèque - Film detail page",
-        "alt5": "Ghibliothèque - Source code excerpt",
-        "alt6": "Ghibliothèque - My Neighbor Totoro",
-        "altPreview": "Ghibliothèque - Home page",
+        "alt3": "Ghibliotheque - Films page",
+        "alt4": "Ghibliotheque - Film detail page",
+        "alt5": "Ghibliotheque - Source code excerpt",
+        "alt6": "Ghibliotheque - My Neighbor Totoro",
+        "altPreview": "Ghibliotheque - Home page",
         "url": "https://ghibliotheque.guillaume-brechaire.fr/"
       },
       {
-        "title": "Pokedex",
+        "title": "Pokédex",
         "ancre": "pokedex",
-        "description": "This interactive backend-only site, without dependency on the official Pokémon API, allows users to create a personalized Pokedex by adding their own Pokémon. Currently, the site is not deployed online.",
+        "description": "This interactive site, exclusively back-end without dependency on the official Pokémon API, allows users to create a personalized Pokédex by adding their own Pokémon. Currently, the site is not deployed online.",
         "technologies": [
           "JavaScript",
           "Node.js",
@@ -235,29 +235,29 @@
         "image": "/images/Pokedex/pokedex.webp",
         "imageDescription": "General view of the Pokémon list.",
         "image2": "/images/Pokedex/pokedex-accueil.webp",
-        "image2Description": "Pokedex homepage showing recently added Pokémon.",
+        "image2Description": "Pokédex homepage showing recently added Pokémon.",
         "image3": "/images/Pokedex/pokemon-detail.webp",
         "image3Description": "Detail of a Pokémon with all its information.",
         "image4": "/images/Pokedex/pokedex-favoris.webp",
-        "image4Description": "List of favorite Pokémon in the Pokedex.",
+        "image4Description": "List of favorite Pokémon in the Pokédex.",
         "image5": "/images/Pokedex/pokedex-code-sql.webp",
         "image5Description": "Excerpt from the database source code.",
         "image6": "/images/Pokedex/pokedex-salameche.webp",
         "image6Description": "Image of the Pokémon Charmander.",
         "imagePreview": "/images/Pokedex/pokedex-accueil.webp",
-        "alt": "Pokedex - General view",
-        "alt2": "Pokedex - Homepage",
-        "alt3": "Pokedex - Pokémon detail",
-        "alt4": "Pokedex - List of favorite Pokémon",
-        "alt5": "Pokedex - Source code excerpt",
-        "alt6": "Pokedex - Charmander",
-        "altPreview": "Pokedex - Homepage",
+        "alt": "Pokédex - General view",
+        "alt2": "Pokédex - Homepage",
+        "alt3": "Pokédex - Pokémon detail",
+        "alt4": "Pokédex - List of favorite Pokémon",
+        "alt5": "Pokédex - Source code excerpt",
+        "alt6": "Pokédex - Charmander",
+        "altPreview": "Pokédex - Homepage",
         "url": ""
       },
       {
         "title": "O'Recipes",
         "ancre": "orecipes",
-        "description": "This site is a fast and interactive cooking recipes platform designed with React. This project integrates user authentication and an add to favorite feature. Currently, the site is not deployed online.",
+        "description": "This site is a platform for culinary recipes, fast and interactive, designed with React. This project integrates user authentication management and a favorites feature. Currently, the site is not deployed online.",
         "technologies": [
           "React",
           "Vite",
@@ -275,7 +275,7 @@
         "image3": "/images/ORecipes/ORecipes-accueil.webp",
         "image3Description": "O'Recipes homepage showing popular recipes.",
         "image4": "/images/ORecipes/ORecipes-reducer-user.webp",
-        "image4Description": "Excerpt from user reducer source code.",
+        "image4Description": "Excerpt from the source code of the user reducer.",
         "image5": "/images/ORecipes/ORecipes-loginForm.webp",
         "image5Description": "Excerpt from the source code of the login form.",
         "image6": "/images/ORecipes/ORecipes-hamburger.webp",
@@ -289,6 +289,104 @@
         "alt6": "O'Recipes - Hamburger",
         "altPreview": "O'Recipes - Homepage",
         "url": ""
+      },
+      {
+        "title": "Albalino Web Studio",
+        "ancre": "albalino",
+        "description": "This site is the website of my company, Albalino Web Studio, which I created using WordPress. It faithfully represents my services and expertise, offering an optimal user experience thanks to a neat design and intuitive navigation. The site is currently online and showcases my portfolio, services, and ways to contact me.",
+        "technologies": [
+          "WordPress",
+          "JavaScript",
+          "PHP",
+          "CSS"
+        ],
+        "image": "/images/Albalino/albalino-accueil.png",
+        "imageDescription": "Home page of the Albalino Web Studio site.",
+        "image2": "/images/Albalino/albalino-portfolio.png",
+        "image2Description": "Portfolio page.",
+        "image3": "/images/Albalino/albalino-contact.png",
+        "image3Description": "Contact page.",
+        "image4": "/images/Albalino/albalino-articles.png",
+        "image4Description": "Excerpt from the articles page.",
+        "image5": "/images/Albalino/albalino-portfolio.png",
+        "image5Description": "Excerpt from the portfolio page.",
+        "image6": "/images/Albalino/albalino-web-studio.png",
+        "image6Description": "Albalino web studio logo.",
+        "imagePreview": "/images/Albalino/albalino-accueil.png",
+        "alt": "Albalino Web Studio - Home page",
+        "alt2": "Albalino Web Studio - Portfolio",
+        "alt3": "Albalino Web Studio - Contact",
+        "alt4": "Albalino Web Studio - Articles",
+        "alt5": "Albalino Web Studio - Portfolio",
+        "alt6": "Albalino Web Studio - Logo",
+        "altPreview": "Albalino Web Studio - Home page",
+        "url": "https://albalino.fr/"
+      },
+      {
+        "title": "CSK Groupe",
+        "ancre": "csk",
+        "description": "This site is the website of the company CSK GROUPE, my first client as a freelancer. The site brings together two companies and was created using WordPress. It faithfully represents the activities and services offered by CSK GROUPE, providing an optimal user experience thanks to a neat design and intuitive navigation. The site is currently online and presents the two companies, their services, and ways to contact them.",
+        "technologies": [
+          "WordPress",
+          "JavaScript",
+          "PHP",
+          "CSS"
+        ],
+        "image": "/images/CSK/csk-accueil.png",
+        "imageDescription": "Home page of the CSK GROUPE site.",
+        "image2": "/images/CSK/CSK-services.webp",
+        "image2Description": "Services page of CSK GROUPE.",
+        "image3": "/images/CSK/csk-securite.png",
+        "image3Description": "Services page of CSK Security.",
+        "image4": "/images/CSK/csk-proprete.png",
+        "image4Description": "Services page of CSK Cleaning.",
+        "image5": "/images/CSK/qui-sommes-nous.png",
+        "image5Description": "Presentation page of CSK GROUPE.",
+        "image6": "/images/CSK/csk-logo.png",
+        "image6Description": "Logo of CSK GROUPE.",
+        "imagePreview": "/images/CSK/csk-accueil.png",
+        "alt": "CSK GROUPE - Home page",
+        "alt2": "CSK GROUPE - Services",
+        "alt3": "CSK Security",
+        "alt4": "CSK Cleaning",
+        "alt5": "CSK GROUPE - About Us",
+        "alt6": "CSK GROUPE - Home page",
+        "altPreview": "CSK GROUPE - Home page",
+        "url": "https://cskgroupe.fr/"
+      },
+      {
+        "title": "Le Restaurant",
+        "ancre": "le-restaurant",
+        "description": "This site is a template website for a restaurant where the content is entirely editable by the owner through an admin dashboard. It allows modifying dishes, menus, images, etc. Offering a user-friendly interface, the owner can easily manage the site's content.",
+        "technologies": [
+          "Next.js",
+          "JavaScript",
+          "Tailwind CSS",
+          "Firebase",
+          "Framer Motion",
+          "NextAuth"
+        ],
+        "image": "/images/LeRestaurant/le-restaurant-dashboard.png",
+        "imageDescription": "Home page of the admin dashboard.",
+        "image2": "/images/LeRestaurant/menu.webp",
+        "image2Description": "Restaurant menu page.",
+        "image3": "/images/LeRestaurant/le-restaurant-carrousel.png",
+        "image3Description": "Image carousel section.",
+        "image4": "/images/LeRestaurant/le-restaurant-modif-menu-special.png",
+        "image4Description": "Special menu modification section.",
+        "image5": "/images/LeRestaurant/le-restaurant-modif-plats.png",
+        "image5Description": "Dish modification section.",
+        "image6": "/images/LeRestaurant/le-restaurant-entrecote.webp",
+        "image6Description": "Entrecôte dish.",
+        "imagePreview": "/images/LeRestaurant/le-restaurant-accueil.png",
+        "alt": "Le Restaurant - Admin dashboard",
+        "alt2": "Le Restaurant - Menu",
+        "alt3": "Le Restaurant - Reviews section",
+        "alt4": "Le Restaurant - Special menu modification",
+        "alt5": "Le Restaurant - Dish modification",
+        "alt6": "Le Restaurant - Entrecôte dish",
+        "altPreview": "Le Restaurant - Site preview",
+        "url": "https://restaurant-site-name.netlify.app/"
       }
     ]
   },

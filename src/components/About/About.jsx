@@ -20,6 +20,9 @@ const About = ({ isDarkMode }) => {
     const [isProjectImage2Visible, projectImage2Ref] = useVisibilityObserver(0.1);
     const [isProjectImage3Visible, projectImage3Ref] = useVisibilityObserver(0.1);
     const [isProjectImage4Visible, projectImage4Ref] = useVisibilityObserver(0.1);
+    const [isProjectImage5Visible, projectImage5Ref] = useVisibilityObserver(0.1);
+    const [isProjectImage6Visible, projectImage6Ref] = useVisibilityObserver(0.1);
+    const [isProjectImage7Visible, projectImage7Ref] = useVisibilityObserver(0.1);
 
     const [timelineVisibility, setTimelineVisibility] = useState(
         Array(timeline.length).fill(false)
@@ -53,7 +56,7 @@ const About = ({ isDarkMode }) => {
     return (
         <div id={t.about} className="text-background ">
             <main className="isolate">
-                {/* Hero section */}
+                {/* Section Héros */}
                 <div className="relative isolate -z-10 overflow-hidden pt-24 sm:pt-0">
                     <div
                         className="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] shadow-xl shadow-indigo-600/10 sm:-mr-80 sm:w-[180%] md:-mr-64 md:w-[160%] lg:-mr-48 lg:w-[140%] xl:-mr-32 xl:w-[120%] 2xl:-mr-24 2xl:w-[100%] gradient-background opacity-60"
@@ -68,7 +71,7 @@ const About = ({ isDarkMode }) => {
                                 <p className={`text-lg leading-8 custom-text-white ${isTextVisible ? 'opacity-100 animate-fadeInLeft' : 'opacity-0'}`}>
                                     {about.primary}
                                 </p>
-                                {/* MusicPlayer section */}
+                                {/* Section MusicPlayer */}
                                 <MusicPlayer />
                             </div>
 
@@ -94,7 +97,7 @@ const About = ({ isDarkMode }) => {
                     </div>
                 </div>
 
-                {/* Timeline section */}
+                {/* Section Chronologie */}
                 <div className="mx-auto -mt-8 max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
                         {timeline.map((item, index) => (
@@ -123,12 +126,12 @@ const About = ({ isDarkMode }) => {
                     </div>
                 </div>
 
-                {/* Technologies section */}
+                {/* Section Technologies */}
                 <Technologies isDarkMode={isDarkMode} />
 
                 <div className='pb-20 sm:pb-8' id={t.projects}></div>
 
-                {/* projects section */}
+                {/* Section Projets */}
                 <div className="pt-8 overflow-hidden sm:mt-16">
                     <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
                         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
@@ -137,9 +140,6 @@ const About = ({ isDarkMode }) => {
                                 <p className={`mt-6 text-xl leading-8 custom-text-white ${isProjectVisible ? 'opacity-100 animate-fadeInLeft' : 'opacity-0'}`}>
                                     {projects.description}
                                 </p>
-                                {/* <p className={`mt-6 text-base leading-7 custom-text-white ${isProjectVisible ? 'opacity-100 animate-fadeInLeft' : 'opacity-0'}`}>
-                                    {projects.description3}
-                                </p> */}
                                 <ul className={`flex flex-col gap-y-3 mt-6 `}>
                                     <li className={`${isLinkVisible ? 'opacity-100 animate-fadeInRight' : 'opacity-0'}`} ref={linkRef} >
                                         <a
@@ -169,11 +169,32 @@ const About = ({ isDarkMode }) => {
                                             <span className={`font-bold `}>{projects.formationProjects[3].title}</span>
                                         </a>
                                     </li>
+                                    <li className={`${isLinkVisible ? 'opacity-100 animate-fadeInRightSlow4' : 'opacity-0'}`} ref={linkRef}>
+                                        <a
+                                            href="#albalino"
+                                            className={`font-semibold leading-6`}>
+                                            <span className={`font-bold `}>{projects.formationProjects[4].title}</span>
+                                        </a>
+                                    </li>
+                                    <li className={`${isLinkVisible ? 'opacity-100 animate-fadeInRightSlow5' : 'opacity-0'}`} ref={linkRef}>
+                                        <a
+                                            href="#csk"
+                                            className={`font-semibold leading-6`}>
+                                            <span className={`font-bold `}>{projects.formationProjects[5].title}</span>
+                                        </a>
+                                    </li>
+                                    <li className={`${isLinkVisible ? 'opacity-100 animate-fadeInRightSlow6' : 'opacity-0'}`} ref={linkRef}>
+                                        <a
+                                            href="#le-restaurant"
+                                            className={`font-semibold leading-6`}>
+                                            <span className={`font-bold `}>{projects.formationProjects[6].title}</span>
+                                        </a>
+                                    </li>
+
                                 </ul>
                             </div>
                             <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
                                 <div className={`w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end`}>
-                                    {/* <a href="#atlasdd"> */}
                                     <img
                                         src={projects.formationProjects[0].image6}
                                         alt={projects.formationProjects[0].alt6}
@@ -181,11 +202,9 @@ const About = ({ isDarkMode }) => {
                                         className={`hidden sm:block aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover ${isProjectImage1Visible ? 'opacity-100 animate-fadeInRight transition-delay-200' : 'opacity-0'}`}
                                         aria-label={`${t.goToProject} ${projects.formationProjects[0].title}`}
                                     />
-                                    {/* </a> */}
                                 </div>
                                 <div className={`contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8`}>
                                     <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
-                                        {/* <a href="#ghibliotheque"> */}
                                         <img
                                             src={projects.formationProjects[1].image6}
                                             alt={projects.formationProjects[1].alt6}
@@ -193,10 +212,8 @@ const About = ({ isDarkMode }) => {
                                             className={`hidden sm:block aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover ${isProjectImage2Visible ? 'opacity-100 animate-fadeInLeft transition-delay-400' : 'opacity-0'}`}
                                             aria-label={`${t.goToProject} ${projects.formationProjects[1].title}`}
                                         />
-                                        {/* </a> */}
                                     </div>
                                     <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
-                                        {/* <a href="#pokedex"> */}
                                         <img
                                             src={projects.formationProjects[2].image6}
                                             alt={projects.formationProjects[2].alt6}
@@ -204,10 +221,8 @@ const About = ({ isDarkMode }) => {
                                             className={`hidden sm:block aspect-[7/5] w-[30rem] xl:w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover ${isProjectImage3Visible ? 'opacity-100 animate-fadeInUp transition-delay-600' : 'opacity-0'}`}
                                             aria-label={`${t.goToProject} ${projects.formationProjects[2].title}`}
                                         />
-                                        {/* </a> */}
                                     </div>
                                     <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
-                                        {/* <a href="#orecipes"> */}
                                         <img
                                             src={projects.formationProjects[3].image6}
                                             alt={projects.formationProjects[3].alt6}
@@ -215,7 +230,37 @@ const About = ({ isDarkMode }) => {
                                             className={`aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover ${isProjectImage4Visible ? 'opacity-100 animate-slideInRight transition-delay-800' : 'opacity-0'}`}
                                             aria-label={`${t.goToProject} ${projects.formationProjects[3].title}`}
                                         />
-                                        {/* </a> */}
+                                    </div>
+
+                                </div>
+                                {/* Nouveaux projets ajoutés */}
+                                <div className={`contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8`}>
+                                    <div className="flex w-64 flex-none justify-end lg:w-auto">
+                                        <img
+                                            src={projects.formationProjects[4].image6}
+                                            alt={projects.formationProjects[4].alt6}
+                                            ref={projectImage5Ref}
+                                            className={`hidden sm:block aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-[#18181B] shadow-xl object-contain ${isProjectImage5Visible ? 'opacity-100 animate-fadeInLeft transition-delay-400' : 'opacity-0'}`}
+                                            aria-label={`${t.goToProject} ${projects.formationProjects[4].title}`}
+                                        />
+                                    </div>
+                                    <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
+                                        <img
+                                            src={projects.formationProjects[5].image6}
+                                            alt={projects.formationProjects[5].alt6}
+                                            ref={projectImage6Ref}
+                                            className={`hidden sm:block aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-[#18181B] shadow-xl object-cover ${isProjectImage6Visible ? 'opacity-100 animate-fadeInUp transition-delay-400' : 'opacity-0'}`}
+                                            aria-label={`${t.goToProject} ${projects.formationProjects[5].title}`}
+                                        />
+                                    </div>
+                                    <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
+                                        <img
+                                            src={projects.formationProjects[6].image6}
+                                            alt={projects.formationProjects[6].alt6}
+                                            ref={projectImage7Ref}
+                                            className={`hidden sm:block aspect-[7/5] w-[30rem] xl:w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover ${isProjectImage7Visible ? 'opacity-100 animate-slideInRight transition-delay-600' : 'opacity-0'}`}
+                                            aria-label={`${t.goToProject} ${projects.formationProjects[6].title}`}
+                                        />
                                     </div>
                                 </div>
                             </div>

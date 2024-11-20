@@ -21,6 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <meta name="twitter:description" content="Découvrez les projets et compétences en développement web de Guillaume Bréchaire." />
         <meta name="twitter:image" content="https://guillaume-brechaire.netlify.app/images/portfolio.webp" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="google-site-verification" content="-wEWWKWuA2AQA2dBX3NqptpwxoXxmQu0252JAAmW528" />
       </Helmet>
       <LanguageProvider>
         <App />

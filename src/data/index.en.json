@@ -2,12 +2,12 @@
   "navigation": [
     {
       "title": "About",
-      "ancre": "Presentation",
+      "ancre": "About",
       "url": "http://www.example.com/about"
     },
     {
       "title": "Projects",
-      "ancre": "Projets",
+      "ancre": "Projects",
       "url": "http://www.example.com/portfolio"
     },
     {
@@ -197,7 +197,16 @@
         "title": "Ghibliotheque",
         "ancre": "ghibliotheque",
         "description": "This site, now entirely front-end, uses React, Redux, Tailwind, and some libraries to provide complete access to the Studio Ghibli film catalog. Each film is accompanied by images, detailed summaries, and various information. Currently, the site is deployed online.",
-        "technologies": ["JavaScript", "React", "Redux", "Tailwind CSS", "Framer Motion", "React Router", "Vite", "Axios"],
+        "technologies": [
+          "JavaScript",
+          "React",
+          "Redux",
+          "Tailwind CSS",
+          "Framer Motion",
+          "React Router",
+          "Vite",
+          "Axios"
+        ],
         "image": "/images/Ghibliotheque/ghibliotheque-accueil.webp",
         "imageDescription": "Home page of the Ghibliotheque",
         "image2": "",
@@ -294,12 +303,7 @@
         "title": "Albalino Web Studio",
         "ancre": "albalino",
         "description": "This site is the website of my company, Albalino Web Studio, which I created using WordPress. It faithfully represents my services and expertise, offering an optimal user experience thanks to a neat design and intuitive navigation. The site is currently online and showcases my portfolio, services, and ways to contact me.",
-        "technologies": [
-          "WordPress",
-          "JavaScript",
-          "PHP",
-          "CSS"
-        ],
+        "technologies": ["WordPress", "JavaScript", "PHP", "CSS"],
         "image": "/images/Albalino/albalino-accueil.png",
         "imageDescription": "Home page of the Albalino Web Studio site.",
         "image2": "/images/Albalino/albalino-portfolio.png",
@@ -323,36 +327,31 @@
         "url": "https://albalino.fr/"
       },
       {
-        "title": "CSK Groupe",
+        "title": "CSK Unity",
         "ancre": "csk",
-        "description": "This site is the website of the company CSK GROUPE, my first client as a freelancer. The site brings together two companies and was created using WordPress. It faithfully represents the activities and services offered by CSK GROUPE, providing an optimal user experience thanks to a neat design and intuitive navigation. The site is currently online and presents the two companies, their services, and ways to contact them.",
-        "technologies": [
-          "WordPress",
-          "JavaScript",
-          "PHP",
-          "CSS"
-        ],
+        "description": "This site is the website of the company CSK Unity, my first client as a freelancer. The site brings together two companies and was created using WordPress. It faithfully represents the activities and services offered by CSK Unity, providing an optimal user experience thanks to a neat design and intuitive navigation. The site is currently online and presents the two companies, their services, and ways to contact them.",
+        "technologies": ["WordPress", "JavaScript", "PHP", "CSS"],
         "image": "/images/CSK/csk-accueil.png",
-        "imageDescription": "Home page of the CSK GROUPE site.",
+        "imageDescription": "Home page of the CSK Unity site.",
         "image2": "/images/CSK/CSK-services.webp",
-        "image2Description": "Services page of CSK GROUPE.",
+        "image2Description": "Services page of CSK Unity.",
         "image3": "/images/CSK/csk-securite.png",
         "image3Description": "Services page of CSK Security.",
         "image4": "/images/CSK/csk-proprete.png",
         "image4Description": "Services page of CSK Cleaning.",
         "image5": "/images/CSK/qui-sommes-nous.png",
-        "image5Description": "Presentation page of CSK GROUPE.",
+        "image5Description": "Presentation page of CSK Unity.",
         "image6": "/images/CSK/csk-logo.png",
-        "image6Description": "Logo of CSK GROUPE.",
+        "image6Description": "Logo of CSK Unity.",
         "imagePreview": "/images/CSK/csk-accueil.png",
-        "alt": "CSK GROUPE - Home page",
-        "alt2": "CSK GROUPE - Services",
+        "alt": "CSK Unity - Home page",
+        "alt2": "CSK Unity - Services",
         "alt3": "CSK Security",
         "alt4": "CSK Cleaning",
-        "alt5": "CSK GROUPE - About Us",
-        "alt6": "CSK GROUPE - Home page",
-        "altPreview": "CSK GROUPE - Home page",
-        "url": "https://cskgroupe.fr/"
+        "alt5": "CSK Unity - About Us",
+        "alt6": "CSK Unity - Home page",
+        "altPreview": "CSK Unity - Home page",
+        "url": "https://cskunity.fr/"
       },
       {
         "title": "Le Restaurant",

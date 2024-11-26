@@ -170,7 +170,6 @@
           "Heroku",
           "JsonWebToken",
           "Bcrypt"
-
         ],
         "image": "/images/OMyDnD/OMyDnD-creation-de-personnage.webp",
         "imageDescription": "Création de personnage dans l'Atlas des Royaumes Oubliés.",
@@ -198,7 +197,16 @@
         "title": "Ghibliothèque",
         "ancre": "ghibliotheque",
         "description": "Ce site, désormais entièrement front-end, utilise React, Redux, Tailwind, et quelques bibliothèques pour offrir un accès complet au catalogue de films du Studio Ghibli. Chaque film est accompagné d'images, de résumés détaillés et de diverses informations. Actuellement, le site est déployé en ligne.",
-        "technologies": ["JavaScript", "React", "Redux", "Tailwind CSS", "Framer Motion", "React Router", "Vite", "Axios"],
+        "technologies": [
+          "JavaScript",
+          "React",
+          "Redux",
+          "Tailwind CSS",
+          "Framer Motion",
+          "React Router",
+          "Vite",
+          "Axios"
+        ],
         "image": "/images/Ghibliotheque/ghibliotheque-accueil.webp",
         "imageDescription": "Page d'accueil de la Ghibliothèque",
         "image2": "",
@@ -288,19 +296,14 @@
         "alt4": "O'Recipes - Extrait du code source",
         "alt5": "O'Recipes - Formulaire de connexion",
         "alt6": "O'Recipes - Hamburger",
-        "altPreview": "O'Recipes - Page d'accueil",	
+        "altPreview": "O'Recipes - Page d'accueil",
         "url": ""
       },
       {
         "title": "Albalino Web Studio",
         "ancre": "albalino",
         "description": "Ce site est le site web de mon entreprise, Albalino Web Studio, que j'ai créé en utilisant WordPress. Il représente fidèlement mes services et mon expertise, offrant une expérience utilisateur optimale grâce à un design soigné et une navigation intuitive. Le site est actuellement en ligne et présente mon portfolio, mes services et les moyens de me contacter",
-        "technologies": [
-          "Wordpress",
-          "JavaScript",
-          "PHP",
-          "CSS"
-        ],
+        "technologies": ["Wordpress", "JavaScript", "PHP", "CSS"],
         "image": "/images/Albalino/albalino-accueil.png",
         "imageDescription": "Page d'accueil du site Albalino Web Studio.",
         "image2": "/images/Albalino/albalino-portfolio.png",
@@ -324,36 +327,31 @@
         "url": "https://albalino.fr/"
       },
       {
-        "title": "CSK Groupe",
+        "title": "CSK Unity",
         "ancre": "csk",
-        "description": "Ce site est le site web de l'entreprise CSK GROUPE, mon premier client en tant que freelance. Le site regroupe deux sociétés et a été créé en utilisant WordPress. Il représente fidèlement les activités et les services offerts par CSK GROUPE, offrant une expérience utilisateur optimale grâce à un design soigné et une navigation intuitive. Le site est actuellement en ligne et présente les deux sociétés, leurs services et les moyens de les contacter.",
-        "technologies": [
-          "Wordpress",
-          "JavaScript",
-          "PHP",
-          "CSS"
-        ],
+        "description": "Ce site est le site web de l'entreprise CSK Unity, mon premier client en tant que freelance. Le site regroupe deux sociétés et a été créé en utilisant WordPress. Il représente fidèlement les activités et les services offerts par CSK Unity, offrant une expérience utilisateur optimale grâce à un design soigné et une navigation intuitive. Le site est actuellement en ligne et présente les deux sociétés, leurs services et les moyens de les contacter.",
+        "technologies": ["Wordpress", "JavaScript", "PHP", "CSS"],
         "image": "/images/CSK/csk-accueil.png",
-        "imageDescription": "Page d'accueil du site CSK GROUPE.",
+        "imageDescription": "Page d'accueil du site CSK Unity.",
         "image2": "/images/CSK/CSK-services.webp",
-        "image2Description": "Page des services de l'entreprise CSK GROUPE.",
+        "image2Description": "Page des services de l'entreprise CSK Unity.",
         "image3": "/images/CSK/csk-securite.png",
         "image3Description": "Page des services de CSK Sécurité.",
         "image4": "/images/CSK/csk-proprete.png",
         "image4Description": "Page des services de CSK Propreté.",
         "image5": "/images/CSK/qui-sommes-nous.png",
-        "image5Description": "Page de présentation de CSK GROUPE.",
+        "image5Description": "Page de présentation de CSK Unity.",
         "image6": "/images/CSK/csk-logo.png",
-        "image6Description": "Logo CSK GROUPE.",
+        "image6Description": "Logo CSK Unity.",
         "imagePreview": "/images/CSK/csk-accueil.png",
-        "alt": "CSK GROUPE - Page d'accueil",
-        "alt2": "CSK GROUPE - Services",
+        "alt": "CSK Unity - Page d'accueil",
+        "alt2": "CSK Unity - Services",
         "alt3": "CSK Sécurité",
         "alt4": "CSK Propreté",
-        "alt5": "CSK GROUPE - Qui sommes-nous",
-        "alt6": "CSK GROUPE - Page d'accueil",
-        "altPreview": "CSK GROUPE - Page d'accueil",
-        "url": "https://cskgroupe.fr/"
+        "alt5": "CSK Unity - Qui sommes-nous",
+        "alt6": "CSK Unity - Page d'accueil",
+        "altPreview": "CSK Unity - Page d'accueil",
+        "url": "https://cskunity.fr/"
       },
       {
         "title": "Le Restaurant",
@@ -388,7 +386,7 @@
         "alt6": "Le Restaurant - Page d'accueil du restaurant",
         "altPreview": "Le Restaurant - Aperçu du site",
         "url": "https://restaurant-site-name.netlify.app/"
-      }      
+      }
     ]
   },
   "contact": {

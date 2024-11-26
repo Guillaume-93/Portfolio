@@ -34,7 +34,8 @@
     "react-medium-image-zoom": "^5.2.4",
     "react-modal-image": "^2.6.0",
     "react-router-dom": "^6.21.3",
-    "sass": "^1.77.6",
+    "sass": "^1.81.0",
+    "sass-loader": "^16.0.3",
     "simplex-noise": "^4.0.3",
     "tailwind-merge": "^2.4.0"
   },

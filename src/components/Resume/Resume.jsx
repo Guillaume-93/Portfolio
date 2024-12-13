@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import 'tailwindcss/tailwind.css';
-import { useLanguage } from '../../contexts/languageHooks';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
+import 'tailwindcss/tailwind.css';
+import { useLanguage } from '../../contexts/languageHooks';
 import LinkPreview from '../ui/LinkPreview.jsx'; // Assurez-vous que le chemin est correct
 
 const Resume = ({ isDarkMode }) => {
@@ -10,9 +10,9 @@ const Resume = ({ isDarkMode }) => {
 
     const getResumeImage = () => {
         if (language === 'en') {
-            return isDarkMode ? '/images/CV/cv-dark_en.webp' : '/images/CV/cv_en.webp';
+            return isDarkMode ? '/images/CV/cv-dark_en.jpg' : '/images/CV/cv_en.jpg';
         }
-        return isDarkMode ? '/images/CV/cv-dark.webp' : '/images/CV/cv.webp';
+        return isDarkMode ? '/images/CV/cv-dark.jpg' : '/images/CV/cv.jpg';
     };
 
     const getResumePdf = () => {
@@ -21,9 +21,9 @@ const Resume = ({ isDarkMode }) => {
 
     const getPreviewImage = () => {
         if (language === 'en') {
-            return isDarkMode ? '/images/CV/cv-dark_en.webp' : '/images/CV/cv_en.webp';
+            return isDarkMode ? '/images/CV/cv-dark_en.jpg' : '/images/CV/cv_en.jpg';
         }
-        return isDarkMode ? '/images/CV/cv-dark.webp' : '/images/CV/cv.webp';
+        return isDarkMode ? '/images/CV/cv-dark.jpg' : '/images/CV/cv.jpg';
     };
 
     return (
